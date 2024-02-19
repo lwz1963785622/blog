@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Proxy | lwz blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/icon.jpg">
+    <meta name="description" content="一个基于vuepress的技术站点">
+    <meta name="keywords" content="vuepress,blog,主题">
+    
+    <link rel="preload" href="/assets/css/0.styles.c81954a9.css" as="style"><link rel="preload" href="/assets/js/app.02f4702a.js" as="script"><link rel="preload" href="/assets/js/2.c24528b1.js" as="script"><link rel="preload" href="/assets/js/74.6b5d9fe1.js" as="script"><link rel="preload" href="/assets/js/4.68802046.js" as="script"><link rel="prefetch" href="/assets/js/10.b9f00163.js"><link rel="prefetch" href="/assets/js/100.cea73915.js"><link rel="prefetch" href="/assets/js/101.da736f62.js"><link rel="prefetch" href="/assets/js/102.7007d484.js"><link rel="prefetch" href="/assets/js/103.caa32a93.js"><link rel="prefetch" href="/assets/js/104.49eec9bb.js"><link rel="prefetch" href="/assets/js/105.6dde3492.js"><link rel="prefetch" href="/assets/js/106.e033d988.js"><link rel="prefetch" href="/assets/js/107.85a7f470.js"><link rel="prefetch" href="/assets/js/108.3199b6c2.js"><link rel="prefetch" href="/assets/js/109.053f0eae.js"><link rel="prefetch" href="/assets/js/11.0130a7ca.js"><link rel="prefetch" href="/assets/js/110.ca65e52d.js"><link rel="prefetch" href="/assets/js/111.5681de27.js"><link rel="prefetch" href="/assets/js/112.099e1f8d.js"><link rel="prefetch" href="/assets/js/113.e0d70638.js"><link rel="prefetch" href="/assets/js/114.0bc43b57.js"><link rel="prefetch" href="/assets/js/115.0b956899.js"><link rel="prefetch" href="/assets/js/116.ae8f53e3.js"><link rel="prefetch" href="/assets/js/117.a9349fe5.js"><link rel="prefetch" href="/assets/js/118.ae2cdf8c.js"><link rel="prefetch" href="/assets/js/119.9f6cba9e.js"><link rel="prefetch" href="/assets/js/12.e8df8df5.js"><link rel="prefetch" href="/assets/js/120.c28514fb.js"><link rel="prefetch" href="/assets/js/121.43d5b226.js"><link rel="prefetch" href="/assets/js/122.d5150570.js"><link rel="prefetch" href="/assets/js/123.3b5271e5.js"><link rel="prefetch" href="/assets/js/124.69c11252.js"><link rel="prefetch" href="/assets/js/125.a84bab86.js"><link rel="prefetch" href="/assets/js/126.feec0868.js"><link rel="prefetch" href="/assets/js/127.988ef89c.js"><link rel="prefetch" href="/assets/js/128.6d787bd5.js"><link rel="prefetch" href="/assets/js/129.e9bae44d.js"><link rel="prefetch" href="/assets/js/13.8e202000.js"><link rel="prefetch" href="/assets/js/130.a531a070.js"><link rel="prefetch" href="/assets/js/131.081e4aba.js"><link rel="prefetch" href="/assets/js/132.117ede7a.js"><link rel="prefetch" href="/assets/js/133.9b262135.js"><link rel="prefetch" href="/assets/js/134.7d3c77e3.js"><link rel="prefetch" href="/assets/js/135.4a152353.js"><link rel="prefetch" href="/assets/js/136.2cdd93f9.js"><link rel="prefetch" href="/assets/js/137.c8ae1cb5.js"><link rel="prefetch" href="/assets/js/138.20ad0617.js"><link rel="prefetch" href="/assets/js/139.d02a0237.js"><link rel="prefetch" href="/assets/js/14.f6d60bde.js"><link rel="prefetch" href="/assets/js/140.e61d9473.js"><link rel="prefetch" href="/assets/js/141.9ab7f428.js"><link rel="prefetch" href="/assets/js/142.d0dc8e5b.js"><link rel="prefetch" href="/assets/js/143.3cae2afe.js"><link rel="prefetch" href="/assets/js/144.f218366b.js"><link rel="prefetch" href="/assets/js/145.e069c18b.js"><link rel="prefetch" href="/assets/js/146.9751fb0e.js"><link rel="prefetch" href="/assets/js/147.41f034cf.js"><link rel="prefetch" href="/assets/js/148.66f7fa5b.js"><link rel="prefetch" href="/assets/js/149.73939e51.js"><link rel="prefetch" href="/assets/js/15.bb4953e9.js"><link rel="prefetch" href="/assets/js/150.cca5c5b9.js"><link rel="prefetch" href="/assets/js/151.9812ce26.js"><link rel="prefetch" href="/assets/js/152.b28a65a8.js"><link rel="prefetch" href="/assets/js/153.8f86ed47.js"><link rel="prefetch" href="/assets/js/154.b93f993a.js"><link rel="prefetch" href="/assets/js/155.bb3edc10.js"><link rel="prefetch" href="/assets/js/156.f91d2146.js"><link rel="prefetch" href="/assets/js/157.19160896.js"><link rel="prefetch" href="/assets/js/158.645322e6.js"><link rel="prefetch" href="/assets/js/16.2ded9e3a.js"><link rel="prefetch" href="/assets/js/17.91bc2bfc.js"><link rel="prefetch" href="/assets/js/18.16b54a36.js"><link rel="prefetch" href="/assets/js/19.40e748ba.js"><link rel="prefetch" href="/assets/js/20.934d8e27.js"><link rel="prefetch" href="/assets/js/21.a593ad30.js"><link rel="prefetch" href="/assets/js/22.65ebbfb0.js"><link rel="prefetch" href="/assets/js/23.22197f5b.js"><link rel="prefetch" href="/assets/js/24.b5a12bf8.js"><link rel="prefetch" href="/assets/js/25.8d9e5c92.js"><link rel="prefetch" href="/assets/js/26.54dcbfd9.js"><link rel="prefetch" href="/assets/js/27.77667eb4.js"><link rel="prefetch" href="/assets/js/28.5a220ac8.js"><link rel="prefetch" href="/assets/js/29.033c82ef.js"><link rel="prefetch" href="/assets/js/3.ae4e21c4.js"><link rel="prefetch" href="/assets/js/30.eb479c9b.js"><link rel="prefetch" href="/assets/js/31.ca4b95d9.js"><link rel="prefetch" href="/assets/js/32.7a8b933a.js"><link rel="prefetch" href="/assets/js/33.16198774.js"><link rel="prefetch" href="/assets/js/34.619cc9df.js"><link rel="prefetch" href="/assets/js/35.e5f38e51.js"><link rel="prefetch" href="/assets/js/36.055b08ad.js"><link rel="prefetch" href="/assets/js/37.94b4517d.js"><link rel="prefetch" href="/assets/js/38.11c6f847.js"><link rel="prefetch" href="/assets/js/39.ead00e84.js"><link rel="prefetch" href="/assets/js/40.90724f30.js"><link rel="prefetch" href="/assets/js/41.57f1e3dc.js"><link rel="prefetch" href="/assets/js/42.81f99fce.js"><link rel="prefetch" href="/assets/js/43.9487db37.js"><link rel="prefetch" href="/assets/js/44.f55f4942.js"><link rel="prefetch" href="/assets/js/45.0840f7d0.js"><link rel="prefetch" href="/assets/js/46.77e4b1e0.js"><link rel="prefetch" href="/assets/js/47.106e5a77.js"><link rel="prefetch" href="/assets/js/48.a0241697.js"><link rel="prefetch" href="/assets/js/49.bfcba80c.js"><link rel="prefetch" href="/assets/js/5.37cdb3ec.js"><link rel="prefetch" href="/assets/js/50.a48aa373.js"><link rel="prefetch" href="/assets/js/51.6eb81d97.js"><link rel="prefetch" href="/assets/js/52.9a4f7c44.js"><link rel="prefetch" href="/assets/js/53.836a2cd9.js"><link rel="prefetch" href="/assets/js/54.20f7c514.js"><link rel="prefetch" href="/assets/js/55.3c9b093e.js"><link rel="prefetch" href="/assets/js/56.2a08ee39.js"><link rel="prefetch" href="/assets/js/57.77b5ae2f.js"><link rel="prefetch" href="/assets/js/58.e13e6489.js"><link rel="prefetch" href="/assets/js/59.fff9f852.js"><link rel="prefetch" href="/assets/js/6.0125fdab.js"><link rel="prefetch" href="/assets/js/60.571542be.js"><link rel="prefetch" href="/assets/js/61.dc24c738.js"><link rel="prefetch" href="/assets/js/62.60b8fbc3.js"><link rel="prefetch" href="/assets/js/63.aebd9e95.js"><link rel="prefetch" href="/assets/js/64.8ca6835f.js"><link rel="prefetch" href="/assets/js/65.785ed38d.js"><link rel="prefetch" href="/assets/js/66.87713e0f.js"><link rel="prefetch" href="/assets/js/67.5c8e2954.js"><link rel="prefetch" href="/assets/js/68.1f624172.js"><link rel="prefetch" href="/assets/js/69.78d43f46.js"><link rel="prefetch" href="/assets/js/7.4afff234.js"><link rel="prefetch" href="/assets/js/70.b570a6a2.js"><link rel="prefetch" href="/assets/js/71.2c924482.js"><link rel="prefetch" href="/assets/js/72.124dc4e8.js"><link rel="prefetch" href="/assets/js/73.92f70cb3.js"><link rel="prefetch" href="/assets/js/75.da5db3e1.js"><link rel="prefetch" href="/assets/js/76.270c7b88.js"><link rel="prefetch" href="/assets/js/77.0ba8904d.js"><link rel="prefetch" href="/assets/js/78.3eabaf04.js"><link rel="prefetch" href="/assets/js/79.c8b0b5f9.js"><link rel="prefetch" href="/assets/js/8.b4a0f119.js"><link rel="prefetch" href="/assets/js/80.175a52a1.js"><link rel="prefetch" href="/assets/js/81.eba4eaf6.js"><link rel="prefetch" href="/assets/js/82.aa662044.js"><link rel="prefetch" href="/assets/js/83.22e8b612.js"><link rel="prefetch" href="/assets/js/84.43fc0353.js"><link rel="prefetch" href="/assets/js/85.f2fd33cd.js"><link rel="prefetch" href="/assets/js/86.0a8b597e.js"><link rel="prefetch" href="/assets/js/87.3b53f85c.js"><link rel="prefetch" href="/assets/js/88.d64e22ce.js"><link rel="prefetch" href="/assets/js/89.4f769098.js"><link rel="prefetch" href="/assets/js/9.aa469d74.js"><link rel="prefetch" href="/assets/js/90.0d8441e7.js"><link rel="prefetch" href="/assets/js/91.ab195f73.js"><link rel="prefetch" href="/assets/js/92.6d724bfd.js"><link rel="prefetch" href="/assets/js/93.cc667cae.js"><link rel="prefetch" href="/assets/js/94.028e3379.js"><link rel="prefetch" href="/assets/js/95.309a85ce.js"><link rel="prefetch" href="/assets/js/96.34028f84.js"><link rel="prefetch" href="/assets/js/97.e6147dce.js"><link rel="prefetch" href="/assets/js/98.032e4ad8.js"><link rel="prefetch" href="/assets/js/99.cbebf64f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c81954a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">lwz blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Javascript/" aria-current="page" class="sidebar-link">首页</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Javascript基础语法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScriptBOM操作</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScriptDOM操作</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Javascript数据处理</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>Ajax</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Javascript/Javascript数据处理/Ajax/ajax的封装案例.html" class="sidebar-link">ajax的封装案例</a></li><li><a href="/Javascript/Javascript数据处理/Ajax/ajax的简介和使用.html" class="sidebar-link">ajax的简介和使用</a></li><li><a href="/Javascript/Javascript数据处理/Ajax/同源策略和跨域.html" class="sidebar-link">同源策略和跨域</a></li></ul></section></li><li><a href="/Javascript/Javascript数据处理/async函数.html" class="sidebar-link">async函数</a></li><li><a href="/Javascript/Javascript数据处理/Fetch.html" class="sidebar-link">Fetch</a></li><li><a href="/Javascript/Javascript数据处理/Generator函数.html" class="sidebar-link">Generator函数</a></li><li><a href="/Javascript/Javascript数据处理/Promise.html" class="sidebar-link">Promise</a></li><li><a href="/Javascript/Javascript数据处理/Proxy.html" class="active sidebar-link">Proxy</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#概述" class="sidebar-link">概述</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#例子" class="sidebar-link">例子</a></li></ul></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#proxy-实例的方法" class="sidebar-link">Proxy 实例的方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#get" class="sidebar-link">get()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#set" class="sidebar-link">set()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#apply" class="sidebar-link">apply()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#has" class="sidebar-link">has()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#construct" class="sidebar-link">construct()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#deleteproperty" class="sidebar-link">deleteProperty()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#deleteproperty-2" class="sidebar-link">deleteProperty()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#getownpropertydescriptor" class="sidebar-link">getOwnPropertyDescriptor()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#getprototypeof" class="sidebar-link">getPrototypeOf()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#isextensible" class="sidebar-link">isExtensible()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#ownkeys" class="sidebar-link">ownKeys()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#preventextensions" class="sidebar-link">preventExtensions()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#setprototypeof" class="sidebar-link">setPrototypeOf()</a></li></ul></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#proxy-revocable" class="sidebar-link">Proxy.revocable()</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript数据处理/Proxy.html#this-问题" class="sidebar-link">this 问题</a></li></ul></li><li><a href="/Javascript/Javascript数据处理/Reflect.html" class="sidebar-link">Reflect</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Javascript扩展操作</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript入门</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="proxy"><a href="#proxy" class="header-anchor">#</a> Proxy <span class="badge warning" style="vertical-align:top;" data-v-15b7b770>ES6</span></h1> <h2 id="概述"><a href="#概述" class="header-anchor">#</a> 概述</h2> <blockquote><p>Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。Proxy 这个词的原意是代理，用在这里表示由它来“代理”某些操作，可以译为“代理器”。</p></blockquote> <h3 id="例子"><a href="#例子" class="header-anchor">#</a> 例子</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> propKey</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">35</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+proxy<span class="token punctuation">.</span>time <span class="token comment">// 35</span>
+proxy<span class="token punctuation">.</span>name <span class="token comment">// 35</span>
+proxy<span class="token punctuation">.</span>title <span class="token comment">// 35</span>
+
+<span class="token comment">// 如果handler没有设置任何拦截，那就等同于直接通向原对象。</span>
+<span class="token keyword">var</span> target <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+proxy<span class="token punctuation">.</span>a <span class="token operator">=</span> <span class="token string">'b'</span><span class="token punctuation">;</span>
+target<span class="token punctuation">.</span>a <span class="token comment">// &quot;b&quot;</span>
+</code></pre></div><p><code>Proxy</code> 接受两个参数。</p> <ul><li><code>target</code> 参数是所要代理的目标对象（上例是一个空对象），即如果没有Proxy的介入，操作原来要访问的就是这个对象；</li> <li><code>handler</code> 参数是一个配置对象，对于每一个被代理的操作，需要提供一个对应的处理函数，该函数将拦截对应的操作。</li></ul> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>注意，要使得Proxy起作用，必须针对Proxy实例（上例是proxy对象）进行操作，而不是针对目标对象（上例是空对象）进行操作。</p> <p>如果handler没有设置任何拦截，那就等同于直接通向原对象。</p></div> <h2 id="proxy-实例的方法"><a href="#proxy-实例的方法" class="header-anchor">#</a> Proxy 实例的方法</h2> <h3 id="get"><a href="#get" class="header-anchor">#</a> <code>get()</code></h3> <blockquote><p>用于拦截某个属性的读取操作，可接受三个参数。</p></blockquote> <ul><li>目标对象</li> <li>属性名</li> <li><code>proxy</code> 实例本身(可选)</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">&quot;张三&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>person<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> propKey</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>propKey <span class="token keyword">in</span> target<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> target<span class="token punctuation">[</span>propKey<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ReferenceError</span><span class="token punctuation">(</span><span class="token string">&quot;Prop name \&quot;&quot;</span> <span class="token operator">+</span> propKey <span class="token operator">+</span> <span class="token string">&quot;\&quot; does not exist.&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+proxy<span class="token punctuation">.</span>name <span class="token comment">// &quot;张三&quot;</span>
+proxy<span class="token punctuation">.</span>age <span class="token comment">// 抛出一个错误</span>
+
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">get</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> key<span class="token punctuation">,</span> receiver</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> receiver<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> d <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span><span class="token punctuation">;</span>
+d<span class="token punctuation">.</span>a <span class="token operator">===</span> d <span class="token comment">// true</span>
+</code></pre></div><h3 id="set"><a href="#set" class="header-anchor">#</a> <code>set()</code></h3> <blockquote><p>set方法用来拦截某个属性的赋值操作，可以接受四个参数，</p></blockquote> <ul><li>目标对象</li> <li>属性名</li> <li>属性值</li> <li><code>proxy</code> 实例本身(可选)</li></ul> <h4 id="例子-2"><a href="#例子-2" class="header-anchor">#</a> 例子</h4> <blockquote><p>假定Person对象有一个age属性，该属性应该是一个不大于 200 的整数，那么可以使用Proxy保证age的属性值符合要求。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> validator <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">set</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prop <span class="token operator">===</span> <span class="token string">'age'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>Number<span class="token punctuation">.</span><span class="token function">isInteger</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">TypeError</span><span class="token punctuation">(</span><span class="token string">'The age is not an integer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>value <span class="token operator">&gt;</span> <span class="token number">200</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">RangeError</span><span class="token punctuation">(</span><span class="token string">'The age seems invalid'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment">// 对于满足条件的 age 属性以及其他属性，直接保存</span>
+        obj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> value<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> validator<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+person<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+person<span class="token punctuation">.</span>age <span class="token comment">// 100</span>
+person<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token string">'young'</span> <span class="token comment">// 报错</span>
+person<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">300</span> <span class="token comment">// 报错</span>
+</code></pre></div><blockquote><p>set方法的第四个参数receiver 一般情况下是proxy实例本身</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">set</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> value<span class="token punctuation">,</span> receiver</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        obj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> receiver<span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> myObj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>myObj<span class="token punctuation">,</span> proxy<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+myObj<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'bar'</span><span class="token punctuation">;</span>
+myObj<span class="token punctuation">.</span>foo <span class="token operator">===</span> myObj <span class="token comment">// true</span>
+<span class="token comment">// myObj的原型对象proxy是一个 Proxy 实例，设置它的foo属性会触发set方法。这时，第四个参数receiver就指向原始赋值行为所在的对象myObj。</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>如果目标对象自身的某个属性不可写，那么set方法将不起作用。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    value<span class="token operator">:</span> <span class="token string">'bar'</span><span class="token punctuation">,</span>
+    writable<span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">set</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> value<span class="token punctuation">,</span> receiver</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        obj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'baz'</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+proxy<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'baz'</span><span class="token punctuation">;</span>
+proxy<span class="token punctuation">.</span>foo <span class="token comment">// &quot;bar&quot;</span>
+</code></pre></div><p>set代理应当返回一个布尔值。严格模式下，set代理如果没有返回true，就会报错。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">set</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">obj<span class="token punctuation">,</span> prop<span class="token punctuation">,</span> value<span class="token punctuation">,</span> receiver</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        obj<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">=</span> receiver<span class="token punctuation">;</span>
+        <span class="token comment">// 无论有没有下面这一行，都会报错</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+proxy<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'bar'</span><span class="token punctuation">;</span>
+<span class="token comment">// TypeError: 'set' on proxy: trap returned falsish for property 'foo'</span>
+</code></pre></div></div> <h3 id="apply"><a href="#apply" class="header-anchor">#</a> <code>apply()</code></h3> <blockquote><p>apply方法拦截函数的调用、call和apply操作。</p></blockquote> <p><code>apply</code> 方法可以接受三个参数</p> <ul><li>目标对象</li> <li>目标对象的上下文对象（this）</li> <li>目标对象的参数数组</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">apply</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">Reflect</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token operator">...</span>arguments<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// ---</span>
+<span class="token keyword">var</span> <span class="token function-variable function">target</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'I am the target'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">apply</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token string">'I am the proxy'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 变量p是 Proxy 的实例，当它作为函数调用时（p()），就会被apply方法拦截，返回一个字符串。</span>
+<span class="token function">p</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">// &quot;I am the proxy&quot;</span>
+
+<span class="token comment">// ---</span>
+<span class="token keyword">var</span> twice <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">apply</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token function">Reflect</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token operator">...</span>arguments<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token parameter">left<span class="token punctuation">,</span> right</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> left <span class="token operator">+</span> right<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>sum<span class="token punctuation">,</span> twice<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">proxy</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token comment">// 6</span>
+<span class="token function">proxy</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span> <span class="token comment">// 22</span>
+<span class="token function">proxy</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// 30</span>
+
+<span class="token comment">// ---</span>
+<span class="token function">Reflect</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>proxy<span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment">// 38</span>
+</code></pre></div><h3 id="has"><a href="#has" class="header-anchor">#</a> <code>has()</code></h3> <blockquote><p><code>has()</code> 方法用来拦截HasProperty操作，即判断对象是否具有某个属性时，这个方法会生效。典型的操作就是in运算符</p></blockquote> <p><code>has()</code> 方法可以接受两个参数</p> <ul><li>目标对象</li> <li>需查询的属性名</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">has</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>key<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'_'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> key <span class="token keyword">in</span> target<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> target <span class="token operator">=</span> <span class="token punctuation">{</span>
+    _prop<span class="token operator">:</span> <span class="token string">'foo'</span><span class="token punctuation">,</span>
+    prop<span class="token operator">:</span> <span class="token string">'foo'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token string">'_prop'</span> <span class="token keyword">in</span> proxy <span class="token comment">// false</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>值得注意的是，has()方法拦截的是HasProperty操作，而不是HasOwnProperty操作，即has()方法不判断一个属性是对象自身的属性，还是继承的属性。</p> <p>另外，虽然for...in循环也用到了in运算符，但是has()拦截对for...in循环不生效。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> stu1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'张三'</span><span class="token punctuation">,</span>
+    score<span class="token operator">:</span> <span class="token number">59</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> stu2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token operator">:</span> <span class="token string">'李四'</span><span class="token punctuation">,</span>
+    score<span class="token operator">:</span> <span class="token number">99</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">has</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> prop</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prop <span class="token operator">===</span> <span class="token string">'score'</span> <span class="token operator">&amp;&amp;</span> target<span class="token punctuation">[</span>prop<span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token number">60</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>target<span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> 不及格</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> prop <span class="token keyword">in</span> target<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> oproxy1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>stu1<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> oproxy2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>stu2<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token string">'score'</span> <span class="token keyword">in</span> oproxy1
+    <span class="token comment">// 张三 不及格</span>
+    <span class="token comment">// false</span>
+
+    <span class="token string">'score'</span> <span class="token keyword">in</span> oproxy2
+<span class="token comment">// true</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> a <span class="token keyword">in</span> oproxy1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>oproxy1<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 张三</span>
+<span class="token comment">// 59</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> b <span class="token keyword">in</span> oproxy2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>oproxy2<span class="token punctuation">[</span>b<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 李四</span>
+<span class="token comment">// 99</span>
+</code></pre></div></div> <h3 id="construct"><a href="#construct" class="header-anchor">#</a> <code>construct()</code></h3> <blockquote><p>construct()方法用于拦截new命令，下面是拦截对象的写法。</p></blockquote> <p><code>construct()</code> 方法可以接受三个参数。</p> <ul><li>target：目标对象。</li> <li>args：构造函数的参数数组。</li> <li>newTarget：创造实例对象时，new命令作用的构造函数（下面例子的p）。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">construct</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'called: '</span> <span class="token operator">+</span> args<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">', '</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+            value<span class="token operator">:</span> args<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">10</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">p</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value
+<span class="token comment">// &quot;called: 1&quot;</span>
+<span class="token comment">// 10</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><code>construct()</code> 方法返回的必须是一个对象，否则会报错。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">construct</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> argumentsList</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">new</span> <span class="token class-name">p</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 报错</span>
+<span class="token comment">// Uncaught TypeError: 'construct' on proxy: trap returned non-object ('1')</span>
+</code></pre></div><p>由于 <code>construct()</code> 拦截的是构造函数，所以它的目标对象必须是函数，否则就会报错。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">construct</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> argumentsList</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">new</span> <span class="token class-name">p</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 报错</span>
+<span class="token comment">// Uncaught TypeError: p is not a constructor</span>
+</code></pre></div><p><code>construct()</code> 方法中的this指向的是handler，而不是实例对象。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">construct</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> args</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">target</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">new</span> <span class="token class-name">p</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+</code></pre></div></div> <h3 id="deleteproperty"><a href="#deleteproperty" class="header-anchor">#</a> <code>deleteProperty()</code></h3> <blockquote><p><code>deleteProperty</code> 方法用于拦截 <code>delete</code> 操作，如果这个方法抛出错误或者返回 <code>false</code> ，当前属性就无法被 <code>delete</code> 命令删除。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">deleteProperty</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">invariant</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token string">'delete'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">delete</span> target<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">invariant</span><span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span> action</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>key<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'_'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Invalid attempt to </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>action<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> private &quot;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>key<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">&quot; property</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">var</span> target <span class="token operator">=</span> <span class="token punctuation">{</span>
+    _prop<span class="token operator">:</span> <span class="token string">'foo'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">delete</span> proxy<span class="token punctuation">.</span>_prop
+<span class="token comment">// Error: Invalid attempt to delete private &quot;_prop&quot; property</span>
+
+<span class="token comment">// deleteProperty方法拦截了delete操作符，删除第一个字符为下划线的属性会报错。</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>目标对象自身的不可配置（configurable）的属性，不能被deleteProperty方法删除，否则报错。</p></div> <h3 id="deleteproperty-2"><a href="#deleteproperty-2" class="header-anchor">#</a> <code>deleteProperty()</code></h3> <blockquote><p><code>defineProperty()</code> 方法拦截了Object.defineProperty()操作。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">defineProperty</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> key<span class="token punctuation">,</span> descriptor</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> target <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+proxy<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token string">'bar'</span> <span class="token comment">// </span>
+
+<span class="token comment">// 上面代码中，defineProperty()方法内部没有任何操作，只返回false，导致添加新属性总是无效。</span>
+<span class="token comment">// 注意，这里的false只是用来提示操作失败，本身并不能阻止添加新属性。</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>如果目标对象不可扩展（non-extensible），则defineProperty()不能增加目标对象上不存在的属性，否则会报错。另外，如果目标对象的某个属性不可写（writable）或不可配置（configurable），则defineProperty()方法不得改变这两个设置。</p></div> <h3 id="getownpropertydescriptor"><a href="#getownpropertydescriptor" class="header-anchor">#</a> <code>getOwnPropertyDescriptor()</code></h3> <blockquote><p><code>getOwnPropertyDescriptor()</code> 方法拦截 <code>Object.getOwnPropertyDescriptor()</code> ，返回一个属性描述对象或者 <code>undefined</code> 。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> key</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>key<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'_'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> key<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> target <span class="token operator">=</span> <span class="token punctuation">{</span>
+    _foo<span class="token operator">:</span> <span class="token string">'bar'</span><span class="token punctuation">,</span>
+    baz<span class="token operator">:</span> <span class="token string">'tar'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>proxy<span class="token punctuation">,</span> <span class="token string">'wat'</span><span class="token punctuation">)</span>
+<span class="token comment">// undefined</span>
+Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>proxy<span class="token punctuation">,</span> <span class="token string">'_foo'</span><span class="token punctuation">)</span>
+<span class="token comment">// undefined</span>
+Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyDescriptor</span><span class="token punctuation">(</span>proxy<span class="token punctuation">,</span> <span class="token string">'baz'</span><span class="token punctuation">)</span>
+<span class="token comment">// { value: 'tar', writable: true, enumerable: true, configurable: true }</span>
+
+<span class="token comment">// handler.getOwnPropertyDescriptor()方法对于第一个字符为下划线的属性名会返回undefined。</span>
+</code></pre></div><h3 id="getprototypeof"><a href="#getprototypeof" class="header-anchor">#</a> <code>getPrototypeOf()</code></h3> <blockquote><p><code>getPrototypeOf()</code> 方法主要用来拦截获取对象原型。具体来说，拦截下面这些操作。</p></blockquote> <ul><li><p><code>Object.prototype.__proto__</code></p></li> <li><p><code>Object.prototype.isPrototypeOf()</code></p></li> <li><p><code>Object.getPrototypeOf()</code></p></li> <li><p><code>Reflect.getPrototypeOf()</code></p></li> <li><p><code>instanceof</code></p></li></ul> <p>例子</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> proto <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function">getPrototypeOf</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> proto<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">getPrototypeOf</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span> <span class="token operator">===</span> proto <span class="token comment">// true</span>
+
+<span class="token comment">// getPrototypeOf()方法拦截Object.getPrototypeOf()，返回proto对象。</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><code>getPrototypeOf()</code> 方法的返回值必须是对象或者null，否则报错。另外，如果目标对象不可扩展（non-extensible）， <code>getPrototypeOf()</code> 方法必须返回目标对象的原型对象。</p></div> <h3 id="isextensible"><a href="#isextensible" class="header-anchor">#</a> <code>isExtensible()</code></h3> <blockquote><p><code>isExtensible()</code> 方法拦截 <code>Object.isExtensible()</code> 操作。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">isExtensible</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">&quot;called&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">isExtensible</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+<span class="token comment">// &quot;called&quot;</span>
+<span class="token comment">// true</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>该方法只能返回布尔值，否则返回值会被自动转为布尔值。</p></div> <p>这个方法有一个强限制，它的返回值必须与目标对象的isExtensible属性保持一致，否则就会抛出错误。</p> <div class="language-js extra-class"><pre class="language-js"><code>Object<span class="token punctuation">.</span><span class="token function">isExtensible</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span> <span class="token operator">===</span> Object<span class="token punctuation">.</span><span class="token function">isExtensible</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span>
+
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">isExtensible</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">isExtensible</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+<span class="token comment">// Uncaught TypeError: 'isExtensible' on proxy: trap result does not reflect extensibility of proxy target (which is 'true')</span>
+</code></pre></div><h3 id="ownkeys"><a href="#ownkeys" class="header-anchor">#</a> <code>ownKeys()</code></h3> <blockquote><p><code>ownKeys()</code> 方法用来拦截对象自身属性的读取操作。具体来说，拦截以下操作。</p></blockquote> <ul><li>Object.getOwnPropertyNames()</li> <li>Object.getOwnPropertySymbols()</li> <li>Object.keys()</li> <li>for...in循环</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> target <span class="token operator">=</span> <span class="token punctuation">{</span>
+    a<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    b<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    c<span class="token operator">:</span> <span class="token number">3</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">ownKeys</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span>
+<span class="token comment">// [ 'a' ]</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>使用 <code>Object.keys()</code> 方法时，有三类属性会被ownKeys()方法自动过滤，不会返回。</p> <ul><li>目标对象上不存在的属性</li> <li>属性名为 Symbol 值</li> <li>不可遍历（enumerable）的属性</li></ul></div> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> target <span class="token operator">=</span> <span class="token punctuation">{</span>
+    a<span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    b<span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    c<span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    <span class="token punctuation">[</span>Symbol<span class="token punctuation">.</span><span class="token function">for</span><span class="token punctuation">(</span><span class="token string">'secret'</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'4'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> <span class="token string">'key'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    enumerable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    configurable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    writable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token string">'static'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">ownKeys</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'d'</span><span class="token punctuation">,</span> Symbol<span class="token punctuation">.</span><span class="token function">for</span><span class="token punctuation">(</span><span class="token string">'secret'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'key'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span>
+<span class="token comment">// ['a']</span>
+<span class="token comment">// ownKeys()方法之中，显式返回不存在的属性（d）、Symbol 值（Symbol.for('secret')）、不可遍历的属性（key），结果都被自动过滤掉。</span>
+</code></pre></div><blockquote><p>ownKeys()方法还可以拦截Object.getOwnPropertyNames()。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">ownKeys</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token string">'c'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+<span class="token comment">// [ 'a', 'b', 'c' ]</span>
+</code></pre></div><blockquote><p>for...in循环也受到ownKeys()方法的拦截。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+    hello<span class="token operator">:</span> <span class="token string">'world'</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">ownKeys</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> proxy<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 没有任何输出</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p><code>ownKeys()</code> 方法返回的数组成员，只能是字符串或 Symbol 值。如果有其他类型的值，或者返回的根本不是数组，就会报错。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">ownKeys</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token number">123</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token keyword">undefined</span><span class="token punctuation">,</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+<span class="token comment">// Uncaught TypeError: 123 is not a valid property name</span>
+</code></pre></div></div> <p>如果目标对象自身包含不可配置的属性，则该属性必须被 <code>ownKeys()</code> 方法返回，否则报错。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">defineProperty</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    configurable<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    enumerable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    value<span class="token operator">:</span> <span class="token number">10</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>obj<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">ownKeys</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token string">'b'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">getOwnPropertyNames</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span>
+<span class="token comment">// Uncaught TypeError: 'ownKeys' on proxy: trap result did not include 'a'</span>
+
+<span class="token comment">// obj对象是不可扩展的，这时ownKeys()方法返回的数组之中，包含了obj对象的多余属性b，所以导致了报错。</span>
+</code></pre></div><h3 id="preventextensions"><a href="#preventextensions" class="header-anchor">#</a> <code>preventExtensions()</code></h3> <blockquote><p><code>preventExtensions()</code> 方法拦截 <code>Object.preventExtensions()</code> 。该方法必须返回一个布尔值，否则会被自动转为布尔值。</p></blockquote> <p>这个方法有一个限制，只有目标对象不可扩展时（即 <code>Object.isExtensible(proxy)</code> 为false）， <code>proxy.preventExtensions</code> 才能返回true，否则会报错。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">preventExtensions</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">target</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Object<span class="token punctuation">.</span><span class="token function">preventExtensions</span><span class="token punctuation">(</span>proxy<span class="token punctuation">)</span>
+<span class="token comment">// Uncaught TypeError: 'preventExtensions' on proxy: trap returned truish but the proxy target is extensible</span>
+</code></pre></div><h3 id="setprototypeof"><a href="#setprototypeof" class="header-anchor">#</a> <code>setPrototypeOf()</code></h3> <blockquote><p>setPrototypeOf()方法主要用来拦截Object.setPrototypeOf()方法。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">setPrototypeOf</span><span class="token punctuation">(</span><span class="token parameter">target<span class="token punctuation">,</span> proto</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">Error</span><span class="token punctuation">(</span><span class="token string">'Changing the prototype is forbidden'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> proto <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> <span class="token function-variable function">target</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">setPrototypeOf</span><span class="token punctuation">(</span>proxy<span class="token punctuation">,</span> proto<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Error: Changing the prototype is forbidden</span>
+</code></pre></div><h2 id="proxy-revocable"><a href="#proxy-revocable" class="header-anchor">#</a> <code>Proxy.revocable()</code></h2> <blockquote><p><code>Proxy.revocable()</code> 方法返回一个可取消的 Proxy 实例。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> target <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">let</span> <span class="token punctuation">{</span>
+    proxy<span class="token punctuation">,</span>
+    revoke
+<span class="token punctuation">}</span> <span class="token operator">=</span> Proxy<span class="token punctuation">.</span><span class="token function">revocable</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+proxy<span class="token punctuation">.</span>foo <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+proxy<span class="token punctuation">.</span>foo <span class="token comment">// 123</span>
+
+<span class="token function">revoke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+proxy<span class="token punctuation">.</span>foo <span class="token comment">// TypeError: Revoked</span>
+</code></pre></div><p><code>Proxy.revocable()</code> 方法返回一个对象，该对象的 <code>proxy</code> 属性是 <code>Proxy</code> 实例， <code>revoke</code> 属性是一个函数，可以取消 <code>Proxy</code> 实例。上面代码中，当执行 <code>revoke</code> 函数之后，再访问 <code>Proxy</code> 实例，就会抛出一个错误。</p> <p><code>Proxy.revocable()</code> 的一个使用场景是，目标对象不允许直接访问，必须通过代理访问，一旦访问结束，就收回代理权，不允许再次访问。</p> <h2 id="this-问题"><a href="#this-问题" class="header-anchor">#</a> <code>this</code> 问题</h2> <blockquote><p>虽然 <code>Proxy</code> 可以代理针对目标对象的访问，但它不是目标对象的透明代理，即不做任何拦截的情况下，也无法保证与目标对象的行为一致。主要原因就是在 <code>Proxy</code> 代理的情况下，目标对象内部的 <code>this</code> 关键字会指向 <code>Proxy</code> 代理。</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> target <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function-variable function">m</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> proxy<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+target<span class="token punctuation">.</span><span class="token function">m</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// false</span>
+proxy<span class="token punctuation">.</span><span class="token function">m</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// true</span>
+
+<span class="token keyword">const</span> target <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token string">'2015-01-01'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> handler <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token function">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prop <span class="token operator">===</span> <span class="token string">'getDate'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> target<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> Reflect<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> prop<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> proxy <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Proxy</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> handler<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+proxy<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 1</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Javascript/Javascript数据处理/Promise.html" class="prev">
+        Promise
+      </a></span> <span class="next"><a href="/Javascript/Javascript数据处理/Reflect.html">
+        Reflect
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02f4702a.js" defer></script><script src="/assets/js/2.c24528b1.js" defer></script><script src="/assets/js/74.6b5d9fe1.js" defer></script><script src="/assets/js/4.68802046.js" defer></script>
+  </body>
+</html>

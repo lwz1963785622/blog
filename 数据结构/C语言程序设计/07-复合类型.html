@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>结构体 | lwz blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/icon.jpg">
+    <meta name="description" content="一个基于vuepress的技术站点">
+    <meta name="keywords" content="vuepress,blog,主题">
+    
+    <link rel="preload" href="/assets/css/0.styles.c81954a9.css" as="style"><link rel="preload" href="/assets/js/app.02f4702a.js" as="script"><link rel="preload" href="/assets/js/2.c24528b1.js" as="script"><link rel="preload" href="/assets/js/149.73939e51.js" as="script"><link rel="prefetch" href="/assets/js/10.b9f00163.js"><link rel="prefetch" href="/assets/js/100.cea73915.js"><link rel="prefetch" href="/assets/js/101.da736f62.js"><link rel="prefetch" href="/assets/js/102.7007d484.js"><link rel="prefetch" href="/assets/js/103.caa32a93.js"><link rel="prefetch" href="/assets/js/104.49eec9bb.js"><link rel="prefetch" href="/assets/js/105.6dde3492.js"><link rel="prefetch" href="/assets/js/106.e033d988.js"><link rel="prefetch" href="/assets/js/107.85a7f470.js"><link rel="prefetch" href="/assets/js/108.3199b6c2.js"><link rel="prefetch" href="/assets/js/109.053f0eae.js"><link rel="prefetch" href="/assets/js/11.0130a7ca.js"><link rel="prefetch" href="/assets/js/110.ca65e52d.js"><link rel="prefetch" href="/assets/js/111.5681de27.js"><link rel="prefetch" href="/assets/js/112.099e1f8d.js"><link rel="prefetch" href="/assets/js/113.e0d70638.js"><link rel="prefetch" href="/assets/js/114.0bc43b57.js"><link rel="prefetch" href="/assets/js/115.0b956899.js"><link rel="prefetch" href="/assets/js/116.ae8f53e3.js"><link rel="prefetch" href="/assets/js/117.a9349fe5.js"><link rel="prefetch" href="/assets/js/118.ae2cdf8c.js"><link rel="prefetch" href="/assets/js/119.9f6cba9e.js"><link rel="prefetch" href="/assets/js/12.e8df8df5.js"><link rel="prefetch" href="/assets/js/120.c28514fb.js"><link rel="prefetch" href="/assets/js/121.43d5b226.js"><link rel="prefetch" href="/assets/js/122.d5150570.js"><link rel="prefetch" href="/assets/js/123.3b5271e5.js"><link rel="prefetch" href="/assets/js/124.69c11252.js"><link rel="prefetch" href="/assets/js/125.a84bab86.js"><link rel="prefetch" href="/assets/js/126.feec0868.js"><link rel="prefetch" href="/assets/js/127.988ef89c.js"><link rel="prefetch" href="/assets/js/128.6d787bd5.js"><link rel="prefetch" href="/assets/js/129.e9bae44d.js"><link rel="prefetch" href="/assets/js/13.8e202000.js"><link rel="prefetch" href="/assets/js/130.a531a070.js"><link rel="prefetch" href="/assets/js/131.081e4aba.js"><link rel="prefetch" href="/assets/js/132.117ede7a.js"><link rel="prefetch" href="/assets/js/133.9b262135.js"><link rel="prefetch" href="/assets/js/134.7d3c77e3.js"><link rel="prefetch" href="/assets/js/135.4a152353.js"><link rel="prefetch" href="/assets/js/136.2cdd93f9.js"><link rel="prefetch" href="/assets/js/137.c8ae1cb5.js"><link rel="prefetch" href="/assets/js/138.20ad0617.js"><link rel="prefetch" href="/assets/js/139.d02a0237.js"><link rel="prefetch" href="/assets/js/14.f6d60bde.js"><link rel="prefetch" href="/assets/js/140.e61d9473.js"><link rel="prefetch" href="/assets/js/141.9ab7f428.js"><link rel="prefetch" href="/assets/js/142.d0dc8e5b.js"><link rel="prefetch" href="/assets/js/143.3cae2afe.js"><link rel="prefetch" href="/assets/js/144.f218366b.js"><link rel="prefetch" href="/assets/js/145.e069c18b.js"><link rel="prefetch" href="/assets/js/146.9751fb0e.js"><link rel="prefetch" href="/assets/js/147.41f034cf.js"><link rel="prefetch" href="/assets/js/148.66f7fa5b.js"><link rel="prefetch" href="/assets/js/15.bb4953e9.js"><link rel="prefetch" href="/assets/js/150.cca5c5b9.js"><link rel="prefetch" href="/assets/js/151.9812ce26.js"><link rel="prefetch" href="/assets/js/152.b28a65a8.js"><link rel="prefetch" href="/assets/js/153.8f86ed47.js"><link rel="prefetch" href="/assets/js/154.b93f993a.js"><link rel="prefetch" href="/assets/js/155.bb3edc10.js"><link rel="prefetch" href="/assets/js/156.f91d2146.js"><link rel="prefetch" href="/assets/js/157.19160896.js"><link rel="prefetch" href="/assets/js/158.645322e6.js"><link rel="prefetch" href="/assets/js/16.2ded9e3a.js"><link rel="prefetch" href="/assets/js/17.91bc2bfc.js"><link rel="prefetch" href="/assets/js/18.16b54a36.js"><link rel="prefetch" href="/assets/js/19.40e748ba.js"><link rel="prefetch" href="/assets/js/20.934d8e27.js"><link rel="prefetch" href="/assets/js/21.a593ad30.js"><link rel="prefetch" href="/assets/js/22.65ebbfb0.js"><link rel="prefetch" href="/assets/js/23.22197f5b.js"><link rel="prefetch" href="/assets/js/24.b5a12bf8.js"><link rel="prefetch" href="/assets/js/25.8d9e5c92.js"><link rel="prefetch" href="/assets/js/26.54dcbfd9.js"><link rel="prefetch" href="/assets/js/27.77667eb4.js"><link rel="prefetch" href="/assets/js/28.5a220ac8.js"><link rel="prefetch" href="/assets/js/29.033c82ef.js"><link rel="prefetch" href="/assets/js/3.ae4e21c4.js"><link rel="prefetch" href="/assets/js/30.eb479c9b.js"><link rel="prefetch" href="/assets/js/31.ca4b95d9.js"><link rel="prefetch" href="/assets/js/32.7a8b933a.js"><link rel="prefetch" href="/assets/js/33.16198774.js"><link rel="prefetch" href="/assets/js/34.619cc9df.js"><link rel="prefetch" href="/assets/js/35.e5f38e51.js"><link rel="prefetch" href="/assets/js/36.055b08ad.js"><link rel="prefetch" href="/assets/js/37.94b4517d.js"><link rel="prefetch" href="/assets/js/38.11c6f847.js"><link rel="prefetch" href="/assets/js/39.ead00e84.js"><link rel="prefetch" href="/assets/js/4.68802046.js"><link rel="prefetch" href="/assets/js/40.90724f30.js"><link rel="prefetch" href="/assets/js/41.57f1e3dc.js"><link rel="prefetch" href="/assets/js/42.81f99fce.js"><link rel="prefetch" href="/assets/js/43.9487db37.js"><link rel="prefetch" href="/assets/js/44.f55f4942.js"><link rel="prefetch" href="/assets/js/45.0840f7d0.js"><link rel="prefetch" href="/assets/js/46.77e4b1e0.js"><link rel="prefetch" href="/assets/js/47.106e5a77.js"><link rel="prefetch" href="/assets/js/48.a0241697.js"><link rel="prefetch" href="/assets/js/49.bfcba80c.js"><link rel="prefetch" href="/assets/js/5.37cdb3ec.js"><link rel="prefetch" href="/assets/js/50.a48aa373.js"><link rel="prefetch" href="/assets/js/51.6eb81d97.js"><link rel="prefetch" href="/assets/js/52.9a4f7c44.js"><link rel="prefetch" href="/assets/js/53.836a2cd9.js"><link rel="prefetch" href="/assets/js/54.20f7c514.js"><link rel="prefetch" href="/assets/js/55.3c9b093e.js"><link rel="prefetch" href="/assets/js/56.2a08ee39.js"><link rel="prefetch" href="/assets/js/57.77b5ae2f.js"><link rel="prefetch" href="/assets/js/58.e13e6489.js"><link rel="prefetch" href="/assets/js/59.fff9f852.js"><link rel="prefetch" href="/assets/js/6.0125fdab.js"><link rel="prefetch" href="/assets/js/60.571542be.js"><link rel="prefetch" href="/assets/js/61.dc24c738.js"><link rel="prefetch" href="/assets/js/62.60b8fbc3.js"><link rel="prefetch" href="/assets/js/63.aebd9e95.js"><link rel="prefetch" href="/assets/js/64.8ca6835f.js"><link rel="prefetch" href="/assets/js/65.785ed38d.js"><link rel="prefetch" href="/assets/js/66.87713e0f.js"><link rel="prefetch" href="/assets/js/67.5c8e2954.js"><link rel="prefetch" href="/assets/js/68.1f624172.js"><link rel="prefetch" href="/assets/js/69.78d43f46.js"><link rel="prefetch" href="/assets/js/7.4afff234.js"><link rel="prefetch" href="/assets/js/70.b570a6a2.js"><link rel="prefetch" href="/assets/js/71.2c924482.js"><link rel="prefetch" href="/assets/js/72.124dc4e8.js"><link rel="prefetch" href="/assets/js/73.92f70cb3.js"><link rel="prefetch" href="/assets/js/74.6b5d9fe1.js"><link rel="prefetch" href="/assets/js/75.da5db3e1.js"><link rel="prefetch" href="/assets/js/76.270c7b88.js"><link rel="prefetch" href="/assets/js/77.0ba8904d.js"><link rel="prefetch" href="/assets/js/78.3eabaf04.js"><link rel="prefetch" href="/assets/js/79.c8b0b5f9.js"><link rel="prefetch" href="/assets/js/8.b4a0f119.js"><link rel="prefetch" href="/assets/js/80.175a52a1.js"><link rel="prefetch" href="/assets/js/81.eba4eaf6.js"><link rel="prefetch" href="/assets/js/82.aa662044.js"><link rel="prefetch" href="/assets/js/83.22e8b612.js"><link rel="prefetch" href="/assets/js/84.43fc0353.js"><link rel="prefetch" href="/assets/js/85.f2fd33cd.js"><link rel="prefetch" href="/assets/js/86.0a8b597e.js"><link rel="prefetch" href="/assets/js/87.3b53f85c.js"><link rel="prefetch" href="/assets/js/88.d64e22ce.js"><link rel="prefetch" href="/assets/js/89.4f769098.js"><link rel="prefetch" href="/assets/js/9.aa469d74.js"><link rel="prefetch" href="/assets/js/90.0d8441e7.js"><link rel="prefetch" href="/assets/js/91.ab195f73.js"><link rel="prefetch" href="/assets/js/92.6d724bfd.js"><link rel="prefetch" href="/assets/js/93.cc667cae.js"><link rel="prefetch" href="/assets/js/94.028e3379.js"><link rel="prefetch" href="/assets/js/95.309a85ce.js"><link rel="prefetch" href="/assets/js/96.34028f84.js"><link rel="prefetch" href="/assets/js/97.e6147dce.js"><link rel="prefetch" href="/assets/js/98.032e4ad8.js"><link rel="prefetch" href="/assets/js/99.cbebf64f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c81954a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">lwz blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" aria-current="page" class="sidebar-link">首页</a></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>C语言程序设计</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/数据结构/C语言程序设计/00-数据类型.html" class="sidebar-link">数据类型</a></li><li><a href="/数据结构/C语言程序设计/01-运算符与表达式.html" class="sidebar-link">运算符与表达式</a></li><li><a href="/数据结构/C语言程序设计/02-流程结构.html" class="sidebar-link">流程结构</a></li><li><a href="/数据结构/C语言程序设计/03-数组和字符串.html" class="sidebar-link">数组和字符串</a></li><li><a href="/数据结构/C语言程序设计/04-函数.html" class="sidebar-link">函数</a></li><li><a href="/数据结构/C语言程序设计/05-指针.html" class="sidebar-link">指针</a></li><li><a href="/数据结构/C语言程序设计/06-内存管理.html" class="sidebar-link">内存管理</a></li><li><a href="/数据结构/C语言程序设计/07-复合类型.html" class="active sidebar-link">复合类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#结构体" class="sidebar-link">结构体</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#结构体的定义和初始化" class="sidebar-link">结构体的定义和初始化</a></li><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#结构体成员的使用" class="sidebar-link">结构体成员的使用</a></li><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#结构体数组" class="sidebar-link">结构体数组</a></li><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#结构体互相嵌套" class="sidebar-link">结构体互相嵌套</a></li><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#结构体赋值" class="sidebar-link">结构体赋值</a></li><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#结构体指针" class="sidebar-link">结构体指针</a></li><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#结构体做函数参数" class="sidebar-link">结构体做函数参数</a></li></ul></li><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#共用体-联合体" class="sidebar-link">共用体(联合体)</a></li><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#枚举" class="sidebar-link">枚举</a></li><li class="sidebar-sub-header"><a href="/数据结构/C语言程序设计/07-复合类型.html#typedef" class="sidebar-link">typedef</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>排序</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/数据结构/排序/00-基本概念.html" class="sidebar-link">基本概念</a></li><li><a href="/数据结构/排序/01-插入排序.html" class="sidebar-link">插入排序</a></li><li><a href="/数据结构/排序/02-希尔排序.html" class="sidebar-link">希尔排序</a></li><li><a href="/数据结构/排序/03-冒泡排序.html" class="sidebar-link">冒泡排序</a></li><li><a href="/数据结构/排序/04-快速排序.html" class="sidebar-link">快速排序</a></li><li><a href="/数据结构/排序/05-简单排序.html" class="sidebar-link">简单排序</a></li><li><a href="/数据结构/排序/06-堆排序.html" class="sidebar-link">堆排序</a></li><li><a href="/数据结构/排序/07-归并排序.html" class="sidebar-link">归并排序</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="结构体"><a href="#结构体" class="header-anchor">#</a> 结构体</h2> <blockquote><p>C语言中的结构体是一种构造数据类型，它可以存储不同类型的数据项，这些数据项可以是基本数据类型，也可以是构造数据类型，甚至可以是结构体类型。</p></blockquote> <p><strong>示例</strong></p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">struct</span> <span class="token class-name">MyStruct</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> c<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">struct</span> <span class="token class-name">MyStruct</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">1.1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">struct</span> <span class="token class-name">MyStruct</span> s2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">2.2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.a = %d\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.b = %c\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.c = %f\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.a = %d\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.b = %c\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.c = %f\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="结构体的定义和初始化"><a href="#结构体的定义和初始化" class="header-anchor">#</a> 结构体的定义和初始化</h3> <p>定义结构体变量的方式：</p> <ul><li><code>struct 结构体类型名 变量名;</code></li> <li><code>struct 结构体类型名 变量名 = {成员1的初始值, 成员2的初始值, ...};</code></li> <li>直接定义结构体变量的成员(无需结构体类型名)</li></ul> <p><strong>示例：</strong></p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token comment">// `struct 结构体类型名 变量名;`</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">MyStruct1</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> c<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span> 
+<span class="token keyword">struct</span> <span class="token class-name">MyStruct1</span> s0<span class="token punctuation">;</span> 
+
+<span class="token comment">// `struct 结构体类型名 变量名 = {成员1的初始值, 成员2的初始值, ...};`</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">MyStruct2</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> c<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">1.1</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
+
+<span class="token comment">// 直接定义结构体变量的成员(无需结构体类型名)</span>
+<span class="token keyword">struct</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> c<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span> s2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">2.2</span><span class="token punctuation">}</span><span class="token punctuation">;</span> 
+
+</code></pre></div><p><strong>结构体类型和结构体变量关系</strong></p> <ul><li>结构体类型：指定一个结构体的类型，可以定义多个结构体变量。没有具体数据，只是一个模板。系统也不分配内存。</li> <li>结构体变量：根据结构体类型定义的变量，有具体的数据，系统会分配内存。</li></ul> <p><strong>结构体类型定义的方式</strong></p> <ul><li><code>struct 结构体类型名 {成员列表};</code></li> <li><code>typedef struct 结构体类型名 {成员列表} 结构体类型别名;</code></li></ul> <p><strong>示例：</strong></p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token comment">// `struct 结构体类型名 {成员列表};`</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">MyStruct1</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> c<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// `typedef struct 结构体类型名 {成员列表} 结构体类型别名;`</span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">MyStruct2</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> c<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span> MyStruct2<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">struct</span> <span class="token class-name">MyStruct1</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">,</span> <span class="token number">1.1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    MyStruct2 s2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">'b'</span><span class="token punctuation">,</span> <span class="token number">2.2</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.a = %d\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.b = %c\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.c = %f\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.a = %d\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.b = %c\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.c = %f\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="结构体成员的使用"><a href="#结构体成员的使用" class="header-anchor">#</a> 结构体成员的使用</h3> <div class="language-c extra-class"><pre class="language-c"><code>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+<span class="token comment">// 结构体的定义</span>
+<span class="token keyword">struct</span> <span class="token class-name">Student</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">// 结构体变量的定义</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> s2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体变量的使用</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.name = %s\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.age = %d\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.score = %f\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.name = %s\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.age = %d\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.score = %f\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体变量的赋值</span>
+    <span class="token function">strcpy</span><span class="token punctuation">(</span>s2<span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token string">&quot;王五&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    s2<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+    s2<span class="token punctuation">.</span>score <span class="token operator">=</span> <span class="token number">80</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 如果是指针变量</span>
+    <span class="token function">strcpy</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>s2<span class="token operator">-&gt;</span>name<span class="token punctuation">,</span> <span class="token string">&quot;王五&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>s2<span class="token operator">-&gt;</span>age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.name = %s\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.age = %d\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.score = %f\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="结构体数组"><a href="#结构体数组" class="header-anchor">#</a> 结构体数组</h3> <div class="language-c extra-class"><pre class="language-c"><code>  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+  <span class="token comment">// 结构体的定义</span>
+  <span class="token keyword">struct</span> <span class="token class-name">Student</span>
+  <span class="token punctuation">{</span>
+
+      <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+      <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">;</span> 
+
+  <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+      <span class="token comment">// 结构体数组的定义</span>
+      <span class="token keyword">struct</span> <span class="token class-name">Student</span> arr<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+          <span class="token punctuation">{</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span><span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span><span class="token string">&quot;王五&quot;</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 结构体数组的使用</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span>
+          <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d].name = %s\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d].age = %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d].score = %f\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+
+      <span class="token comment">// 结构体数组的赋值</span>
+      <span class="token function">strcpy</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token string">&quot;赵六&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">21</span><span class="token punctuation">;</span>
+      arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>score <span class="token operator">=</span> <span class="token number">70</span><span class="token punctuation">;</span>
+
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[2].name = %s\n&quot;</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[2].age = %d\n&quot;</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[2].score = %f\n&quot;</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="结构体互相嵌套"><a href="#结构体互相嵌套" class="header-anchor">#</a> 结构体互相嵌套</h3> <div class="language-c extra-class"><pre class="language-c"><code>  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+  <span class="token comment">// 结构体的定义</span>
+
+  <span class="token keyword">struct</span> <span class="token class-name">Student</span>
+  <span class="token punctuation">{</span>
+
+      <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+      <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">struct</span> <span class="token class-name">Teacher</span>
+  <span class="token punctuation">{</span>
+
+      <span class="token keyword">int</span> id<span class="token punctuation">;</span>
+      <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+      <span class="token keyword">struct</span> <span class="token class-name">Student</span> stu<span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+      <span class="token comment">// 结构体变量的定义</span>
+      <span class="token keyword">struct</span> <span class="token class-name">Teacher</span> t1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 结构体变量的使用</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t1.id = %d\n&quot;</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span>id<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t1.name = %s\n&quot;</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t1.age = %d\n&quot;</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t1.stu.name = %s\n&quot;</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span>stu<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t1.stu.age = %d\n&quot;</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span>stu<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t1.stu.score = %f\n&quot;</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span>stu<span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 结构体变量的赋值</span>
+      <span class="token function">strcpy</span><span class="token punctuation">(</span>t1<span class="token punctuation">.</span>stu<span class="token punctuation">.</span>name<span class="token punctuation">,</span> <span class="token string">&quot;王五&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      t1<span class="token punctuation">.</span>stu<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+      t1<span class="token punctuation">.</span>stu<span class="token punctuation">.</span>score <span class="token operator">=</span> <span class="token number">80</span><span class="token punctuation">;</span>
+
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t1.stu.name = %s\n&quot;</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span>stu<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t1.stu.age = %d\n&quot;</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span>stu<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;t1.stu.score = %f\n&quot;</span><span class="token punctuation">,</span> t1<span class="token punctuation">.</span>stu<span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="结构体赋值"><a href="#结构体赋值" class="header-anchor">#</a> 结构体赋值</h3> <blockquote><p>结构体变量之间可以相互赋值，但是不能相互比较大小</p></blockquote> <div class="language-c extra-class"><pre class="language-c"><code>  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+  <span class="token comment">// 结构体的定义</span>
+  <span class="token keyword">struct</span> <span class="token class-name">Student</span>
+  <span class="token punctuation">{</span>
+
+      <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+      <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+      <span class="token comment">// 结构体变量的定义</span>
+      <span class="token keyword">struct</span> <span class="token class-name">Student</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token keyword">struct</span> <span class="token class-name">Student</span> s2<span class="token punctuation">;</span>
+
+      <span class="token comment">// 结构体变量的赋值</span>
+      s2 <span class="token operator">=</span> s1<span class="token punctuation">;</span>
+
+      <span class="token comment">// 结构体变量的使用</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.name = %s\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.age = %d\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2.score = %f\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="结构体指针"><a href="#结构体指针" class="header-anchor">#</a> 结构体指针</h3> <h4 id="指向普通结构体变量的指针"><a href="#指向普通结构体变量的指针" class="header-anchor">#</a> 指向普通结构体变量的指针</h4> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+<span class="token comment">// 结构体类型的定义</span>
+<span class="token keyword">struct</span> <span class="token class-name">Student</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">// 结构体变量的定义</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体指针的定义</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token operator">&amp;</span>s1<span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体指针的使用</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.name = %s\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.age = %d\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1.score = %f\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;name = %s\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;age = %d\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;score = %f\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;(*p).name = %s\n&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;(*p).age = %d\n&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;(*p).score = %f\n&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="堆区结构体变量"><a href="#堆区结构体变量" class="header-anchor">#</a> 堆区结构体变量</h4> <div class="language-c extra-class"><pre class="language-c"><code>  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+  <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+  <span class="token comment">// 结构体类型的定义</span>
+
+  <span class="token keyword">struct</span> <span class="token class-name">Student</span>
+  <span class="token punctuation">{</span>
+
+      <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+      <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+      <span class="token comment">// 结构体指针的定义</span>
+      <span class="token keyword">struct</span> <span class="token class-name">Student</span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">Student</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">// 结构体指针的使用</span>
+      <span class="token function">strcpy</span><span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>name<span class="token punctuation">,</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      p<span class="token operator">-&gt;</span>age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+      p<span class="token operator">-&gt;</span>score <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;name = %s\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;age = %d\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;score = %f\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="结构体套一级指针"><a href="#结构体套一级指针" class="header-anchor">#</a> 结构体套一级指针</h4> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token comment">// 结构体类型的定义</span>
+<span class="token keyword">struct</span> <span class="token class-name">Student</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">char</span> <span class="token operator">*</span>name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">// 结构体指针的定义</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> <span class="token operator">*</span>p <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">Student</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体指针的使用</span>
+    <span class="token function">strcpy</span><span class="token punctuation">(</span>p<span class="token operator">-&gt;</span>name<span class="token punctuation">,</span> <span class="token string">&quot;张三&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p<span class="token operator">-&gt;</span>age <span class="token operator">=</span> <span class="token number">18</span><span class="token punctuation">;</span>
+    p<span class="token operator">-&gt;</span>score <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;name = %s\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;age = %d\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;score = %f\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h3 id="结构体做函数参数"><a href="#结构体做函数参数" class="header-anchor">#</a> 结构体做函数参数</h3> <h4 id="结构体普通变量做函数参数"><a href="#结构体普通变量做函数参数" class="header-anchor">#</a> 结构体普通变量做函数参数</h4> <div class="language-c extra-class"><pre class="language-c"><code>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+<span class="token comment">// 结构体类型的定义</span>
+<span class="token keyword">struct</span> <span class="token class-name">Student</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 结构体变量做函数参数</span>
+
+<span class="token keyword">void</span> <span class="token function">printStudent</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">Student</span> s<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s.name = %s\n&quot;</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s.age = %d\n&quot;</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s.score = %f\n&quot;</span><span class="token punctuation">,</span> s<span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">// 结构体变量的定义</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体变量做函数参数</span>
+    <span class="token function">printStudent</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="结构体指针做函数参数"><a href="#结构体指针做函数参数" class="header-anchor">#</a> 结构体指针做函数参数</h4> <div class="language-c extra-class"><pre class="language-c"><code>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+<span class="token comment">// 结构体类型的定义</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">Student</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 结构体指针做函数参数</span>
+
+<span class="token keyword">void</span> <span class="token function">printStudent</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">Student</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;name = %s\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;age = %d\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;score = %f\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">// 结构体变量的定义</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体指针做函数参数</span>
+    <span class="token function">printStudent</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="结构体数组做函数参数"><a href="#结构体数组做函数参数" class="header-anchor">#</a> 结构体数组做函数参数</h4> <div class="language-c extra-class"><pre class="language-c"><code>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+<span class="token comment">// 结构体类型的定义</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">Student</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 结构体数组做函数参数</span>
+
+<span class="token keyword">void</span> <span class="token function">printStudent</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">Student</span> arr<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d].name = %s\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d].age = %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d].score = %f\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">// 结构体数组的定义</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> arr<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">{</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span><span class="token string">&quot;王五&quot;</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体数组做函数参数</span>
+    <span class="token function">printStudent</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="结构体指针数组做函数参数"><a href="#结构体指针数组做函数参数" class="header-anchor">#</a> 结构体指针数组做函数参数</h4> <div class="language-c extra-class"><pre class="language-c"><code>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+<span class="token comment">// 结构体类型的定义</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">Student</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 结构体指针数组做函数参数</span>
+
+<span class="token keyword">void</span> <span class="token function">printStudent</span><span class="token punctuation">(</span><span class="token keyword">struct</span> <span class="token class-name">Student</span> <span class="token operator">*</span>arr<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token keyword">int</span> len<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> len<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d]-&gt;name = %s\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d]-&gt;age = %d\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-&gt;</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;arr[%d]-&gt;score = %f\n&quot;</span><span class="token punctuation">,</span> i<span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-&gt;</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">// 结构体数组的定义</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> s2 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;李四&quot;</span><span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">,</span> <span class="token number">90</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> s3 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;王五&quot;</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">80</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> <span class="token operator">*</span>arr<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token operator">&amp;</span>s1<span class="token punctuation">,</span> <span class="token operator">&amp;</span>s2<span class="token punctuation">,</span> <span class="token operator">&amp;</span>s3<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体指针数组做函数参数</span>
+    <span class="token function">printStudent</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h4 id="const-修饰结构体指针做函数参数"><a href="#const-修饰结构体指针做函数参数" class="header-anchor">#</a> <code>const</code> 修饰结构体指针做函数参数</h4> <div class="language-c extra-class"><pre class="language-c"><code>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;string.h&gt;</span></span>
+
+<span class="token comment">// 结构体类型的定义</span>
+
+<span class="token keyword">struct</span> <span class="token class-name">Student</span>
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> age<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> score<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 结构体指针做函数参数</span>
+
+<span class="token keyword">void</span> <span class="token function">printStudent</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">struct</span> <span class="token class-name">Student</span> <span class="token operator">*</span>p<span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;name = %s\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;age = %d\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;p-&gt;score = %f\n&quot;</span><span class="token punctuation">,</span> p<span class="token operator">-&gt;</span>score<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    p<span class="token operator">-&gt;</span>age <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span> <span class="token comment">// error</span>
+
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token comment">// 结构体变量的定义</span>
+    <span class="token keyword">struct</span> <span class="token class-name">Student</span> s1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;张三&quot;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 结构体指针做函数参数</span>
+    <span class="token function">printStudent</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="共用体-联合体"><a href="#共用体-联合体" class="header-anchor">#</a> 共用体(联合体)</h2> <ul><li>共用体是一种特殊的数据类型，允许在相同的内存位置存储不同的数据类型。</li> <li>可以定义一个带有多成员的共用体，但是任何时候只能有一个成员带有值，共用体提供了一种使用相同的内存位置的有效方式。</li> <li>共用体占用的内存应足够存储共用体中最大的成员。</li> <li>共用体的声明和结构体类似，但是必须使用<code>union</code>关键字。</li> <li>共用体的初始化和结构体类似，但是只能初始化第一个成员。</li> <li>共用体的成员地址和其他成员地址相同，共用体的成员地址和共用体变量地址相同。</li></ul> <p><strong>示例：</strong></p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">union</span> MyUnion
+<span class="token punctuation">{</span>
+
+    <span class="token keyword">int</span> a<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> b<span class="token punctuation">;</span>
+    <span class="token keyword">float</span> c<span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">union</span> MyUnion u1 <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;u1.a = %d\n&quot;</span><span class="token punctuation">,</span> u1<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;u1.b = %c\n&quot;</span><span class="token punctuation">,</span> u1<span class="token punctuation">.</span>b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;u1.c = %f\n&quot;</span><span class="token punctuation">,</span> u1<span class="token punctuation">.</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//所有成员的地址都是一样的</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;&amp;u1.a = %p\n&quot;</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>u1<span class="token punctuation">.</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="枚举"><a href="#枚举" class="header-anchor">#</a> 枚举</h2> <ul><li>枚举是一种用户自定义的数据类型，用于定义变量，可以将变量的值一一列举出来。</li> <li>枚举的每个值都可以叫做枚举的一个成员，每个成员都可以赋予一个值，如果没有赋值，系统会默认赋值。</li> <li>枚举的定义和结构体类似，但是必须使用<code>enum</code>关键字。</li> <li>枚举值是常量，不能在程序中用赋值语句再对它赋值</li> <li>枚举值的默认值从0开始，依次加1，如果前面一个成员赋值，后面没有赋值的成员会在前一个成员的基础上加1。</li></ul> <p><strong>示例：</strong></p> <div class="language-c extra-class"><pre class="language-c"><code><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">enum</span> <span class="token class-name">Season</span>
+<span class="token punctuation">{</span>
+
+    spring<span class="token punctuation">,</span>
+    summer<span class="token punctuation">,</span>
+    autumn<span class="token punctuation">,</span>
+    winter
+
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    <span class="token keyword">enum</span> <span class="token class-name">Season</span> s1 <span class="token operator">=</span> spring<span class="token punctuation">;</span>
+    <span class="token keyword">enum</span> <span class="token class-name">Season</span> s2 <span class="token operator">=</span> summer<span class="token punctuation">;</span>
+    <span class="token keyword">enum</span> <span class="token class-name">Season</span> s3 <span class="token operator">=</span> autumn<span class="token punctuation">;</span>
+    <span class="token keyword">enum</span> <span class="token class-name">Season</span> s4 <span class="token operator">=</span> winter<span class="token punctuation">;</span>
+
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s1 = %d\n&quot;</span><span class="token punctuation">,</span> s1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s2 = %d\n&quot;</span><span class="token punctuation">,</span> s2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s3 = %d\n&quot;</span><span class="token punctuation">,</span> s3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;s4 = %d\n&quot;</span><span class="token punctuation">,</span> s4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div><h2 id="typedef"><a href="#typedef" class="header-anchor">#</a> typedef</h2> <blockquote><p><code>typedef</code> 是C语言中的一个关键字，用来为类型取一个新的名字，可以使用 <code>typedef</code> 为 <code>int</code> 取一个新的名字叫 <code>myInt</code> ，这样以后就可以用 <code>myInt</code> 来定义变量了。</p></blockquote> <ul><li><code>typedef</code>的作用是为一种数据类型定义一个新的名字，可以使用这个新的名字来定义变量。</li> <li><code>typedef</code>的语法：<code>typedef 数据类型 新名字;</code></li> <li><code>typedef</code>的本质是给数据类型起一个别名，本质上是一个宏定义。</li> <li><code>typedef</code>仅限于为数据类型定义别名，不能为变量定义别名。</li></ul> <p><strong>示例：</strong></p> <div class="language-c extra-class"><pre class="language-c"><code>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+
+<span class="token keyword">typedef</span> <span class="token keyword">int</span> myInt<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+
+    myInt a <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">&quot;a = %d\n&quot;</span><span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/数据结构/C语言程序设计/06-内存管理.html" class="prev">
+        内存管理
+      </a></span> <span class="next"><a href="/数据结构/排序/00-基本概念.html">
+        基本概念
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02f4702a.js" defer></script><script src="/assets/js/2.c24528b1.js" defer></script><script src="/assets/js/149.73939e51.js" defer></script>
+  </body>
+</html>

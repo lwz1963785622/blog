@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Npm的常用命令 | lwz blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/icon.jpg">
+    <meta name="description" content="一个基于vuepress的技术站点">
+    <meta name="keywords" content="vuepress,blog,主题">
+    
+    <link rel="preload" href="/assets/css/0.styles.c81954a9.css" as="style"><link rel="preload" href="/assets/js/app.02f4702a.js" as="script"><link rel="preload" href="/assets/js/2.c24528b1.js" as="script"><link rel="preload" href="/assets/js/86.0a8b597e.js" as="script"><link rel="prefetch" href="/assets/js/10.b9f00163.js"><link rel="prefetch" href="/assets/js/100.cea73915.js"><link rel="prefetch" href="/assets/js/101.da736f62.js"><link rel="prefetch" href="/assets/js/102.7007d484.js"><link rel="prefetch" href="/assets/js/103.caa32a93.js"><link rel="prefetch" href="/assets/js/104.49eec9bb.js"><link rel="prefetch" href="/assets/js/105.6dde3492.js"><link rel="prefetch" href="/assets/js/106.e033d988.js"><link rel="prefetch" href="/assets/js/107.85a7f470.js"><link rel="prefetch" href="/assets/js/108.3199b6c2.js"><link rel="prefetch" href="/assets/js/109.053f0eae.js"><link rel="prefetch" href="/assets/js/11.0130a7ca.js"><link rel="prefetch" href="/assets/js/110.ca65e52d.js"><link rel="prefetch" href="/assets/js/111.5681de27.js"><link rel="prefetch" href="/assets/js/112.099e1f8d.js"><link rel="prefetch" href="/assets/js/113.e0d70638.js"><link rel="prefetch" href="/assets/js/114.0bc43b57.js"><link rel="prefetch" href="/assets/js/115.0b956899.js"><link rel="prefetch" href="/assets/js/116.ae8f53e3.js"><link rel="prefetch" href="/assets/js/117.a9349fe5.js"><link rel="prefetch" href="/assets/js/118.ae2cdf8c.js"><link rel="prefetch" href="/assets/js/119.9f6cba9e.js"><link rel="prefetch" href="/assets/js/12.e8df8df5.js"><link rel="prefetch" href="/assets/js/120.c28514fb.js"><link rel="prefetch" href="/assets/js/121.43d5b226.js"><link rel="prefetch" href="/assets/js/122.d5150570.js"><link rel="prefetch" href="/assets/js/123.3b5271e5.js"><link rel="prefetch" href="/assets/js/124.69c11252.js"><link rel="prefetch" href="/assets/js/125.a84bab86.js"><link rel="prefetch" href="/assets/js/126.feec0868.js"><link rel="prefetch" href="/assets/js/127.988ef89c.js"><link rel="prefetch" href="/assets/js/128.6d787bd5.js"><link rel="prefetch" href="/assets/js/129.e9bae44d.js"><link rel="prefetch" href="/assets/js/13.8e202000.js"><link rel="prefetch" href="/assets/js/130.a531a070.js"><link rel="prefetch" href="/assets/js/131.081e4aba.js"><link rel="prefetch" href="/assets/js/132.117ede7a.js"><link rel="prefetch" href="/assets/js/133.9b262135.js"><link rel="prefetch" href="/assets/js/134.7d3c77e3.js"><link rel="prefetch" href="/assets/js/135.4a152353.js"><link rel="prefetch" href="/assets/js/136.2cdd93f9.js"><link rel="prefetch" href="/assets/js/137.c8ae1cb5.js"><link rel="prefetch" href="/assets/js/138.20ad0617.js"><link rel="prefetch" href="/assets/js/139.d02a0237.js"><link rel="prefetch" href="/assets/js/14.f6d60bde.js"><link rel="prefetch" href="/assets/js/140.e61d9473.js"><link rel="prefetch" href="/assets/js/141.9ab7f428.js"><link rel="prefetch" href="/assets/js/142.d0dc8e5b.js"><link rel="prefetch" href="/assets/js/143.3cae2afe.js"><link rel="prefetch" href="/assets/js/144.f218366b.js"><link rel="prefetch" href="/assets/js/145.e069c18b.js"><link rel="prefetch" href="/assets/js/146.9751fb0e.js"><link rel="prefetch" href="/assets/js/147.41f034cf.js"><link rel="prefetch" href="/assets/js/148.66f7fa5b.js"><link rel="prefetch" href="/assets/js/149.73939e51.js"><link rel="prefetch" href="/assets/js/15.bb4953e9.js"><link rel="prefetch" href="/assets/js/150.cca5c5b9.js"><link rel="prefetch" href="/assets/js/151.9812ce26.js"><link rel="prefetch" href="/assets/js/152.b28a65a8.js"><link rel="prefetch" href="/assets/js/153.8f86ed47.js"><link rel="prefetch" href="/assets/js/154.b93f993a.js"><link rel="prefetch" href="/assets/js/155.bb3edc10.js"><link rel="prefetch" href="/assets/js/156.f91d2146.js"><link rel="prefetch" href="/assets/js/157.19160896.js"><link rel="prefetch" href="/assets/js/158.645322e6.js"><link rel="prefetch" href="/assets/js/16.2ded9e3a.js"><link rel="prefetch" href="/assets/js/17.91bc2bfc.js"><link rel="prefetch" href="/assets/js/18.16b54a36.js"><link rel="prefetch" href="/assets/js/19.40e748ba.js"><link rel="prefetch" href="/assets/js/20.934d8e27.js"><link rel="prefetch" href="/assets/js/21.a593ad30.js"><link rel="prefetch" href="/assets/js/22.65ebbfb0.js"><link rel="prefetch" href="/assets/js/23.22197f5b.js"><link rel="prefetch" href="/assets/js/24.b5a12bf8.js"><link rel="prefetch" href="/assets/js/25.8d9e5c92.js"><link rel="prefetch" href="/assets/js/26.54dcbfd9.js"><link rel="prefetch" href="/assets/js/27.77667eb4.js"><link rel="prefetch" href="/assets/js/28.5a220ac8.js"><link rel="prefetch" href="/assets/js/29.033c82ef.js"><link rel="prefetch" href="/assets/js/3.ae4e21c4.js"><link rel="prefetch" href="/assets/js/30.eb479c9b.js"><link rel="prefetch" href="/assets/js/31.ca4b95d9.js"><link rel="prefetch" href="/assets/js/32.7a8b933a.js"><link rel="prefetch" href="/assets/js/33.16198774.js"><link rel="prefetch" href="/assets/js/34.619cc9df.js"><link rel="prefetch" href="/assets/js/35.e5f38e51.js"><link rel="prefetch" href="/assets/js/36.055b08ad.js"><link rel="prefetch" href="/assets/js/37.94b4517d.js"><link rel="prefetch" href="/assets/js/38.11c6f847.js"><link rel="prefetch" href="/assets/js/39.ead00e84.js"><link rel="prefetch" href="/assets/js/4.68802046.js"><link rel="prefetch" href="/assets/js/40.90724f30.js"><link rel="prefetch" href="/assets/js/41.57f1e3dc.js"><link rel="prefetch" href="/assets/js/42.81f99fce.js"><link rel="prefetch" href="/assets/js/43.9487db37.js"><link rel="prefetch" href="/assets/js/44.f55f4942.js"><link rel="prefetch" href="/assets/js/45.0840f7d0.js"><link rel="prefetch" href="/assets/js/46.77e4b1e0.js"><link rel="prefetch" href="/assets/js/47.106e5a77.js"><link rel="prefetch" href="/assets/js/48.a0241697.js"><link rel="prefetch" href="/assets/js/49.bfcba80c.js"><link rel="prefetch" href="/assets/js/5.37cdb3ec.js"><link rel="prefetch" href="/assets/js/50.a48aa373.js"><link rel="prefetch" href="/assets/js/51.6eb81d97.js"><link rel="prefetch" href="/assets/js/52.9a4f7c44.js"><link rel="prefetch" href="/assets/js/53.836a2cd9.js"><link rel="prefetch" href="/assets/js/54.20f7c514.js"><link rel="prefetch" href="/assets/js/55.3c9b093e.js"><link rel="prefetch" href="/assets/js/56.2a08ee39.js"><link rel="prefetch" href="/assets/js/57.77b5ae2f.js"><link rel="prefetch" href="/assets/js/58.e13e6489.js"><link rel="prefetch" href="/assets/js/59.fff9f852.js"><link rel="prefetch" href="/assets/js/6.0125fdab.js"><link rel="prefetch" href="/assets/js/60.571542be.js"><link rel="prefetch" href="/assets/js/61.dc24c738.js"><link rel="prefetch" href="/assets/js/62.60b8fbc3.js"><link rel="prefetch" href="/assets/js/63.aebd9e95.js"><link rel="prefetch" href="/assets/js/64.8ca6835f.js"><link rel="prefetch" href="/assets/js/65.785ed38d.js"><link rel="prefetch" href="/assets/js/66.87713e0f.js"><link rel="prefetch" href="/assets/js/67.5c8e2954.js"><link rel="prefetch" href="/assets/js/68.1f624172.js"><link rel="prefetch" href="/assets/js/69.78d43f46.js"><link rel="prefetch" href="/assets/js/7.4afff234.js"><link rel="prefetch" href="/assets/js/70.b570a6a2.js"><link rel="prefetch" href="/assets/js/71.2c924482.js"><link rel="prefetch" href="/assets/js/72.124dc4e8.js"><link rel="prefetch" href="/assets/js/73.92f70cb3.js"><link rel="prefetch" href="/assets/js/74.6b5d9fe1.js"><link rel="prefetch" href="/assets/js/75.da5db3e1.js"><link rel="prefetch" href="/assets/js/76.270c7b88.js"><link rel="prefetch" href="/assets/js/77.0ba8904d.js"><link rel="prefetch" href="/assets/js/78.3eabaf04.js"><link rel="prefetch" href="/assets/js/79.c8b0b5f9.js"><link rel="prefetch" href="/assets/js/8.b4a0f119.js"><link rel="prefetch" href="/assets/js/80.175a52a1.js"><link rel="prefetch" href="/assets/js/81.eba4eaf6.js"><link rel="prefetch" href="/assets/js/82.aa662044.js"><link rel="prefetch" href="/assets/js/83.22e8b612.js"><link rel="prefetch" href="/assets/js/84.43fc0353.js"><link rel="prefetch" href="/assets/js/85.f2fd33cd.js"><link rel="prefetch" href="/assets/js/87.3b53f85c.js"><link rel="prefetch" href="/assets/js/88.d64e22ce.js"><link rel="prefetch" href="/assets/js/89.4f769098.js"><link rel="prefetch" href="/assets/js/9.aa469d74.js"><link rel="prefetch" href="/assets/js/90.0d8441e7.js"><link rel="prefetch" href="/assets/js/91.ab195f73.js"><link rel="prefetch" href="/assets/js/92.6d724bfd.js"><link rel="prefetch" href="/assets/js/93.cc667cae.js"><link rel="prefetch" href="/assets/js/94.028e3379.js"><link rel="prefetch" href="/assets/js/95.309a85ce.js"><link rel="prefetch" href="/assets/js/96.34028f84.js"><link rel="prefetch" href="/assets/js/97.e6147dce.js"><link rel="prefetch" href="/assets/js/98.032e4ad8.js"><link rel="prefetch" href="/assets/js/99.cbebf64f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c81954a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">lwz blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/Node/" class="sidebar-heading clickable router-link-active open"><span>Node</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/Node/npm.html" aria-current="page" class="active sidebar-link">npm</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/npm.html#一、镜像源链接切换" class="sidebar-link">一、镜像源链接切换</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#二、使用-nrm-切换镜像源" class="sidebar-link">二、使用 nrm 切换镜像源</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#三-快速完全删除node-modules" class="sidebar-link">三，快速完全删除node_modules</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#四、npm-v-版本查询" class="sidebar-link">四、npm -v :版本查询</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#五、安装依赖" class="sidebar-link">五、安装依赖</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#其他指令" class="sidebar-link">其他指令</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#git-秘钥" class="sidebar-link">git 秘钥</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/npm.html#设置秘钥" class="sidebar-link">设置秘钥</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#查看路径" class="sidebar-link">查看路径</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#查看公钥" class="sidebar-link">查看公钥</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#新建config" class="sidebar-link">新建config</a></li></ul></li><li class="sidebar-sub-header"><a href="/Node/npm.html#yarn-的使用" class="sidebar-link">yarn 的使用</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/npm.html#yarn-的版本" class="sidebar-link">yarn 的版本</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#yarn-的安装" class="sidebar-link">yarn 的安装</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#初始化一个新项目" class="sidebar-link">初始化一个新项目</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#添加依赖" class="sidebar-link">添加依赖</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#安装依赖的位置" class="sidebar-link">安装依赖的位置</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#升级依赖" class="sidebar-link">升级依赖</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#安装包" class="sidebar-link">安装包</a></li><li class="sidebar-sub-header"><a href="/Node/npm.html#移除依赖包" class="sidebar-link">移除依赖包</a></li></ul></li></ul></li><li><a href="/Node/nvm.html" class="sidebar-link">nvm</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Egg</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Node/Egg/Egg.html" class="sidebar-link">Egg</a></li><li><a href="/Node/Egg/jwt.html" class="sidebar-link">jwt</a></li><li><a href="/Node/Egg/Sequelize.html" class="sidebar-link">Sequelize</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="npm的常用命令"><a href="#npm的常用命令" class="header-anchor">#</a> Npm的常用命令</h1> <h2 id="一、镜像源链接切换"><a href="#一、镜像源链接切换" class="header-anchor">#</a> 一、镜像源链接切换</h2> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">全局切换镜像源：npm config set registry http:<span class="token punctuation">/</span><span class="token punctuation">/</span>registry.npm.taobao.org</span>
+<span class="token entry string">查看镜像源使用状态：npm get registry</span>
+<span class="token entry string">全局切换官方镜像源：npm config set registry http:<span class="token punctuation">/</span><span class="token punctuation">/</span>www.npmjs.org</span>
+</code></pre></div><h2 id="二、使用-nrm-切换镜像源"><a href="#二、使用-nrm-切换镜像源" class="header-anchor">#</a> 二、使用 nrm 切换镜像源</h2> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">下载 nrm：npm install -g nrm</span>
+<span class="token entry string">是否安装成功 nrm -V</span>
+<span class="token entry string">查看可切换的镜像源： nrm ls (<span class="token operator">*</span>表示正在使用的镜像源)</span>
+</code></pre></div><h2 id="三-快速完全删除node-modules"><a href="#三-快速完全删除node-modules" class="header-anchor">#</a> 三，快速完全删除node_modules</h2> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">npm install rimraf -g</span>
+<span class="token entry string">rimraf node_modules</span>
+
+</code></pre></div><h2 id="四、npm-v-版本查询"><a href="#四、npm-v-版本查询" class="header-anchor">#</a> 四、npm -v :版本查询</h2> <h2 id="五、安装依赖"><a href="#五、安装依赖" class="header-anchor">#</a> 五、安装依赖</h2> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">npm install 包名 --save-dev(npm install 包名 -D) ：安装的包只用于开发环境，不用于生产环境</span>
+
+<span class="token entry string">npm install 包名 --save (npm install 包名 -S)：安装的包需要发布到生产环境的</span>
+
+</code></pre></div><h2 id="其他指令"><a href="#其他指令" class="header-anchor">#</a> 其他指令</h2> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">安装<span class="token punctuation">/</span>卸载</span>
+<span class="token entry string">全局安装<span class="token punctuation">/</span>卸载</span>
+<span class="token entry string">npm install <span class="token operator">**</span> -g</span>
+<span class="token entry string">npm uninstall <span class="token operator">**</span> -g</span>
+<span class="token entry string">npm un 同上，别名</span>
+
+<span class="token entry string">npm update -g 更新全部包</span>
+
+
+<span class="token entry string">npm list -g --depth 0 查看全局的包</span>
+
+<span class="token entry string">查看所有全局安装的模块 npm ls -g</span>
+<span class="token entry string">查看npm默认设置（部分） npm config ls</span>
+<span class="token entry string">查看npm默认设置（全部） npm config ls -l</span>
+
+
+<span class="token entry string">修改默认安装目录</span>
+<span class="token entry string">npm config set prefix “D:\ProgramFiles\npm_global_modules\node_modules”</span>
+
+
+<span class="token entry string">npm-check检查更新</span>
+<span class="token entry string">npm install -g npm-check</span>
+<span class="token entry string">npm-check</span>
+
+<span class="token entry string">npm-upgrade更新</span>
+<span class="token entry string">npm install -g npm-upgrade</span>
+<span class="token entry string">npm-upgrade</span>
+
+<span class="token entry string">更新生产环境依赖包：</span>
+<span class="token entry string">npm update --save</span>
+
+<span class="token entry string">更新开发环境依赖包：</span>
+<span class="token entry string">npm update --save-dev</span>
+
+<span class="token entry string">npm link <span class="token regex">[&lt;@scope&gt;/]</span><span class="token regex">[@]</span> 将npm包创建快捷方式到全局npm的路径下</span>
+
+<span class="token entry string">npm outdated 查看当前安装的包里版本是否过期的信息</span>
+
+<span class="token entry string">npm deprecate <span class="token regex">[@]</span> 添加对某个包的某个版本的反对信息。只有owner才可以，安装此包能看到这些反对信息</span>
+
+<span class="token entry string">npm pack 将当前npm包文件打成一个压缩包</span>
+
+<span class="token entry string">npm prune 移除没有定义在package.json 依赖配置上的包</span>
+
+
+<span class="token entry string">npm adduser 添加用户</span>
+<span class="token entry string">npm login 登陆用户</span>
+<span class="token entry string">npm logout 退出当前登陆的npm账号</span>
+
+<span class="token entry string">npm unpublish <span class="token regex">[&lt;@scope&gt;/]</span><span class="token regex">[@]</span> 取消发布包, 将发布的包从远程仓库中删除</span>
+<span class="token entry string">npm publish <span class="token regex">[|]</span> <span class="token regex">[–tag ]</span> <span class="token regex">[–access &lt;public|restricted&gt;]</span> 发布一个包</span>
+
+<span class="token entry string">查看当前npm包的依赖包列表</span>
+<span class="token entry string">npm ls</span>
+<span class="token entry string">npm list</span>
+<span class="token entry string">npm la</span>
+<span class="token entry string">npm ll</span>
+
+
+</code></pre></div><h2 id="git-秘钥"><a href="#git-秘钥" class="header-anchor">#</a> git 秘钥</h2> <h3 id="设置秘钥"><a href="#设置秘钥" class="header-anchor">#</a> 设置秘钥</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">ssh-keygen -t rsa -C '1963785622@qq.com' -f ~<span class="token punctuation">/</span>.ssh<span class="token punctuation">/</span>gub_id_rsa</span>
+</code></pre></div><h3 id="查看路径"><a href="#查看路径" class="header-anchor">#</a> 查看路径</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">where git</span>
+</code></pre></div><h3 id="查看公钥"><a href="#查看公钥" class="header-anchor">#</a> 查看公钥</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">cat gub_id_rsa.pub</span>
+
+</code></pre></div><h3 id="新建config"><a href="#新建config" class="header-anchor">#</a> 新建config</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">touch config</span>
+
+
+<span class="token comment">#github</span>
+<span class="token entry string">Host github.com</span>
+<span class="token entry string">HostName github.com</span>
+<span class="token entry string">PreferredAuthentications publickey</span>
+<span class="token entry string">IdentityFile ~<span class="token punctuation">/</span>.ssh<span class="token punctuation">/</span>gub_id_rsa.pub</span>
+</code></pre></div><h2 id="yarn-的使用"><a href="#yarn-的使用" class="header-anchor">#</a> yarn 的使用</h2> <h3 id="yarn-的版本"><a href="#yarn-的版本" class="header-anchor">#</a> yarn 的版本</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">yarn --version</span>
+</code></pre></div><h3 id="yarn-的安装"><a href="#yarn-的安装" class="header-anchor">#</a> yarn 的安装</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">npm install -g yarn</span>
+
+</code></pre></div><h3 id="初始化一个新项目"><a href="#初始化一个新项目" class="header-anchor">#</a> 初始化一个新项目</h3> <div class="language- extra-class"><pre class="language-text"><code>yarn init
+
+</code></pre></div><h3 id="添加依赖"><a href="#添加依赖" class="header-anchor">#</a> 添加依赖</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">yarn add <span class="token regex">[package]</span></span>
+<span class="token entry string">yarn add <span class="token regex">[package]</span>@<span class="token regex">[version]</span></span>
+<span class="token entry string">yarn add <span class="token regex">[package]</span>@<span class="token regex">[tag]</span>-（比如beta,next或者latest）</span>
+
+</code></pre></div><h3 id="安装依赖的位置"><a href="#安装依赖的位置" class="header-anchor">#</a> 安装依赖的位置</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">yarn add <span class="token regex">[package]</span> --dev  devDependencies</span>
+<span class="token entry string">yarn add <span class="token regex">[package]</span> --peer  peerDependencies</span>
+<span class="token entry string">yarn add <span class="token regex">[package]</span> --optional optionalDependencies</span>
+</code></pre></div><h3 id="升级依赖"><a href="#升级依赖" class="header-anchor">#</a> 升级依赖</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">yarn upgrade <span class="token regex">[package]</span></span>
+<span class="token entry string">yarn upgrade <span class="token regex">[package]</span>@<span class="token regex">[version]</span></span>
+<span class="token entry string">yarn upgrade <span class="token regex">[package]</span>@<span class="token regex">[tag]</span></span>
+
+</code></pre></div><h3 id="安装包"><a href="#安装包" class="header-anchor">#</a> 安装包</h3> <h3 id="移除依赖包"><a href="#移除依赖包" class="header-anchor">#</a> 移除依赖包</h3> <div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">yarn remove <span class="token regex">[package]</span></span>
+</code></pre></div><div class="language-npmignore extra-class"><pre class="language-npmignore"><code><span class="token entry string">安装包：</span>
+<span class="token entry string">yarn install <span class="token punctuation">/</span><span class="token punctuation">/</span>安装package.json里所有包，并将包及它的所有依赖项保存进yarn.lock</span>
+<span class="token entry string">yarn install --flat <span class="token punctuation">/</span><span class="token punctuation">/</span>安装一个包的单一版本</span>
+<span class="token entry string">yarn install --force <span class="token punctuation">/</span><span class="token punctuation">/</span>强制重新下载所有包</span>
+<span class="token entry string">yarn install --production <span class="token punctuation">/</span><span class="token punctuation">/</span>只安装dependencies里的包</span>
+<span class="token entry string">yarn install --no-lockfile <span class="token punctuation">/</span><span class="token punctuation">/</span>不读取或生成yarn.lock</span>
+<span class="token entry string">yarn install --pure-lockfile <span class="token punctuation">/</span><span class="token punctuation">/</span>不生成yarn.lock</span>
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/Node/nvm.html">
+        nvm
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02f4702a.js" defer></script><script src="/assets/js/2.c24528b1.js" defer></script><script src="/assets/js/86.0a8b597e.js" defer></script>
+  </body>
+</html>

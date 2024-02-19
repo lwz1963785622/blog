@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>JavaScript垃圾回收机制 | lwz blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/icon.jpg">
+    <meta name="description" content="一个基于vuepress的技术站点">
+    <meta name="keywords" content="vuepress,blog,主题">
+    
+    <link rel="preload" href="/assets/css/0.styles.c81954a9.css" as="style"><link rel="preload" href="/assets/js/app.02f4702a.js" as="script"><link rel="preload" href="/assets/js/2.c24528b1.js" as="script"><link rel="preload" href="/assets/js/55.3c9b093e.js" as="script"><link rel="prefetch" href="/assets/js/10.b9f00163.js"><link rel="prefetch" href="/assets/js/100.cea73915.js"><link rel="prefetch" href="/assets/js/101.da736f62.js"><link rel="prefetch" href="/assets/js/102.7007d484.js"><link rel="prefetch" href="/assets/js/103.caa32a93.js"><link rel="prefetch" href="/assets/js/104.49eec9bb.js"><link rel="prefetch" href="/assets/js/105.6dde3492.js"><link rel="prefetch" href="/assets/js/106.e033d988.js"><link rel="prefetch" href="/assets/js/107.85a7f470.js"><link rel="prefetch" href="/assets/js/108.3199b6c2.js"><link rel="prefetch" href="/assets/js/109.053f0eae.js"><link rel="prefetch" href="/assets/js/11.0130a7ca.js"><link rel="prefetch" href="/assets/js/110.ca65e52d.js"><link rel="prefetch" href="/assets/js/111.5681de27.js"><link rel="prefetch" href="/assets/js/112.099e1f8d.js"><link rel="prefetch" href="/assets/js/113.e0d70638.js"><link rel="prefetch" href="/assets/js/114.0bc43b57.js"><link rel="prefetch" href="/assets/js/115.0b956899.js"><link rel="prefetch" href="/assets/js/116.ae8f53e3.js"><link rel="prefetch" href="/assets/js/117.a9349fe5.js"><link rel="prefetch" href="/assets/js/118.ae2cdf8c.js"><link rel="prefetch" href="/assets/js/119.9f6cba9e.js"><link rel="prefetch" href="/assets/js/12.e8df8df5.js"><link rel="prefetch" href="/assets/js/120.c28514fb.js"><link rel="prefetch" href="/assets/js/121.43d5b226.js"><link rel="prefetch" href="/assets/js/122.d5150570.js"><link rel="prefetch" href="/assets/js/123.3b5271e5.js"><link rel="prefetch" href="/assets/js/124.69c11252.js"><link rel="prefetch" href="/assets/js/125.a84bab86.js"><link rel="prefetch" href="/assets/js/126.feec0868.js"><link rel="prefetch" href="/assets/js/127.988ef89c.js"><link rel="prefetch" href="/assets/js/128.6d787bd5.js"><link rel="prefetch" href="/assets/js/129.e9bae44d.js"><link rel="prefetch" href="/assets/js/13.8e202000.js"><link rel="prefetch" href="/assets/js/130.a531a070.js"><link rel="prefetch" href="/assets/js/131.081e4aba.js"><link rel="prefetch" href="/assets/js/132.117ede7a.js"><link rel="prefetch" href="/assets/js/133.9b262135.js"><link rel="prefetch" href="/assets/js/134.7d3c77e3.js"><link rel="prefetch" href="/assets/js/135.4a152353.js"><link rel="prefetch" href="/assets/js/136.2cdd93f9.js"><link rel="prefetch" href="/assets/js/137.c8ae1cb5.js"><link rel="prefetch" href="/assets/js/138.20ad0617.js"><link rel="prefetch" href="/assets/js/139.d02a0237.js"><link rel="prefetch" href="/assets/js/14.f6d60bde.js"><link rel="prefetch" href="/assets/js/140.e61d9473.js"><link rel="prefetch" href="/assets/js/141.9ab7f428.js"><link rel="prefetch" href="/assets/js/142.d0dc8e5b.js"><link rel="prefetch" href="/assets/js/143.3cae2afe.js"><link rel="prefetch" href="/assets/js/144.f218366b.js"><link rel="prefetch" href="/assets/js/145.e069c18b.js"><link rel="prefetch" href="/assets/js/146.9751fb0e.js"><link rel="prefetch" href="/assets/js/147.41f034cf.js"><link rel="prefetch" href="/assets/js/148.66f7fa5b.js"><link rel="prefetch" href="/assets/js/149.73939e51.js"><link rel="prefetch" href="/assets/js/15.bb4953e9.js"><link rel="prefetch" href="/assets/js/150.cca5c5b9.js"><link rel="prefetch" href="/assets/js/151.9812ce26.js"><link rel="prefetch" href="/assets/js/152.b28a65a8.js"><link rel="prefetch" href="/assets/js/153.8f86ed47.js"><link rel="prefetch" href="/assets/js/154.b93f993a.js"><link rel="prefetch" href="/assets/js/155.bb3edc10.js"><link rel="prefetch" href="/assets/js/156.f91d2146.js"><link rel="prefetch" href="/assets/js/157.19160896.js"><link rel="prefetch" href="/assets/js/158.645322e6.js"><link rel="prefetch" href="/assets/js/16.2ded9e3a.js"><link rel="prefetch" href="/assets/js/17.91bc2bfc.js"><link rel="prefetch" href="/assets/js/18.16b54a36.js"><link rel="prefetch" href="/assets/js/19.40e748ba.js"><link rel="prefetch" href="/assets/js/20.934d8e27.js"><link rel="prefetch" href="/assets/js/21.a593ad30.js"><link rel="prefetch" href="/assets/js/22.65ebbfb0.js"><link rel="prefetch" href="/assets/js/23.22197f5b.js"><link rel="prefetch" href="/assets/js/24.b5a12bf8.js"><link rel="prefetch" href="/assets/js/25.8d9e5c92.js"><link rel="prefetch" href="/assets/js/26.54dcbfd9.js"><link rel="prefetch" href="/assets/js/27.77667eb4.js"><link rel="prefetch" href="/assets/js/28.5a220ac8.js"><link rel="prefetch" href="/assets/js/29.033c82ef.js"><link rel="prefetch" href="/assets/js/3.ae4e21c4.js"><link rel="prefetch" href="/assets/js/30.eb479c9b.js"><link rel="prefetch" href="/assets/js/31.ca4b95d9.js"><link rel="prefetch" href="/assets/js/32.7a8b933a.js"><link rel="prefetch" href="/assets/js/33.16198774.js"><link rel="prefetch" href="/assets/js/34.619cc9df.js"><link rel="prefetch" href="/assets/js/35.e5f38e51.js"><link rel="prefetch" href="/assets/js/36.055b08ad.js"><link rel="prefetch" href="/assets/js/37.94b4517d.js"><link rel="prefetch" href="/assets/js/38.11c6f847.js"><link rel="prefetch" href="/assets/js/39.ead00e84.js"><link rel="prefetch" href="/assets/js/4.68802046.js"><link rel="prefetch" href="/assets/js/40.90724f30.js"><link rel="prefetch" href="/assets/js/41.57f1e3dc.js"><link rel="prefetch" href="/assets/js/42.81f99fce.js"><link rel="prefetch" href="/assets/js/43.9487db37.js"><link rel="prefetch" href="/assets/js/44.f55f4942.js"><link rel="prefetch" href="/assets/js/45.0840f7d0.js"><link rel="prefetch" href="/assets/js/46.77e4b1e0.js"><link rel="prefetch" href="/assets/js/47.106e5a77.js"><link rel="prefetch" href="/assets/js/48.a0241697.js"><link rel="prefetch" href="/assets/js/49.bfcba80c.js"><link rel="prefetch" href="/assets/js/5.37cdb3ec.js"><link rel="prefetch" href="/assets/js/50.a48aa373.js"><link rel="prefetch" href="/assets/js/51.6eb81d97.js"><link rel="prefetch" href="/assets/js/52.9a4f7c44.js"><link rel="prefetch" href="/assets/js/53.836a2cd9.js"><link rel="prefetch" href="/assets/js/54.20f7c514.js"><link rel="prefetch" href="/assets/js/56.2a08ee39.js"><link rel="prefetch" href="/assets/js/57.77b5ae2f.js"><link rel="prefetch" href="/assets/js/58.e13e6489.js"><link rel="prefetch" href="/assets/js/59.fff9f852.js"><link rel="prefetch" href="/assets/js/6.0125fdab.js"><link rel="prefetch" href="/assets/js/60.571542be.js"><link rel="prefetch" href="/assets/js/61.dc24c738.js"><link rel="prefetch" href="/assets/js/62.60b8fbc3.js"><link rel="prefetch" href="/assets/js/63.aebd9e95.js"><link rel="prefetch" href="/assets/js/64.8ca6835f.js"><link rel="prefetch" href="/assets/js/65.785ed38d.js"><link rel="prefetch" href="/assets/js/66.87713e0f.js"><link rel="prefetch" href="/assets/js/67.5c8e2954.js"><link rel="prefetch" href="/assets/js/68.1f624172.js"><link rel="prefetch" href="/assets/js/69.78d43f46.js"><link rel="prefetch" href="/assets/js/7.4afff234.js"><link rel="prefetch" href="/assets/js/70.b570a6a2.js"><link rel="prefetch" href="/assets/js/71.2c924482.js"><link rel="prefetch" href="/assets/js/72.124dc4e8.js"><link rel="prefetch" href="/assets/js/73.92f70cb3.js"><link rel="prefetch" href="/assets/js/74.6b5d9fe1.js"><link rel="prefetch" href="/assets/js/75.da5db3e1.js"><link rel="prefetch" href="/assets/js/76.270c7b88.js"><link rel="prefetch" href="/assets/js/77.0ba8904d.js"><link rel="prefetch" href="/assets/js/78.3eabaf04.js"><link rel="prefetch" href="/assets/js/79.c8b0b5f9.js"><link rel="prefetch" href="/assets/js/8.b4a0f119.js"><link rel="prefetch" href="/assets/js/80.175a52a1.js"><link rel="prefetch" href="/assets/js/81.eba4eaf6.js"><link rel="prefetch" href="/assets/js/82.aa662044.js"><link rel="prefetch" href="/assets/js/83.22e8b612.js"><link rel="prefetch" href="/assets/js/84.43fc0353.js"><link rel="prefetch" href="/assets/js/85.f2fd33cd.js"><link rel="prefetch" href="/assets/js/86.0a8b597e.js"><link rel="prefetch" href="/assets/js/87.3b53f85c.js"><link rel="prefetch" href="/assets/js/88.d64e22ce.js"><link rel="prefetch" href="/assets/js/89.4f769098.js"><link rel="prefetch" href="/assets/js/9.aa469d74.js"><link rel="prefetch" href="/assets/js/90.0d8441e7.js"><link rel="prefetch" href="/assets/js/91.ab195f73.js"><link rel="prefetch" href="/assets/js/92.6d724bfd.js"><link rel="prefetch" href="/assets/js/93.cc667cae.js"><link rel="prefetch" href="/assets/js/94.028e3379.js"><link rel="prefetch" href="/assets/js/95.309a85ce.js"><link rel="prefetch" href="/assets/js/96.34028f84.js"><link rel="prefetch" href="/assets/js/97.e6147dce.js"><link rel="prefetch" href="/assets/js/98.032e4ad8.js"><link rel="prefetch" href="/assets/js/99.cbebf64f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c81954a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">lwz blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Javascript/" aria-current="page" class="sidebar-link">首页</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Javascript基础语法</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScriptBOM操作</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScriptDOM操作</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Javascript数据处理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Javascript扩展操作</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Javascript/Javascript扩展操作/ESLint 代码检查.html" class="sidebar-link">ESLint 代码检查</a></li><li><a href="/Javascript/Javascript扩展操作/javascript中的MVC.html" class="sidebar-link">javascript中的MVC</a></li><li><a href="/Javascript/Javascript扩展操作/JavaScript垃圾回收机制.html" class="active sidebar-link">JavaScript垃圾回收机制</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript扩展操作/JavaScript垃圾回收机制.html#两种实现方式" class="sidebar-link">两种实现方式</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript扩展操作/JavaScript垃圾回收机制.html#_1-标记清除法" class="sidebar-link">1.标记清除法</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript扩展操作/JavaScript垃圾回收机制.html#_2-引用计数法" class="sidebar-link">2.引用计数法</a></li></ul></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript扩展操作/JavaScript垃圾回收机制.html#参考" class="sidebar-link">参考</a></li></ul></li><li><a href="/Javascript/Javascript扩展操作/JavaScript设计模式.html" class="sidebar-link">JavaScript设计模式</a></li><li><a href="/Javascript/Javascript扩展操作/js性能优化.html" class="sidebar-link">js性能优化</a></li><li><a href="/Javascript/Javascript扩展操作/SPA.html" class="sidebar-link">SPA</a></li><li><a href="/Javascript/Javascript扩展操作/VUE实现.html" class="sidebar-link">VUE实现</a></li><li><a href="/Javascript/Javascript扩展操作/WebSocket.html" class="sidebar-link">WebSocket</a></li><li><a href="/Javascript/Javascript扩展操作/严格模式.html" class="sidebar-link">严格模式</a></li><li><a href="/Javascript/Javascript扩展操作/内存管理.html" class="sidebar-link">内存管理</a></li><li><a href="/Javascript/Javascript扩展操作/数据类型检测.html" class="sidebar-link">数据类型检测</a></li><li><a href="/Javascript/Javascript扩展操作/数据结构和算法.html" class="sidebar-link">数据结构和算法</a></li><li><a href="/Javascript/Javascript扩展操作/模块化.html" class="sidebar-link">模块化</a></li><li><a href="/Javascript/Javascript扩展操作/简单vue实现.html" class="sidebar-link">简单vue实现</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript入门</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="javascript垃圾回收机制"><a href="#javascript垃圾回收机制" class="header-anchor">#</a> JavaScript垃圾回收机制</h1> <p>Javascript具有自动垃圾回收机制(GC:Garbage Collecation)。</p> <p>原理：垃圾收集器会定期（周期性）找出那些不在继续使用的变量，然后释放其内存。</p> <p>JavaScript垃圾回收的机制很简单：找出不再使用的变量，然后释放掉其占用的内存，但是这个过程不是实时的，因为其开销比较大，所以垃圾回收器会按照固定的时间间隔周期性的执行。</p> <h2 id="两种实现方式"><a href="#两种实现方式" class="header-anchor">#</a> 两种实现方式</h2> <p>函数中的局部变量的生命周期：局部变量只在函数执行的过程中存在。而在这个过程中，会为局部变量在栈（或堆）内存上分配相应的空间，以便存储它们的值。然后在函数中使用这些变量，直至函数执行结束。此时，局部变量就没有存在的必要了，因此可以释放它们的内存以供将来使用。在这种情况下，很容易判断变量是否还有存在的必要；但并非所有情况下都这么容易就能得出结论。垃圾回收器必须跟踪哪个变量有用，哪个变量没用，对于不再有用的变量打上标记，以备将来收回其占用的内存。用于标识无用变量的策略可能会因实现而异，但具体到浏览器中的实现。</p> <p>通常情况下有两种实现方式：<strong>标记清除</strong> 和 <strong>引用计数</strong>。引用计数不太常用，标记清除较为常用。</p> <h3 id="_1-标记清除法"><a href="#_1-标记清除法" class="header-anchor">#</a> 1.标记清除法</h3> <p>在函数声明一个变量的时候，就将这个变量标记为“进入环境”。从逻辑上讲，永远都不能释放进入环境的变量作占用的内存，因为只要执行流进入相应的环境，就可能会用到它们。而当变量离开环境时，则将其标记为“离开环境”。垃圾回收器在运行时候会给存储在内存中中的所有变量都加上标记。然后它会去掉环境中的变量以及被环境中的变量引用的变量的标记（闭包）。在此之后再被标记的变量将被视为准备删除的变量，原因是环境中的变量已经无法访问到这些变量了。最后，垃圾回收器完成内存清楚工作，销毁那些带标记的值并回收他们所占用的内存空间。</p> <div class="language- extra-class"><pre class="language-text"><code>
+function
+
+test(){
+
+ var a = 10 ; //被标记 ，进入环境
+
+ var b = 20 ; //被标记 ，进入环境
+
+}
+
+test(); //执行完毕 之后 a、b又被标离开环境，被回收。
+
+</code></pre></div><h3 id="_2-引用计数法"><a href="#_2-引用计数法" class="header-anchor">#</a> 2.引用计数法</h3> <p>引用计数的含义是跟踪记录每个值被引用的次数。当声明了一个变量并将一个引用类型值赋给该变量时，则这个值的引用次数就是1。如果同一个值又被赋给另一个变量，则该值的引用次数加1。相反，如果包含对这个值引用的变量又取得了另外一个值，则这个值的引用次数减1。当这个值的引用次数变成0时，则说明没有办法再访问这个值了，因而就可以将其占用的内存空间回收回来。这样，当垃圾回收器下次再运行时，它就会释放那些引用次数为0的值所占用的内存。</p> <p>但是很重要的一点是当遇到循环引用的时候，函数的引用次数就不会为0，所以不会被垃圾回收器回收内存，会造成内存泄露。在IE中涉及COM对象，就会存在循环引用的问题。</p> <div class="language- extra-class"><pre class="language-text"><code>
+function
+
+test(){
+
+ var a = {} ; //a的引用次数为0
+
+ var b = a ; //a的引用次数加1，为1
+
+ var c =a; //a的引用次数再加1，为2
+
+ var b ={}; //a的引用次数减1，为1
+
+}
+
+</code></pre></div><h2 id="参考"><a href="#参考" class="header-anchor">#</a> 参考</h2> <ul><li>https://blog.csdn.net/OLiver_web/article/details/53957021</li> <li></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Javascript/Javascript扩展操作/javascript中的MVC.html" class="prev">
+        javascript中的MVC
+      </a></span> <span class="next"><a href="/Javascript/Javascript扩展操作/JavaScript设计模式.html">
+        JavaScript设计模式
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02f4702a.js" defer></script><script src="/assets/js/2.c24528b1.js" defer></script><script src="/assets/js/55.3c9b093e.js" defer></script>
+  </body>
+</html>

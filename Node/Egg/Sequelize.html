@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sequelize-egg 中的使用 | lwz blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/icon.jpg">
+    <meta name="description" content="一个基于vuepress的技术站点">
+    <meta name="keywords" content="vuepress,blog,主题">
+    
+    <link rel="preload" href="/assets/css/0.styles.c81954a9.css" as="style"><link rel="preload" href="/assets/js/app.02f4702a.js" as="script"><link rel="preload" href="/assets/js/2.c24528b1.js" as="script"><link rel="preload" href="/assets/js/84.43fc0353.js" as="script"><link rel="prefetch" href="/assets/js/10.b9f00163.js"><link rel="prefetch" href="/assets/js/100.cea73915.js"><link rel="prefetch" href="/assets/js/101.da736f62.js"><link rel="prefetch" href="/assets/js/102.7007d484.js"><link rel="prefetch" href="/assets/js/103.caa32a93.js"><link rel="prefetch" href="/assets/js/104.49eec9bb.js"><link rel="prefetch" href="/assets/js/105.6dde3492.js"><link rel="prefetch" href="/assets/js/106.e033d988.js"><link rel="prefetch" href="/assets/js/107.85a7f470.js"><link rel="prefetch" href="/assets/js/108.3199b6c2.js"><link rel="prefetch" href="/assets/js/109.053f0eae.js"><link rel="prefetch" href="/assets/js/11.0130a7ca.js"><link rel="prefetch" href="/assets/js/110.ca65e52d.js"><link rel="prefetch" href="/assets/js/111.5681de27.js"><link rel="prefetch" href="/assets/js/112.099e1f8d.js"><link rel="prefetch" href="/assets/js/113.e0d70638.js"><link rel="prefetch" href="/assets/js/114.0bc43b57.js"><link rel="prefetch" href="/assets/js/115.0b956899.js"><link rel="prefetch" href="/assets/js/116.ae8f53e3.js"><link rel="prefetch" href="/assets/js/117.a9349fe5.js"><link rel="prefetch" href="/assets/js/118.ae2cdf8c.js"><link rel="prefetch" href="/assets/js/119.9f6cba9e.js"><link rel="prefetch" href="/assets/js/12.e8df8df5.js"><link rel="prefetch" href="/assets/js/120.c28514fb.js"><link rel="prefetch" href="/assets/js/121.43d5b226.js"><link rel="prefetch" href="/assets/js/122.d5150570.js"><link rel="prefetch" href="/assets/js/123.3b5271e5.js"><link rel="prefetch" href="/assets/js/124.69c11252.js"><link rel="prefetch" href="/assets/js/125.a84bab86.js"><link rel="prefetch" href="/assets/js/126.feec0868.js"><link rel="prefetch" href="/assets/js/127.988ef89c.js"><link rel="prefetch" href="/assets/js/128.6d787bd5.js"><link rel="prefetch" href="/assets/js/129.e9bae44d.js"><link rel="prefetch" href="/assets/js/13.8e202000.js"><link rel="prefetch" href="/assets/js/130.a531a070.js"><link rel="prefetch" href="/assets/js/131.081e4aba.js"><link rel="prefetch" href="/assets/js/132.117ede7a.js"><link rel="prefetch" href="/assets/js/133.9b262135.js"><link rel="prefetch" href="/assets/js/134.7d3c77e3.js"><link rel="prefetch" href="/assets/js/135.4a152353.js"><link rel="prefetch" href="/assets/js/136.2cdd93f9.js"><link rel="prefetch" href="/assets/js/137.c8ae1cb5.js"><link rel="prefetch" href="/assets/js/138.20ad0617.js"><link rel="prefetch" href="/assets/js/139.d02a0237.js"><link rel="prefetch" href="/assets/js/14.f6d60bde.js"><link rel="prefetch" href="/assets/js/140.e61d9473.js"><link rel="prefetch" href="/assets/js/141.9ab7f428.js"><link rel="prefetch" href="/assets/js/142.d0dc8e5b.js"><link rel="prefetch" href="/assets/js/143.3cae2afe.js"><link rel="prefetch" href="/assets/js/144.f218366b.js"><link rel="prefetch" href="/assets/js/145.e069c18b.js"><link rel="prefetch" href="/assets/js/146.9751fb0e.js"><link rel="prefetch" href="/assets/js/147.41f034cf.js"><link rel="prefetch" href="/assets/js/148.66f7fa5b.js"><link rel="prefetch" href="/assets/js/149.73939e51.js"><link rel="prefetch" href="/assets/js/15.bb4953e9.js"><link rel="prefetch" href="/assets/js/150.cca5c5b9.js"><link rel="prefetch" href="/assets/js/151.9812ce26.js"><link rel="prefetch" href="/assets/js/152.b28a65a8.js"><link rel="prefetch" href="/assets/js/153.8f86ed47.js"><link rel="prefetch" href="/assets/js/154.b93f993a.js"><link rel="prefetch" href="/assets/js/155.bb3edc10.js"><link rel="prefetch" href="/assets/js/156.f91d2146.js"><link rel="prefetch" href="/assets/js/157.19160896.js"><link rel="prefetch" href="/assets/js/158.645322e6.js"><link rel="prefetch" href="/assets/js/16.2ded9e3a.js"><link rel="prefetch" href="/assets/js/17.91bc2bfc.js"><link rel="prefetch" href="/assets/js/18.16b54a36.js"><link rel="prefetch" href="/assets/js/19.40e748ba.js"><link rel="prefetch" href="/assets/js/20.934d8e27.js"><link rel="prefetch" href="/assets/js/21.a593ad30.js"><link rel="prefetch" href="/assets/js/22.65ebbfb0.js"><link rel="prefetch" href="/assets/js/23.22197f5b.js"><link rel="prefetch" href="/assets/js/24.b5a12bf8.js"><link rel="prefetch" href="/assets/js/25.8d9e5c92.js"><link rel="prefetch" href="/assets/js/26.54dcbfd9.js"><link rel="prefetch" href="/assets/js/27.77667eb4.js"><link rel="prefetch" href="/assets/js/28.5a220ac8.js"><link rel="prefetch" href="/assets/js/29.033c82ef.js"><link rel="prefetch" href="/assets/js/3.ae4e21c4.js"><link rel="prefetch" href="/assets/js/30.eb479c9b.js"><link rel="prefetch" href="/assets/js/31.ca4b95d9.js"><link rel="prefetch" href="/assets/js/32.7a8b933a.js"><link rel="prefetch" href="/assets/js/33.16198774.js"><link rel="prefetch" href="/assets/js/34.619cc9df.js"><link rel="prefetch" href="/assets/js/35.e5f38e51.js"><link rel="prefetch" href="/assets/js/36.055b08ad.js"><link rel="prefetch" href="/assets/js/37.94b4517d.js"><link rel="prefetch" href="/assets/js/38.11c6f847.js"><link rel="prefetch" href="/assets/js/39.ead00e84.js"><link rel="prefetch" href="/assets/js/4.68802046.js"><link rel="prefetch" href="/assets/js/40.90724f30.js"><link rel="prefetch" href="/assets/js/41.57f1e3dc.js"><link rel="prefetch" href="/assets/js/42.81f99fce.js"><link rel="prefetch" href="/assets/js/43.9487db37.js"><link rel="prefetch" href="/assets/js/44.f55f4942.js"><link rel="prefetch" href="/assets/js/45.0840f7d0.js"><link rel="prefetch" href="/assets/js/46.77e4b1e0.js"><link rel="prefetch" href="/assets/js/47.106e5a77.js"><link rel="prefetch" href="/assets/js/48.a0241697.js"><link rel="prefetch" href="/assets/js/49.bfcba80c.js"><link rel="prefetch" href="/assets/js/5.37cdb3ec.js"><link rel="prefetch" href="/assets/js/50.a48aa373.js"><link rel="prefetch" href="/assets/js/51.6eb81d97.js"><link rel="prefetch" href="/assets/js/52.9a4f7c44.js"><link rel="prefetch" href="/assets/js/53.836a2cd9.js"><link rel="prefetch" href="/assets/js/54.20f7c514.js"><link rel="prefetch" href="/assets/js/55.3c9b093e.js"><link rel="prefetch" href="/assets/js/56.2a08ee39.js"><link rel="prefetch" href="/assets/js/57.77b5ae2f.js"><link rel="prefetch" href="/assets/js/58.e13e6489.js"><link rel="prefetch" href="/assets/js/59.fff9f852.js"><link rel="prefetch" href="/assets/js/6.0125fdab.js"><link rel="prefetch" href="/assets/js/60.571542be.js"><link rel="prefetch" href="/assets/js/61.dc24c738.js"><link rel="prefetch" href="/assets/js/62.60b8fbc3.js"><link rel="prefetch" href="/assets/js/63.aebd9e95.js"><link rel="prefetch" href="/assets/js/64.8ca6835f.js"><link rel="prefetch" href="/assets/js/65.785ed38d.js"><link rel="prefetch" href="/assets/js/66.87713e0f.js"><link rel="prefetch" href="/assets/js/67.5c8e2954.js"><link rel="prefetch" href="/assets/js/68.1f624172.js"><link rel="prefetch" href="/assets/js/69.78d43f46.js"><link rel="prefetch" href="/assets/js/7.4afff234.js"><link rel="prefetch" href="/assets/js/70.b570a6a2.js"><link rel="prefetch" href="/assets/js/71.2c924482.js"><link rel="prefetch" href="/assets/js/72.124dc4e8.js"><link rel="prefetch" href="/assets/js/73.92f70cb3.js"><link rel="prefetch" href="/assets/js/74.6b5d9fe1.js"><link rel="prefetch" href="/assets/js/75.da5db3e1.js"><link rel="prefetch" href="/assets/js/76.270c7b88.js"><link rel="prefetch" href="/assets/js/77.0ba8904d.js"><link rel="prefetch" href="/assets/js/78.3eabaf04.js"><link rel="prefetch" href="/assets/js/79.c8b0b5f9.js"><link rel="prefetch" href="/assets/js/8.b4a0f119.js"><link rel="prefetch" href="/assets/js/80.175a52a1.js"><link rel="prefetch" href="/assets/js/81.eba4eaf6.js"><link rel="prefetch" href="/assets/js/82.aa662044.js"><link rel="prefetch" href="/assets/js/83.22e8b612.js"><link rel="prefetch" href="/assets/js/85.f2fd33cd.js"><link rel="prefetch" href="/assets/js/86.0a8b597e.js"><link rel="prefetch" href="/assets/js/87.3b53f85c.js"><link rel="prefetch" href="/assets/js/88.d64e22ce.js"><link rel="prefetch" href="/assets/js/89.4f769098.js"><link rel="prefetch" href="/assets/js/9.aa469d74.js"><link rel="prefetch" href="/assets/js/90.0d8441e7.js"><link rel="prefetch" href="/assets/js/91.ab195f73.js"><link rel="prefetch" href="/assets/js/92.6d724bfd.js"><link rel="prefetch" href="/assets/js/93.cc667cae.js"><link rel="prefetch" href="/assets/js/94.028e3379.js"><link rel="prefetch" href="/assets/js/95.309a85ce.js"><link rel="prefetch" href="/assets/js/96.34028f84.js"><link rel="prefetch" href="/assets/js/97.e6147dce.js"><link rel="prefetch" href="/assets/js/98.032e4ad8.js"><link rel="prefetch" href="/assets/js/99.cbebf64f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c81954a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">lwz blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/Node/" class="sidebar-heading clickable router-link-active"><span>Node</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/Node/npm.html" class="sidebar-link">npm</a></li><li><a href="/Node/nvm.html" class="sidebar-link">nvm</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Egg</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Node/Egg/Egg.html" class="sidebar-link">Egg</a></li><li><a href="/Node/Egg/jwt.html" class="sidebar-link">jwt</a></li><li><a href="/Node/Egg/Sequelize.html" aria-current="page" class="active sidebar-link">Sequelize</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#安装" class="sidebar-link">安装</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#配置更改" class="sidebar-link">配置更改</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#编写代码" class="sidebar-link">编写代码</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#创建所需的model" class="sidebar-link">创建所需的MOdel</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#详细文档地址" class="sidebar-link">详细文档地址</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#sequelize-automate-命令详解" class="sidebar-link">sequelize-automate 命令详解</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#生成的module-需要注意的事项" class="sidebar-link">生成的Module 需要注意的事项</a></li></ul></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#sequelize的一些使用方法" class="sidebar-link">sequelize的一些使用方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#insert" class="sidebar-link">INSERT</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#select" class="sidebar-link">SELECT</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#where" class="sidebar-link">WHERE</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#update" class="sidebar-link">UPDATE</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#delete" class="sidebar-link">DELETE</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#findall" class="sidebar-link">findAll</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#findbypk" class="sidebar-link">findByPk</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#findone" class="sidebar-link">findOne</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#findorcreate" class="sidebar-link">findOrCreate</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#findandcountall" class="sidebar-link">findAndCountAll</a></li></ul></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#关联查的一些方法" class="sidebar-link">关联查的一些方法</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#一对一关系" class="sidebar-link">一对一关系</a></li><li class="sidebar-sub-header"><a href="/Node/Egg/Sequelize.html#一对多关系" class="sidebar-link">一对多关系</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="sequelize-egg-中的使用"><a href="#sequelize-egg-中的使用" class="header-anchor">#</a> Sequelize-egg 中的使用</h1> <h2 id="安装"><a href="#安装" class="header-anchor">#</a> 安装</h2> <div class="language-sh extra-class"><pre class="language-sh"><code><span class="token function">npm</span> <span class="token function">install</span> --save egg-sequelize mysql2
+
+</code></pre></div><h2 id="配置更改"><a href="#配置更改" class="header-anchor">#</a> 配置更改</h2> <ul><li>在 config/plugin.js 中引入 egg-sequelize 插件</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>exports<span class="token punctuation">.</span>sequelize <span class="token operator">=</span> <span class="token punctuation">{</span>
+    enable<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token keyword">package</span><span class="token operator">:</span> <span class="token string">'egg-sequelize'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>在 config/config.default.js 中编写 sequelize 配置</li></ul> <div class="language-js extra-class"><pre class="language-js"><code>config<span class="token punctuation">.</span>sequelize <span class="token operator">=</span> <span class="token punctuation">{</span>
+    dialect<span class="token operator">:</span> <span class="token string">'mysql'</span><span class="token punctuation">,</span>
+    host<span class="token operator">:</span> <span class="token string">'127.0.0.1'</span><span class="token punctuation">,</span>
+    port<span class="token operator">:</span> <span class="token number">3306</span><span class="token punctuation">,</span>
+    database<span class="token operator">:</span> <span class="token string">'egg-sequelize-doc-default'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="编写代码"><a href="#编写代码" class="header-anchor">#</a> 编写代码</h2> <h3 id="创建所需的model"><a href="#创建所需的model" class="header-anchor">#</a> 创建所需的MOdel</h3> <blockquote><p>app/model/ 目录下编写Model</p></blockquote> <blockquote><p>可使用 sequelize-automate 插件来自定义生成Model</p></blockquote> <div class="language- extra-class"><pre class="language-text"><code>
+npm install sequelize-automate --save
+</code></pre></div><h3 id="详细文档地址"><a href="#详细文档地址" class="header-anchor">#</a> <a href="https://github.com/nodejh/sequelize-automate" target="_blank" rel="noopener noreferrer">详细文档地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></h3> <h3 id="sequelize-automate-命令详解"><a href="#sequelize-automate-命令详解" class="header-anchor">#</a> sequelize-automate 命令详解</h3> <div class="language- extra-class"><pre class="language-text"><code>
+sequelize-automate 命令支持的参数主要有：
+
+--type, -t 指定 models 代码风格，当前可选值：js ts egg midway
+--dialect, -e 数据库类型，可选值：mysql sqlite postgres mssql mariadb
+--host, -h 数据库 host
+--database, -d 数据库名
+--user, -u 数据库用户名
+--password, -p 数据库密码
+--port, -P 数据库端口，默认：MySQL/MariaDB 3306，Postgres 5432，SSQL: 1433
+--output, -o 指定输出 models 文件的目录，默认会生成在当前目录下 models 文件夹中
+--camel, -C models 文件中代码是否使用驼峰发命名，默认 false
+--emptyDir, -r 是否清空 models 目录（即 -o 指定的目录），如果为 true，则生成 models 之前会清空对应目录，默认 false
+--config, -c 指定配置文件，可以在一个配置文件中指定命令的参数
+</code></pre></div><p>自定义的命令</p> <div class="language-js extra-class"><pre class="language-js"><code>sequelize <span class="token operator">-</span> automate <span class="token operator">-</span> t js <span class="token operator">-</span> h <span class="token number">127.0</span> <span class="token number">.0</span> <span class="token number">.1</span> <span class="token operator">-</span> d Test <span class="token operator">-</span> u Test <span class="token operator">-</span> p <span class="token number">123456</span> <span class="token operator">-</span> <span class="token constant">P</span> <span class="token number">3306</span> <span class="token operator">-</span> e mysql <span class="token operator">-</span> o models
+</code></pre></div><h3 id="生成的module-需要注意的事项"><a href="#生成的module-需要注意的事项" class="header-anchor">#</a> 生成的Module 需要注意的事项</h3> <blockquote><p>生成的Moudle 建议改成一下格式</p></blockquote> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>Model 的名字首字母建议大写</li></ul></div> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string">'use strict'</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span><span class="token function-variable function">exports</span> <span class="token operator">=</span> <span class="token parameter">sequelize</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        model<span class="token punctuation">,</span>
+        Sequelize<span class="token operator">:</span> <span class="token punctuation">{</span>
+            DataTypes
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token operator">=</span> sequelize<span class="token punctuation">;</span>
+    <span class="token keyword">const</span> attributes <span class="token operator">=</span> <span class="token punctuation">{</span>
+        id<span class="token operator">:</span> <span class="token punctuation">{</span>
+            type<span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">INTEGER</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            allowNull<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            defaultValue<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            primaryKey<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            autoIncrement<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            comment<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            field<span class="token operator">:</span> <span class="token string">'id'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        user<span class="token operator">:</span> <span class="token punctuation">{</span>
+            type<span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            allowNull<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            defaultValue<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            primaryKey<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            autoIncrement<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            comment<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            field<span class="token operator">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        pass<span class="token operator">:</span> <span class="token punctuation">{</span>
+            type<span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            allowNull<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            defaultValue<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            primaryKey<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            autoIncrement<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            comment<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            field<span class="token operator">:</span> <span class="token string">'pass'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        create_data<span class="token operator">:</span> <span class="token punctuation">{</span>
+            type<span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">DATE</span><span class="token punctuation">,</span>
+            allowNull<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            defaultValue<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            primaryKey<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            autoIncrement<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            comment<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            field<span class="token operator">:</span> <span class="token string">'create_data'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        update_data<span class="token operator">:</span> <span class="token punctuation">{</span>
+            type<span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">DATE</span><span class="token punctuation">,</span>
+            allowNull<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            defaultValue<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            primaryKey<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            autoIncrement<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            comment<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            field<span class="token operator">:</span> <span class="token string">'update_data'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        logo<span class="token operator">:</span> <span class="token punctuation">{</span>
+            type<span class="token operator">:</span> DataTypes<span class="token punctuation">.</span><span class="token constant">STRING</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            allowNull<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            defaultValue<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            primaryKey<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            autoIncrement<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+            comment<span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+            field<span class="token operator">:</span> <span class="token string">'logo'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+        tableName<span class="token operator">:</span> <span class="token string">'user'</span><span class="token punctuation">,</span>
+        comment<span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>
+        indexes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> UserModel <span class="token operator">=</span> model<span class="token punctuation">.</span><span class="token function">define</span><span class="token punctuation">(</span><span class="token string">'user_model'</span><span class="token punctuation">,</span> attributes<span class="token punctuation">,</span> options<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> UserModel<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="sequelize的一些使用方法"><a href="#sequelize的一些使用方法" class="header-anchor">#</a> <a href="https://www.sequelize.com.cn/core-concepts/model-basics" target="_blank" rel="noopener noreferrer">sequelize<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>的一些使用方法</h2> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>此处只有部分的使用案例，具体移步到上述中文文档</p></div> <h3 id="insert"><a href="#insert" class="header-anchor">#</a> INSERT</h3> <blockquote><p>Model.create() 方法是使用 Model.build() 构建未保存实例并使用 instance.save() 保存实例的简写形式.</p></blockquote> <ul><li>方式一：调用 build 方法后对象只存在于内存中，需要进一步调用 save 方法才会保存到数据库中。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> user <span class="token operator">=</span> UsersModel<span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    username<span class="token operator">:</span> <span class="token string">&quot;swnd&quot;</span><span class="token punctuation">,</span>
+    password<span class="token operator">:</span> <span class="token string">&quot;q11111&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+user <span class="token operator">=</span> <span class="token keyword">await</span> user<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>方式二：调用 create 方法后，会直接保存到数据库中。</li></ul> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> user <span class="token operator">=</span> UsersModel<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    username<span class="token operator">:</span> <span class="token string">'zhangsan'</span><span class="token punctuation">,</span>
+    password<span class="token operator">:</span> <span class="token string">'123456'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    fields<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'username'</span><span class="token punctuation">]</span> <span class="token comment">// 只允许更新这个</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre></div><h3 id="select"><a href="#select" class="header-anchor">#</a> SELECT</h3> <blockquote><p>attributes  选择查出数据需要展示的字段</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>Model<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    attributes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token string">'bar'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><blockquote><p>可以使用嵌套数组来重命名属性：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>Model<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    attributes<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token string">'baz'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'qux'</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token constant">SELECT</span> foo<span class="token punctuation">,</span> bar <span class="token constant">AS</span> baz<span class="token punctuation">,</span> qux <span class="token constant">FROM</span><span class="token operator">...</span>
+</code></pre></div><blockquote><p>你可以使用 sequelize.fn 进行聚合：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>Model<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    attributes<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">'foo'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span>sequelize<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'COUNT'</span><span class="token punctuation">,</span> sequelize<span class="token punctuation">.</span><span class="token function">col</span><span class="token punctuation">(</span><span class="token string">'hats'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'n_hats'</span><span class="token punctuation">]</span>
+        <span class="token string">'bar'</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">SELECT</span> foo<span class="token punctuation">,</span> <span class="token constant">COUNT</span><span class="token punctuation">(</span>hats<span class="token punctuation">)</span> <span class="token constant">AS</span> n_hats<span class="token punctuation">,</span> bar <span class="token constant">FROM</span><span class="token operator">...</span>
+</code></pre></div><p>使用聚合函数时, 必须为它提供一个别名, 以便能够从模型中访问它. 在上面的示例中, 你可以通过 instance.n_hats 获取帽子数量.</p> <blockquote><p>有时, 如果只想添加聚合, 那么列出模型的所有属性可能会很麻烦：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 这是获取帽子数量的烦人方法(每列都有)</span>
+Model<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    attributes<span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token string">'id'</span><span class="token punctuation">,</span> <span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token string">'baz'</span><span class="token punctuation">,</span> <span class="token string">'qux'</span><span class="token punctuation">,</span> <span class="token string">'hats'</span><span class="token punctuation">,</span> <span class="token comment">// 我们必须列出所有属性...</span>
+        <span class="token punctuation">[</span>sequelize<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'COUNT'</span><span class="token punctuation">,</span> sequelize<span class="token punctuation">.</span><span class="token function">col</span><span class="token punctuation">(</span><span class="token string">'hats'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'n_hats'</span><span class="token punctuation">]</span> <span class="token comment">// 添加聚合...</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 这个更短,并且更不易出错. 如果以后在模型中添加/删除属性,它仍然可以正常工作</span>
+Model<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    attributes<span class="token operator">:</span> <span class="token punctuation">{</span>
+        include<span class="token operator">:</span> <span class="token punctuation">[</span>
+            <span class="token punctuation">[</span>sequelize<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token string">'COUNT'</span><span class="token punctuation">,</span> sequelize<span class="token punctuation">.</span><span class="token function">col</span><span class="token punctuation">(</span><span class="token string">'hats'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">'n_hats'</span><span class="token punctuation">]</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">SELECT</span> id<span class="token punctuation">,</span> foo<span class="token punctuation">,</span> bar<span class="token punctuation">,</span> baz<span class="token punctuation">,</span> qux<span class="token punctuation">,</span> hats<span class="token punctuation">,</span> <span class="token constant">COUNT</span><span class="token punctuation">(</span>hats<span class="token punctuation">)</span> <span class="token constant">AS</span> n_hats <span class="token constant">FROM</span><span class="token operator">...</span>
+</code></pre></div><blockquote><p>同样, 也可以排除某些属性：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>Model<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    attributes<span class="token operator">:</span> <span class="token punctuation">{</span>
+        exclude<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'baz'</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">--</span>Assuming all columns are <span class="token string">'id'</span><span class="token punctuation">,</span> <span class="token string">'foo'</span><span class="token punctuation">,</span> <span class="token string">'bar'</span><span class="token punctuation">,</span> <span class="token string">'baz'</span>
+and <span class="token string">'qux'</span>
+<span class="token constant">SELECT</span> id<span class="token punctuation">,</span> foo<span class="token punctuation">,</span> bar<span class="token punctuation">,</span> qux <span class="token constant">FROM</span><span class="token operator">...</span>
+</code></pre></div><h3 id="where"><a href="#where" class="header-anchor">#</a> WHERE</h3> <blockquote><p>where 参数用于过滤查询.where 子句有很多运算符, 可以从 Op 中以 Symbols 的形式使用.</p></blockquote> <p>基础</p> <div class="language-js extra-class"><pre class="language-js"><code>Post<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        authorId<span class="token operator">:</span> <span class="token number">2</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// SELECT * FROM post WHERE authorId = 2</span>
+</code></pre></div><p>可以看到没有显式传递任何运算符(来自Op), 因为默认情况下 Sequelize 假定进行相等比较. 上面的代码等效于：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>
+    Op
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;sequelize&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Post<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        authorId<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>eq<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">2</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// SELECT * FROM post WHERE authorId = 2</span>
+</code></pre></div><p>可以传递多个校验:</p> <div class="language-js extra-class"><pre class="language-js"><code>Post<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        authorId<span class="token operator">:</span> <span class="token number">12</span>
+        status<span class="token operator">:</span> <span class="token string">'active'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// SELECT * FROM post WHERE authorId = 12 AND status = 'active';</span>
+</code></pre></div><p>就像在第一个示例中 Sequelize 推断出 Op.eq 运算符一样, 在这里 Sequelize 推断出调用者希望对两个检查使用 AND. 上面的代码等效于：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>
+    Op
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;sequelize&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Post<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>and<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                authorId<span class="token operator">:</span> <span class="token number">12</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                status<span class="token operator">:</span> <span class="token string">'active'</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// SELECT * FROM post WHERE authorId = 12 AND status = 'active';</span>
+</code></pre></div><p>OR 可以通过类似的方式轻松执行：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>
+    Op
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;sequelize&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Post<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>or<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                authorId<span class="token operator">:</span> <span class="token number">12</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                authorId<span class="token operator">:</span> <span class="token number">13</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// SELECT * FROM post WHERE authorId = 12 OR authorId = 13;</span>
+</code></pre></div><p>由于以上的 OR 涉及相同字段 , 因此 Sequelize 允许你使用稍有不同的结构, 该结构更易读并且作用相同：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>
+    Op
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;sequelize&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Post<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        authorId<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>or<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// DELETE FROM post WHERE authorId = 12 OR authorId = 13;</span>
+</code></pre></div><p>操作符
+Sequelize 提供了多种运算符.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>
+    Op
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;sequelize&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Post<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>and<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            a<span class="token operator">:</span> <span class="token number">5</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            b<span class="token operator">:</span> <span class="token number">6</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// (a = 5) AND (b = 6)</span>
+        <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>or<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            a<span class="token operator">:</span> <span class="token number">5</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            b<span class="token operator">:</span> <span class="token number">6</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// (a = 5) OR (b = 6)</span>
+        someAttribute<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token comment">// 基本</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>eq<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token comment">// = 3</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>ne<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token comment">// != 20</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>is<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span> <span class="token comment">// IS NULL</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>not<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token comment">// IS NOT TRUE</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>or<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// (someAttribute = 5) OR (someAttribute = 6)</span>
+
+            <span class="token comment">// 使用方言特定的列标识符 (以下示例中使用 PG):</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>col<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'user.organization_id'</span><span class="token punctuation">,</span> <span class="token comment">// = &quot;user&quot;.&quot;organization_id&quot;</span>
+
+            <span class="token comment">// 数字比较</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>gt<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token comment">// &gt; 6</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>gte<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token comment">// &gt;= 6</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>lt<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token comment">// &lt; 10</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>lte<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token comment">// &lt;= 10</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>between<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// BETWEEN 6 AND 10</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notBetween<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// NOT BETWEEN 11 AND 15</span>
+
+            <span class="token comment">// 其它操作符</span>
+
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>all<span class="token punctuation">]</span><span class="token operator">:</span> sequelize<span class="token punctuation">.</span><span class="token function">literal</span><span class="token punctuation">(</span><span class="token string">'SELECT 1'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// &gt; ALL (SELECT 1)</span>
+
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>in<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// IN [1, 2]</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notIn<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// NOT IN [1, 2]</span>
+
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>like<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'%hat'</span><span class="token punctuation">,</span> <span class="token comment">// LIKE '%hat'</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notLike<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'%hat'</span><span class="token punctuation">,</span> <span class="token comment">// NOT LIKE '%hat'</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>startsWith<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'hat'</span><span class="token punctuation">,</span> <span class="token comment">// LIKE 'hat%'</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>endsWith<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'hat'</span><span class="token punctuation">,</span> <span class="token comment">// LIKE '%hat'</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>substring<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'hat'</span><span class="token punctuation">,</span> <span class="token comment">// LIKE '%hat%'</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>iLike<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'%hat'</span><span class="token punctuation">,</span> <span class="token comment">// ILIKE '%hat' (不区分大小写) (仅 PG)</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notILike<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'%hat'</span><span class="token punctuation">,</span> <span class="token comment">// NOT ILIKE '%hat'  (仅 PG)</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>regexp<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'^[h|a|t]'</span><span class="token punctuation">,</span> <span class="token comment">// REGEXP/~ '^[h|a|t]' (仅 MySQL/PG)</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notRegexp<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'^[h|a|t]'</span><span class="token punctuation">,</span> <span class="token comment">// NOT REGEXP/!~ '^[h|a|t]' (仅 MySQL/PG)</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>iRegexp<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'^[h|a|t]'</span><span class="token punctuation">,</span> <span class="token comment">// ~* '^[h|a|t]' (仅 PG)</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>notIRegexp<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'^[h|a|t]'</span><span class="token punctuation">,</span> <span class="token comment">// !~* '^[h|a|t]' (仅 PG)</span>
+
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>any<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// ANY ARRAY[2, 3]::INTEGER (仅 PG)</span>
+
+            <span class="token comment">// 在 Postgres 中, Op.like/Op.iLike/Op.notLike 可以结合 Op.any 使用:</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>like<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>any<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'cat'</span><span class="token punctuation">,</span> <span class="token string">'hat'</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span> <span class="token comment">// LIKE ANY ARRAY['cat', 'hat']</span>
+
+            <span class="token comment">// 还有更多的仅限 postgres 的范围运算符,请参见下文</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>Op.in 的简写语法
+直接将数组参数传递给 where 将隐式使用 IN 运算符：</p> <div class="language- extra-class"><pre class="language-text"><code>
+Post.findAll({
+  where: {
+    id: [1,2,3] // 等同使用 `id: { [Op.in]: [1,2,3] }`
+  }
+});
+// SELECT ... FROM &quot;posts&quot; AS &quot;post&quot; WHERE &quot;post&quot;.&quot;id&quot; IN (1, 2, 3);
+</code></pre></div><p>运算符的逻辑组合
+运算符 Op.and, Op.or 和 Op.not 可用于创建任意复杂的嵌套逻辑比较.</p> <p>使用 Op.and 和 Op.or 示例#</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">{</span>
+    Op
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">&quot;sequelize&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+Foo<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        rank<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>or<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>lt<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token number">1000</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>eq<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token keyword">null</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// rank &lt; 1000 OR rank IS NULL</span>
+
+        <span class="token punctuation">{</span>
+            createdAt<span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>lt<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+                <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>gt<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">24</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment">// createdAt &lt; [timestamp] AND createdAt &gt; [timestamp]</span>
+
+        <span class="token punctuation">{</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>or<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                    title<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>like<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'Boat%'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                <span class="token punctuation">{</span>
+                    description<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>like<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'%boat%'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">]</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment">// title LIKE 'Boat%' OR description LIKE '%boat%'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>使用 Op.not 示例#</p> <div class="language-js extra-class"><pre class="language-js"><code>Project<span class="token punctuation">.</span><span class="token function">findAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        name<span class="token operator">:</span> <span class="token string">'Some Project'</span><span class="token punctuation">,</span>
+        <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>not<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+                id<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token punctuation">{</span>
+                description<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>like<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'Hello%'</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+上面将生成：
+
+<span class="token constant">SELECT</span> <span class="token operator">*</span>
+    <span class="token constant">FROM</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Projects</span><span class="token template-punctuation string">`</span></span>
+<span class="token constant">WHERE</span><span class="token punctuation">(</span>
+    <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Projects</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">.</span>
+    <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">name</span><span class="token template-punctuation string">`</span></span> <span class="token operator">=</span> <span class="token string">'a project'</span>
+    <span class="token constant">AND</span> <span class="token constant">NOT</span><span class="token punctuation">(</span>
+        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Projects</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">.</span>
+        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">id</span><span class="token template-punctuation string">`</span></span>
+        <span class="token constant">IN</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token constant">OR</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Projects</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">.</span>
+        <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">description</span><span class="token template-punctuation string">`</span></span>
+        <span class="token constant">LIKE</span> <span class="token string">'Hello%'</span>
+    <span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+</code></pre></div><h3 id="update"><a href="#update" class="header-anchor">#</a> UPDATE</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 将所有没有姓氏的人更改为 &quot;Doe&quot;</span>
+<span class="token keyword">await</span> UsersModel<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    lastName<span class="token operator">:</span> <span class="token string">&quot;Doe&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        lastName<span class="token operator">:</span> <span class="token keyword">null</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="delete"><a href="#delete" class="header-anchor">#</a> DELETE</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 删除所有名为 &quot;Jane&quot; 的人 </span>
+<span class="token keyword">await</span> UsersModel<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  where<span class="token operator">:</span> <span class="token punctuation">{</span>
+
+    firstName<span class="token operator">:</span> <span class="token string">&quot;Jane&quot;</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+</code></pre></div><blockquote><p>要销毁所有内容,可以使用 TRUNCATE SQL：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 截断表格</span>
+<span class="token keyword">await</span> User<span class="token punctuation">.</span><span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  truncate<span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="findall"><a href="#findall" class="header-anchor">#</a> findAll</h3> <p>findAll 方法. 它生成一个标准的 SELECT 查询, 该查询将从表中检索所有条目(除非受到 where 子句的限制).</p> <h3 id="findbypk"><a href="#findbypk" class="header-anchor">#</a> findByPk</h3> <p>findByPk 方法使用提供的主键从表中仅获得一个条目.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> project <span class="token operator">=</span> <span class="token keyword">await</span> Project<span class="token punctuation">.</span><span class="token function">findByPk</span><span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>project <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Not found!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>project <span class="token keyword">instanceof</span> <span class="token class-name">Project</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+    <span class="token comment">// 它的主键是 123</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="findone"><a href="#findone" class="header-anchor">#</a> findOne</h3> <p>findOne 方法获得它找到的第一个条目(它可以满足提供的可选查询参数).</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> project <span class="token operator">=</span> <span class="token keyword">await</span> Project<span class="token punctuation">.</span><span class="token function">findOne</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        title<span class="token operator">:</span> <span class="token string">'My Title'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>project <span class="token operator">===</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Not found!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>project <span class="token keyword">instanceof</span> <span class="token class-name">Project</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>project<span class="token punctuation">.</span>title<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'My Title'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="findorcreate"><a href="#findorcreate" class="header-anchor">#</a> findOrCreate</h3> <blockquote><p>除非找到一个满足查询参数的结果, 否则方法 findOrCreate 将在表中创建一个条目. 在这两种情况下, 它将返回一个实例(找到的实例或创建的实例)和一个布尔值, 指示该实例是已创建还是已经存在.</p></blockquote> <p>使用 where 参数来查找条目, 而使用 defaults 参数来定义必须创建的内容. 如果 defaults 不包含每一列的值, 则 Sequelize 将采用 where 的值(如果存在).</p> <p>假设我们有一个空的数据库, 该数据库具有一个 User 模型, 该模型具有一个 username 和一个 job.</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">const</span> <span class="token punctuation">[</span>user<span class="token punctuation">,</span> created<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">await</span> User<span class="token punctuation">.</span><span class="token function">findOrCreate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        username<span class="token operator">:</span> <span class="token string">'sdepold'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    defaults<span class="token operator">:</span> <span class="token punctuation">{</span>
+        job<span class="token operator">:</span> <span class="token string">'Technical Lead JavaScript'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>username<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'sdepold'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>job<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 这可能是也可能不是 'Technical Lead JavaScript'</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>created<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 指示此实例是否刚刚创建的布尔值</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span>created<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>job<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 这里肯定是 'Technical Lead JavaScript'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="findandcountall"><a href="#findandcountall" class="header-anchor">#</a> findAndCountAll</h3> <blockquote><p>findAndCountAll 方法是结合了 findAll 和 count 的便捷方法. 在处理与分页有关的查询时非常有用, 在分页中, 你想检索带有 limit 和 offset 的数据, 但又需要知道与查询匹配的记录总数.</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>findAndCountAll 方法返回一个具有两个属性的对象：
+
+count <span class="token operator">-</span> 一个整数 <span class="token operator">-</span> 符合查询条件的记录总数
+rows <span class="token operator">-</span> 一个数组对象 <span class="token operator">-</span> 获得的记录
+<span class="token keyword">const</span> <span class="token punctuation">{</span>
+    count<span class="token punctuation">,</span>
+    rows
+<span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> Project<span class="token punctuation">.</span><span class="token function">findAndCountAll</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    where<span class="token operator">:</span> <span class="token punctuation">{</span>
+        title<span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token punctuation">[</span>Op<span class="token punctuation">.</span>like<span class="token punctuation">]</span><span class="token operator">:</span> <span class="token string">'foo%'</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    offset<span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    limit<span class="token operator">:</span> <span class="token number">2</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>rows<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="关联查的一些方法"><a href="#关联查的一些方法" class="header-anchor">#</a> 关联查的一些方法</h2> <blockquote><p>Sequelize 支持标准关联关系: 一对一, 一对多 和 多对多.</p></blockquote> <ul><li><p>A.hasOne(B) 关联意味着 A 和 B 之间存在一对一的关系, 外键在目标模型(B)中定义.</p></li> <li><p>A.belongsTo(B)关联意味着 A 和 B 之间存在一对一的关系, 外键在源模型中定义(A).</p></li> <li><p>A.hasMany(B) 关联意味着 A 和 B 之间存在一对多关系, 外键在目标模型(B)中定义.</p></li></ul> <blockquote><p>这三个调用将导致 Sequelize 自动将外键添加到适当的模型中(除非它们已经存在).</p></blockquote> <ul><li>A.belongsToMany(B, { through: 'C' }) 关联意味着将表 C 用作联结表, 在 A 和 B 之间存在多对多关系. 具有外键(例如, aId 和 bId). Sequelize 将自动创建此模型 C(除非已经存在), 并在其上定义适当的外</li></ul> <h3 id="一对一关系"><a href="#一对一关系" class="header-anchor">#</a> 一对一关系</h3> <blockquote><p>对于本示例的其余部分, 我们假设我们有两个模型, 即 Foo 和 Bar. 我们想要在它们之间建立一对一的关系, 以便 Bar 获得 fooId 列.</p></blockquote> <p>实现该目标的主要设置如下：</p> <div class="language-js extra-class"><pre class="language-js"><code>Foo<span class="token punctuation">.</span><span class="token function">hasOne</span><span class="token punctuation">(</span>Bar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Bar<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>Foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>自定义外键</p> <blockquote><p>上面显示的 hasOne 和 belongsTo 调用都会推断出要创建的外键应称为 fooId. 如要使用其他名称, 例如 myFooId：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 方法 1</span>
+Foo<span class="token punctuation">.</span><span class="token function">hasOne</span><span class="token punctuation">(</span>Bar<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    foreignKey<span class="token operator">:</span> <span class="token string">'myFooId'</span><span class="token punctuation">,</span> <span class="token comment">//从表的id</span>
+    <span class="token keyword">as</span><span class="token operator">:</span> <span class="token string">'acticle'</span><span class="token punctuation">,</span> <span class="token comment">//定义别名</span>
+    sourceKey<span class="token operator">:</span> <span class="token string">'article_id'</span> <span class="token comment">//当前主表的id </span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Bar<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>Foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 方法 2</span>
+Foo<span class="token punctuation">.</span><span class="token function">hasOne</span><span class="token punctuation">(</span>Bar<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    foreignKey<span class="token operator">:</span> <span class="token punctuation">{</span>
+        name<span class="token operator">:</span> <span class="token string">'myFooId'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Bar<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>Foo<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 方法 3</span>
+Foo<span class="token punctuation">.</span><span class="token function">hasOne</span><span class="token punctuation">(</span>Bar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Bar<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>Foo<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    foreignKey<span class="token operator">:</span> <span class="token string">'myFooId'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 方法 4</span>
+Foo<span class="token punctuation">.</span><span class="token function">hasOne</span><span class="token punctuation">(</span>Bar<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Bar<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>Foo<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    foreignKey<span class="token operator">:</span> <span class="token punctuation">{</span>
+        name<span class="token operator">:</span> <span class="token string">'myFooId'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <div class="language-js extra-class"><pre class="language-js"><code>Ship<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>Captain<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    targetKey<span class="token operator">:</span> <span class="token string">'name'</span><span class="token punctuation">,</span>
+    foreignKey<span class="token operator">:</span> <span class="token string">'captainName'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token constant">A</span><span class="token punctuation">.</span><span class="token function">hasOne</span><span class="token punctuation">(</span><span class="token constant">B</span><span class="token punctuation">)</span> 和 <span class="token constant">A</span><span class="token punctuation">.</span><span class="token function">hasMany</span><span class="token punctuation">(</span><span class="token constant">B</span><span class="token punctuation">)</span> <span class="token function">将外键保留在目标模型</span><span class="token punctuation">(</span><span class="token constant">B</span><span class="token punctuation">)</span>中<span class="token punctuation">,</span>因此引用的键在源模型中<span class="token punctuation">,</span>因此使用了 sourceKey<span class="token punctuation">.</span> 
+原模型 需要关联的字段id 是  sourceKey
+foreignKey 对应的id 是目标源的id
+<span class="token constant">A</span><span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span><span class="token constant">B</span><span class="token punctuation">)</span> <span class="token function">将外键保留在源模型中</span><span class="token punctuation">(</span><span class="token constant">A</span><span class="token punctuation">)</span><span class="token punctuation">,</span>因此引用的键在目标模型中<span class="token punctuation">,</span>因此使用了 targetKey<span class="token punctuation">.</span>
+外键保存源模型  foreignKey  为查询的从 id
+外键保存目标模型  foreignKey  为主的 id
+
+</code></pre></div><p>以上方法可用于一对一</p></div> <p>强制性与可选性关联</p> <blockquote><p>默认情况下, 该关联被视为可选. 换句话说, 在我们的示例中, fooId 允许为空, 这意味着一个 Bar 可以不存在 Foo 而存在. 只需在外键选项中指定 allowNull: false 即可更改此设置：</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>Foo<span class="token punctuation">.</span><span class="token function">hasOne</span><span class="token punctuation">(</span>Bar<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    foreignKey<span class="token operator">:</span> <span class="token punctuation">{</span>
+        allowNull<span class="token operator">:</span> <span class="token boolean">false</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><h3 id="一对多关系"><a href="#一对多关系" class="header-anchor">#</a> 一对多关系</h3> <blockquote><p>在这个例子中, 我们有模型 Team 和 Player. 我们要告诉 Sequelize, 他们之间存在一对多的关系, 这意味着一个 Team 有 Player , 而每个 Player 都属于一个 Team.</p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code>Team<span class="token punctuation">.</span><span class="token function">hasMany</span><span class="token punctuation">(</span>Player<span class="token punctuation">)</span><span class="token punctuation">;</span>
+Player<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>Team<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code>Team<span class="token punctuation">.</span><span class="token function">hasMany</span><span class="token punctuation">(</span>Player<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    foreignKey<span class="token operator">:</span> <span class="token string">'myFooId'</span><span class="token punctuation">,</span> <span class="token comment">//从表的id</span>
+    <span class="token keyword">as</span><span class="token operator">:</span> <span class="token string">'acticle'</span><span class="token punctuation">,</span> <span class="token comment">//定义别名</span>
+    sourceKey<span class="token operator">:</span> <span class="token string">'article_id'</span> <span class="token comment">//当前主表的id </span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+Player<span class="token punctuation">.</span><span class="token function">belongsTo</span><span class="token punctuation">(</span>Team<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Node/Egg/jwt.html" class="prev">
+        jwt
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02f4702a.js" defer></script><script src="/assets/js/2.c24528b1.js" defer></script><script src="/assets/js/84.43fc0353.js" defer></script>
+  </body>
+</html>

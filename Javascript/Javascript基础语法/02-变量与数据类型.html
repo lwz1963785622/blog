@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>变量与数据类型 | lwz blog</title>
+    <meta name="generator" content="VuePress 1.8.0">
+    <link rel="icon" href="/icon.jpg">
+    <meta name="description" content="一个基于vuepress的技术站点">
+    <meta name="keywords" content="vuepress,blog,主题">
+    
+    <link rel="preload" href="/assets/css/0.styles.c81954a9.css" as="style"><link rel="preload" href="/assets/js/app.02f4702a.js" as="script"><link rel="preload" href="/assets/js/2.c24528b1.js" as="script"><link rel="preload" href="/assets/js/24.b5a12bf8.js" as="script"><link rel="preload" href="/assets/js/4.68802046.js" as="script"><link rel="prefetch" href="/assets/js/10.b9f00163.js"><link rel="prefetch" href="/assets/js/100.cea73915.js"><link rel="prefetch" href="/assets/js/101.da736f62.js"><link rel="prefetch" href="/assets/js/102.7007d484.js"><link rel="prefetch" href="/assets/js/103.caa32a93.js"><link rel="prefetch" href="/assets/js/104.49eec9bb.js"><link rel="prefetch" href="/assets/js/105.6dde3492.js"><link rel="prefetch" href="/assets/js/106.e033d988.js"><link rel="prefetch" href="/assets/js/107.85a7f470.js"><link rel="prefetch" href="/assets/js/108.3199b6c2.js"><link rel="prefetch" href="/assets/js/109.053f0eae.js"><link rel="prefetch" href="/assets/js/11.0130a7ca.js"><link rel="prefetch" href="/assets/js/110.ca65e52d.js"><link rel="prefetch" href="/assets/js/111.5681de27.js"><link rel="prefetch" href="/assets/js/112.099e1f8d.js"><link rel="prefetch" href="/assets/js/113.e0d70638.js"><link rel="prefetch" href="/assets/js/114.0bc43b57.js"><link rel="prefetch" href="/assets/js/115.0b956899.js"><link rel="prefetch" href="/assets/js/116.ae8f53e3.js"><link rel="prefetch" href="/assets/js/117.a9349fe5.js"><link rel="prefetch" href="/assets/js/118.ae2cdf8c.js"><link rel="prefetch" href="/assets/js/119.9f6cba9e.js"><link rel="prefetch" href="/assets/js/12.e8df8df5.js"><link rel="prefetch" href="/assets/js/120.c28514fb.js"><link rel="prefetch" href="/assets/js/121.43d5b226.js"><link rel="prefetch" href="/assets/js/122.d5150570.js"><link rel="prefetch" href="/assets/js/123.3b5271e5.js"><link rel="prefetch" href="/assets/js/124.69c11252.js"><link rel="prefetch" href="/assets/js/125.a84bab86.js"><link rel="prefetch" href="/assets/js/126.feec0868.js"><link rel="prefetch" href="/assets/js/127.988ef89c.js"><link rel="prefetch" href="/assets/js/128.6d787bd5.js"><link rel="prefetch" href="/assets/js/129.e9bae44d.js"><link rel="prefetch" href="/assets/js/13.8e202000.js"><link rel="prefetch" href="/assets/js/130.a531a070.js"><link rel="prefetch" href="/assets/js/131.081e4aba.js"><link rel="prefetch" href="/assets/js/132.117ede7a.js"><link rel="prefetch" href="/assets/js/133.9b262135.js"><link rel="prefetch" href="/assets/js/134.7d3c77e3.js"><link rel="prefetch" href="/assets/js/135.4a152353.js"><link rel="prefetch" href="/assets/js/136.2cdd93f9.js"><link rel="prefetch" href="/assets/js/137.c8ae1cb5.js"><link rel="prefetch" href="/assets/js/138.20ad0617.js"><link rel="prefetch" href="/assets/js/139.d02a0237.js"><link rel="prefetch" href="/assets/js/14.f6d60bde.js"><link rel="prefetch" href="/assets/js/140.e61d9473.js"><link rel="prefetch" href="/assets/js/141.9ab7f428.js"><link rel="prefetch" href="/assets/js/142.d0dc8e5b.js"><link rel="prefetch" href="/assets/js/143.3cae2afe.js"><link rel="prefetch" href="/assets/js/144.f218366b.js"><link rel="prefetch" href="/assets/js/145.e069c18b.js"><link rel="prefetch" href="/assets/js/146.9751fb0e.js"><link rel="prefetch" href="/assets/js/147.41f034cf.js"><link rel="prefetch" href="/assets/js/148.66f7fa5b.js"><link rel="prefetch" href="/assets/js/149.73939e51.js"><link rel="prefetch" href="/assets/js/15.bb4953e9.js"><link rel="prefetch" href="/assets/js/150.cca5c5b9.js"><link rel="prefetch" href="/assets/js/151.9812ce26.js"><link rel="prefetch" href="/assets/js/152.b28a65a8.js"><link rel="prefetch" href="/assets/js/153.8f86ed47.js"><link rel="prefetch" href="/assets/js/154.b93f993a.js"><link rel="prefetch" href="/assets/js/155.bb3edc10.js"><link rel="prefetch" href="/assets/js/156.f91d2146.js"><link rel="prefetch" href="/assets/js/157.19160896.js"><link rel="prefetch" href="/assets/js/158.645322e6.js"><link rel="prefetch" href="/assets/js/16.2ded9e3a.js"><link rel="prefetch" href="/assets/js/17.91bc2bfc.js"><link rel="prefetch" href="/assets/js/18.16b54a36.js"><link rel="prefetch" href="/assets/js/19.40e748ba.js"><link rel="prefetch" href="/assets/js/20.934d8e27.js"><link rel="prefetch" href="/assets/js/21.a593ad30.js"><link rel="prefetch" href="/assets/js/22.65ebbfb0.js"><link rel="prefetch" href="/assets/js/23.22197f5b.js"><link rel="prefetch" href="/assets/js/25.8d9e5c92.js"><link rel="prefetch" href="/assets/js/26.54dcbfd9.js"><link rel="prefetch" href="/assets/js/27.77667eb4.js"><link rel="prefetch" href="/assets/js/28.5a220ac8.js"><link rel="prefetch" href="/assets/js/29.033c82ef.js"><link rel="prefetch" href="/assets/js/3.ae4e21c4.js"><link rel="prefetch" href="/assets/js/30.eb479c9b.js"><link rel="prefetch" href="/assets/js/31.ca4b95d9.js"><link rel="prefetch" href="/assets/js/32.7a8b933a.js"><link rel="prefetch" href="/assets/js/33.16198774.js"><link rel="prefetch" href="/assets/js/34.619cc9df.js"><link rel="prefetch" href="/assets/js/35.e5f38e51.js"><link rel="prefetch" href="/assets/js/36.055b08ad.js"><link rel="prefetch" href="/assets/js/37.94b4517d.js"><link rel="prefetch" href="/assets/js/38.11c6f847.js"><link rel="prefetch" href="/assets/js/39.ead00e84.js"><link rel="prefetch" href="/assets/js/40.90724f30.js"><link rel="prefetch" href="/assets/js/41.57f1e3dc.js"><link rel="prefetch" href="/assets/js/42.81f99fce.js"><link rel="prefetch" href="/assets/js/43.9487db37.js"><link rel="prefetch" href="/assets/js/44.f55f4942.js"><link rel="prefetch" href="/assets/js/45.0840f7d0.js"><link rel="prefetch" href="/assets/js/46.77e4b1e0.js"><link rel="prefetch" href="/assets/js/47.106e5a77.js"><link rel="prefetch" href="/assets/js/48.a0241697.js"><link rel="prefetch" href="/assets/js/49.bfcba80c.js"><link rel="prefetch" href="/assets/js/5.37cdb3ec.js"><link rel="prefetch" href="/assets/js/50.a48aa373.js"><link rel="prefetch" href="/assets/js/51.6eb81d97.js"><link rel="prefetch" href="/assets/js/52.9a4f7c44.js"><link rel="prefetch" href="/assets/js/53.836a2cd9.js"><link rel="prefetch" href="/assets/js/54.20f7c514.js"><link rel="prefetch" href="/assets/js/55.3c9b093e.js"><link rel="prefetch" href="/assets/js/56.2a08ee39.js"><link rel="prefetch" href="/assets/js/57.77b5ae2f.js"><link rel="prefetch" href="/assets/js/58.e13e6489.js"><link rel="prefetch" href="/assets/js/59.fff9f852.js"><link rel="prefetch" href="/assets/js/6.0125fdab.js"><link rel="prefetch" href="/assets/js/60.571542be.js"><link rel="prefetch" href="/assets/js/61.dc24c738.js"><link rel="prefetch" href="/assets/js/62.60b8fbc3.js"><link rel="prefetch" href="/assets/js/63.aebd9e95.js"><link rel="prefetch" href="/assets/js/64.8ca6835f.js"><link rel="prefetch" href="/assets/js/65.785ed38d.js"><link rel="prefetch" href="/assets/js/66.87713e0f.js"><link rel="prefetch" href="/assets/js/67.5c8e2954.js"><link rel="prefetch" href="/assets/js/68.1f624172.js"><link rel="prefetch" href="/assets/js/69.78d43f46.js"><link rel="prefetch" href="/assets/js/7.4afff234.js"><link rel="prefetch" href="/assets/js/70.b570a6a2.js"><link rel="prefetch" href="/assets/js/71.2c924482.js"><link rel="prefetch" href="/assets/js/72.124dc4e8.js"><link rel="prefetch" href="/assets/js/73.92f70cb3.js"><link rel="prefetch" href="/assets/js/74.6b5d9fe1.js"><link rel="prefetch" href="/assets/js/75.da5db3e1.js"><link rel="prefetch" href="/assets/js/76.270c7b88.js"><link rel="prefetch" href="/assets/js/77.0ba8904d.js"><link rel="prefetch" href="/assets/js/78.3eabaf04.js"><link rel="prefetch" href="/assets/js/79.c8b0b5f9.js"><link rel="prefetch" href="/assets/js/8.b4a0f119.js"><link rel="prefetch" href="/assets/js/80.175a52a1.js"><link rel="prefetch" href="/assets/js/81.eba4eaf6.js"><link rel="prefetch" href="/assets/js/82.aa662044.js"><link rel="prefetch" href="/assets/js/83.22e8b612.js"><link rel="prefetch" href="/assets/js/84.43fc0353.js"><link rel="prefetch" href="/assets/js/85.f2fd33cd.js"><link rel="prefetch" href="/assets/js/86.0a8b597e.js"><link rel="prefetch" href="/assets/js/87.3b53f85c.js"><link rel="prefetch" href="/assets/js/88.d64e22ce.js"><link rel="prefetch" href="/assets/js/89.4f769098.js"><link rel="prefetch" href="/assets/js/9.aa469d74.js"><link rel="prefetch" href="/assets/js/90.0d8441e7.js"><link rel="prefetch" href="/assets/js/91.ab195f73.js"><link rel="prefetch" href="/assets/js/92.6d724bfd.js"><link rel="prefetch" href="/assets/js/93.cc667cae.js"><link rel="prefetch" href="/assets/js/94.028e3379.js"><link rel="prefetch" href="/assets/js/95.309a85ce.js"><link rel="prefetch" href="/assets/js/96.34028f84.js"><link rel="prefetch" href="/assets/js/97.e6147dce.js"><link rel="prefetch" href="/assets/js/98.032e4ad8.js"><link rel="prefetch" href="/assets/js/99.cbebf64f.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c81954a9.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">lwz blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/vue/" class="nav-link">
+  Vue
+</a></div><div class="nav-item"><a href="/React/" class="nav-link">
+  React
+</a></div><div class="nav-item"><a href="/Javascript/" class="nav-link router-link-active">
+  Javascript
+</a></div><div class="nav-item"><a href="/数据结构/" class="nav-link">
+  数据结构
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  web
+</a></div><div class="nav-item"><a href="/Jenkins/" class="nav-link">
+  Jenkins
+</a></div><div class="nav-item"><a href="/Docker/" class="nav-link">
+  Docker
+</a></div><div class="nav-item"><a href="/Linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/Summarize/" class="nav-link">
+  Summarize
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Node" class="dropdown-title"><span class="title">Node</span> <span class="arrow down"></span></button> <button type="button" aria-label="Node" class="mobile-dropdown-title"><span class="title">Node</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/Node/npm.html" class="nav-link">
+  npm
+</a></li><li class="dropdown-item"><!----> <a href="/Node/nvm.html" class="nav-link">
+  nvm
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/Javascript/" aria-current="page" class="sidebar-link">首页</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Javascript基础语法</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/Javascript/Javascript基础语法/01-ECMAScript介绍.html" class="sidebar-link">ECMAScript介绍</a></li><li><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html" class="active sidebar-link">变量与数据类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#标识符命名规范" class="sidebar-link">标识符命名规范</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#命名规范" class="sidebar-link">命名规范</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#关键字与保留字" class="sidebar-link">关键字与保留字</a></li></ul></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#变量" class="sidebar-link">变量</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#变量是什么" class="sidebar-link">变量是什么?</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#声明变量" class="sidebar-link">声明变量</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#es6-常量-constants" class="sidebar-link">[es6]常量(Constants)</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#变量声明兼容性" class="sidebar-link">变量声明兼容性</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#let-const-var-区别" class="sidebar-link">let const var 区别</a></li></ul></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#数据类型" class="sidebar-link">数据类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#undefined" class="sidebar-link">undefined</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#null" class="sidebar-link">null</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#string-类型" class="sidebar-link">string 类型</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#number-类型" class="sidebar-link">number 类型</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#bigint-类型" class="sidebar-link">BigInt 类型</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#boolean-类型" class="sidebar-link">boolean 类型</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#symbol" class="sidebar-link">Symbol</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#object" class="sidebar-link">Object</a></li></ul></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#判断数据类型" class="sidebar-link">判断数据类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#语法" class="sidebar-link">语法</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#返回值" class="sidebar-link">返回值</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#示例" class="sidebar-link">示例</a></li></ul></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#变量在内存划分" class="sidebar-link">变量在内存划分</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#堆栈的概念" class="sidebar-link">堆栈的概念</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#两种数据类型的存放" class="sidebar-link">两种数据类型的存放</a></li><li class="sidebar-sub-header"><a href="/Javascript/Javascript基础语法/02-变量与数据类型.html#变量复制" class="sidebar-link">变量复制</a></li></ul></li></ul></li><li><a href="/Javascript/Javascript基础语法/03-运算符.html" class="sidebar-link">运算符</a></li><li><a href="/Javascript/Javascript基础语法/04-流程控制.html" class="sidebar-link">流程控制</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>函数</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>数组</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>对象</span> <span class="arrow right"></span></p> <!----></section></li><li><a href="/Javascript/Javascript基础语法/08-Symbol.html" class="sidebar-link">Symbol</a></li><li><a href="/Javascript/Javascript基础语法/09-Set数据结构.html" class="sidebar-link">Set数据结构</a></li><li><a href="/Javascript/Javascript基础语法/10-Map数据结构.html" class="sidebar-link">Map数据结构</a></li><li><a href="/Javascript/Javascript基础语法/11-ES新特性.html" class="sidebar-link">ES新特性</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading"><span>错误调试</span> <span class="arrow right"></span></p> <!----></section></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScriptBOM操作</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>JavaScriptDOM操作</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Javascript数据处理</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Javascript扩展操作</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>TypeScript入门</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="变量与数据类型"><a href="#变量与数据类型" class="header-anchor">#</a> 变量与数据类型</h1> <blockquote><p>请使用 var 运算符声明变量。</p></blockquote> <h2 id="标识符命名规范"><a href="#标识符命名规范" class="header-anchor">#</a> 标识符命名规范</h2> <h3 id="命名规范"><a href="#命名规范" class="header-anchor">#</a> 命名规范</h3> <ol><li>严格区分大小写；</li></ol> <ul><li>命名必须以字母或<code>_</code>或<code>$</code>开头，余下的部分可以是任意的字母，数字，或者是<code>_</code>或者是<code>$</code>；</li> <li>不能用关键字或者是保留字命名；</li> <li>javascript 自己的命名习惯；
+<ul><li>驼峰命名法：getElementById</li> <li>首字母大写：Object</li></ul></li> <li>命名要有意义。</li></ul> <h3 id="关键字与保留字"><a href="#关键字与保留字" class="header-anchor">#</a> 关键字与保留字</h3> <ul><li>ECMA-262 定义了 ECMAScript 支持的一套关键字（keyword）、保留字（reserved word）。</li> <li>关键字标识了 ECMAScript 语句的开头和/或结尾。根据规定，关键字是保留的，不能用作变量名或函数名。</li> <li>保留字在某种意思上是为将来的关键字而保留的单词。因此保留字不能被用作变量名或函数名。</li></ul> <table><thead><tr><th style="text-align:left;">关键字保留字</th> <th style="text-align:center;"></th> <th style="text-align:center;"></th> <th style="text-align:center;"></th> <th style="text-align:center;"></th> <th style="text-align:center;"></th></tr></thead> <tbody><tr><td style="text-align:left;">abstract</td> <td style="text-align:center;">arguments</td> <td style="text-align:center;">boolean</td> <td style="text-align:center;">break</td> <td style="text-align:center;">byte</td> <td style="text-align:center;">case</td></tr> <tr><td style="text-align:left;">catch</td> <td style="text-align:center;">char</td> <td style="text-align:center;">class</td> <td style="text-align:center;">const</td> <td style="text-align:center;">continue</td> <td style="text-align:center;">debugger</td></tr> <tr><td style="text-align:left;">default</td> <td style="text-align:center;">delete</td> <td style="text-align:center;">do</td> <td style="text-align:center;">double</td> <td style="text-align:center;">else</td> <td style="text-align:center;">enum</td></tr> <tr><td style="text-align:left;">eval</td> <td style="text-align:center;">export</td> <td style="text-align:center;">extends</td> <td style="text-align:center;">false</td> <td style="text-align:center;">final</td> <td style="text-align:center;">finally</td></tr> <tr><td style="text-align:left;">float</td> <td style="text-align:center;">for</td> <td style="text-align:center;">function</td> <td style="text-align:center;">goto</td> <td style="text-align:center;">if</td> <td style="text-align:center;">implements</td></tr> <tr><td style="text-align:left;">import</td> <td style="text-align:center;">in</td> <td style="text-align:center;">instanceof</td> <td style="text-align:center;">int</td> <td style="text-align:center;">interface</td> <td style="text-align:center;">let</td></tr> <tr><td style="text-align:left;">long</td> <td style="text-align:center;">native</td> <td style="text-align:center;">new</td> <td style="text-align:center;">null</td> <td style="text-align:center;">package</td> <td style="text-align:center;">private</td></tr> <tr><td style="text-align:left;">protected</td> <td style="text-align:center;">public</td> <td style="text-align:center;">return</td> <td style="text-align:center;">short</td> <td style="text-align:center;">static</td> <td style="text-align:center;">super</td></tr> <tr><td style="text-align:left;">switch</td> <td style="text-align:center;">synchronized</td> <td style="text-align:center;">this</td> <td style="text-align:center;">throws</td> <td style="text-align:center;">transient</td> <td style="text-align:center;">true</td></tr> <tr><td style="text-align:left;">try</td> <td style="text-align:center;">typeof</td> <td style="text-align:center;">var</td> <td style="text-align:center;">void</td> <td style="text-align:center;">volatile</td> <td style="text-align:center;">while</td></tr> <tr><td style="text-align:left;">with</td> <td style="text-align:center;">yield</td> <td style="text-align:center;"></td> <td style="text-align:center;"></td> <td style="text-align:center;"></td> <td style="text-align:center;"></td></tr></tbody></table> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>如果将保留字用作变量名或函数名，那么除非将来的浏览器实现了该保留字，否则很可能收不到任何错误消息。当浏览器将其实现后，该单词将被看做关键字，如此将出现关键字错误。</p></div> <div class="language- extra-class"><pre class="language-text"><code>var for = 123;
+//Uncaught SyntaxError: Unexpected token for
+</code></pre></div><h2 id="变量"><a href="#变量" class="header-anchor">#</a> 变量</h2> <h3 id="变量是什么"><a href="#变量是什么" class="header-anchor">#</a> 变量是什么?</h3> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>变量，就是一个用于存放数值的容器。</p></div> <div class="language- extra-class"><pre class="language-text"><code>var name = &quot;张三&quot;;
+alert(&quot;hello &quot;+name); // hello 张三
+
+var num = 100;
+alert(num*10);        // 1000
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>变量是用来存储数值的。变量不是数值本身，它们仅仅是一个用于存储数值的容器。
+你可以把变量想象成一个个用来装东西的纸箱子。</p></div> <img src="/img/javascript/boxes.png" width="50%" alt="存储数据" class="my-img"> <ul><li>变量的独特之处在于它存放的数值是可以改变的。</li> <li>变量它们能够存储任何的东西 -- 不只是字符串和数字。变量可以存储更复杂的数据，甚至是函数。</li></ul> <h3 id="声明变量"><a href="#声明变量" class="header-anchor">#</a> 声明变量</h3> <p>JavaScript 有三种声明方式。</p> <table><thead><tr><th style="text-align:left;">关键词</th> <th style="text-align:left;">描述</th> <th style="text-align:left;">版本</th></tr></thead> <tbody><tr><td style="text-align:left;">var</td> <td style="text-align:left;">声明一个变量，可赋一个初始化值。</td> <td style="text-align:left;">ES5</td></tr> <tr><td style="text-align:left;">let</td> <td style="text-align:left;">声明一个块作用域的局部变量，可赋一个初始化值。</td> <td style="text-align:left;">ES6</td></tr> <tr><td style="text-align:left;">const</td> <td style="text-align:left;">声明一个块作用域的只读的命名常量。</td> <td style="text-align:left;">ES6</td></tr></tbody></table> <h4 id="基本语法"><a href="#基本语法" class="header-anchor">#</a> 基本语法</h4> <p>声明一个变量的语法是在 var 关键字之后加上这个变量的名字：</p> <div class="language- extra-class"><pre class="language-text"><code>var myName;
+var myAge;
+</code></pre></div><p>变量声明后，即可使用，以下通过输出变量方式来使用：</p> <div class="language- extra-class"><pre class="language-text"><code>console.log(myName);   //undefined
+console.log(myAge);    //undefined
+</code></pre></div><p>以上这两个变量并没有赋值，他们是空的容器(在 Javascript 中用 undefined 表示，未定义)。</p> <p>同时声明多个变量,通过<code>,</code>隔开：</p> <div class="language- extra-class"><pre class="language-text"><code>var myName,myAge,mySex;
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>提示: 千万不要把两个概念弄混淆了，“一个变量存在，但是没有赋值”和“一个变量并不存在” — 他们完全是两回事.</p></div> <div class="language- extra-class"><pre class="language-text"><code>//声明未赋值
+var myName;
+console.log(myName);     //输出undefined
+
+//未声明
+console.log(firstName);  //报错 firstName is not defined
+</code></pre></div><div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>用 var 或 let 语句声明的变量，如果没有赋初始值，则其值为 undefined。</p></div> <h4 id="初始化变量"><a href="#初始化变量" class="header-anchor">#</a> 初始化变量</h4> <p>初始化变量有两种方式：</p> <ol><li>先声明再初始化</li> <li>声明变量并初始化</li></ol> <p>先声明再初始化，方法如下，在变量名之后跟上一个“=”，然后是值:</p> <div class="language- extra-class"><pre class="language-text"><code>var myName;
+var myAge;
+
+myName=&quot;Nico&quot;;
+myAge = 19;
+
+console.log(myName);  //输出 Nico
+console.log(myAge);   //输出 19
+</code></pre></div><p>【重点】声明变量并初始化:</p> <div class="language- extra-class"><pre class="language-text"><code>var myName = &quot;Nico&quot;;
+var myAge = 19;
+
+console.log(myName);  //输出 Nico
+console.log(myAge);   //输出 19
+</code></pre></div><h4 id="更新变量"><a href="#更新变量" class="header-anchor">#</a> 更新变量</h4> <p>一旦变量赋值，您可以通过简单地给它一个不同的值来更新它。</p> <div class="language- extra-class"><pre class="language-text"><code>var myName = 'Nico';
+console.log(myName); //输出 Nico
+
+myName = &quot;Allcky&quot;;
+console.log(myName); //输出 Allcky
+</code></pre></div><h3 id="es6-常量-constants"><a href="#es6-常量-constants" class="header-anchor">#</a> [es6]常量(Constants)</h3> <p>你可以用关键字 const 创建一个只读的常量。</p> <div class="language- extra-class"><pre class="language-text"><code>const PI = 3.141592654 ;
+console.log(PI); //输出 3.141592654
+</code></pre></div><ul><li>常量不可以通过赋值改变其值，也不可以在脚本运行时重新声明。它必须被初始化为某个值。</li> <li>常量的作用域规则与 let 块级作用域变量相同。若省略 const 关键字，则该标识符将被视为变量。</li> <li>在同一作用域中，不能使用与变量名或函数名相同的名字来命名常量。</li></ul> <p>不能使用与变量名或函数名相同的名字来命名常量，例如：</p> <div class="language- extra-class"><pre class="language-text"><code>function f() {};
+const f = 5;
+//Uncaught SyntaxError: Identifier 'f' has already been declared
+//语法错误： 标识符 'f' 已经被声明
+</code></pre></div><blockquote><p>常量标识符的命名规则和变量相同：必须以字母、下划线或美元符号开头并可以包含有字母、数字或下划线。</p></blockquote> <p>常量对象的属性是不受保护的,所以可以修改常量对象的属性，例如：</p> <div class="language- extra-class"><pre class="language-text"><code>const MY_OBJECT = {&quot;key&quot;: &quot;value&quot;};
+MY_OBJECT.key = &quot;otherValue&quot;;
+</code></pre></div><blockquote><p>利用 ES6 中对象的方法 <code>Object.freeze()</code>可将对象冻结，从而无法修改其属性 (详见<code>Object对象</code>一节)</p></blockquote> <h3 id="变量声明兼容性"><a href="#变量声明兼容性" class="header-anchor">#</a> 变量声明兼容性</h3> <blockquote><p><code>let</code> 与 <code>const</code>是 ES6 新增声明方式，其存在兼容问题：</p></blockquote> <h3 id="let-const-var-区别"><a href="#let-const-var-区别" class="header-anchor">#</a> <code>let</code> <code>const</code> <code>var</code> 区别</h3> <h4 id="var"><a href="#var" class="header-anchor">#</a> <code>var</code></h4> <ol><li>var 声明作用域
+关键的问题在于，使用 var 操作符定义的变量会成为包含它的函数的局部变量。比如，使用 var
+在一个函数内部定义一个变量，就意味着该变量将在函数退出时被销毁：</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token keyword">var</span> message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 局部变量</span>
+<span class="token punctuation">}</span> 
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 出错！</span>
+</code></pre></div><p>这里，message 变量是在函数内部使用 var 定义的。函数叫 test()，调用它会创建这个变量并给
+它赋值。调用之后变量随即被销毁，因此示例中的最后一行会导致错误。不过，在函数内定义变量时省
+略 var 操作符，可以创建一个全局变量：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ message <span class="token operator">=</span> <span class="token string">&quot;hi&quot;</span><span class="token punctuation">;</span> <span class="token comment">// 全局变量</span>
+<span class="token punctuation">}</span> 
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;hi&quot;</span>
+</code></pre></div><p>去掉之前的 var 操作符之后，message 就变成了全局变量。只要调用一次函数 test()，就会定义
+这个变量，并且可以在函数外部访问到。</p> <ol start="2"><li>var 声明提升
+使用 var 时，下面的代码不会报错。这是因为使用这个关键字声明的变量会自动提升到函数作用域
+顶部：</li></ol> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+ <span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined </span>
+<span class="token comment">// 之所以不会报错，是因为 ECMAScript 运行时把它看成等价于如下代码：</span>
+<span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token keyword">var</span> age<span class="token punctuation">;</span> 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+ age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined </span>
+</code></pre></div> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">16</span><span class="token punctuation">;</span> 
+ <span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span> 
+ <span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">36</span><span class="token punctuation">;</span> 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
+<span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 36</span>
+</code></pre></div><h4 id="let"><a href="#let" class="header-anchor">#</a> <code>let</code></h4> <blockquote><p>let 跟 var 的作用差不多，但有着非常重要的区别。<code>最明显的区别是，let 声明的范围是块作用域， 而 var 声明的范围是函数作用域。</code></p></blockquote> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// var</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Matt'</span><span class="token punctuation">;</span> 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Matt </span>
+<span class="token punctuation">}</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Matt </span>
+<span class="token comment">// let</span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span> 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 26 </span>
+<span class="token punctuation">}</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ReferenceError: age 没有定义</span>
+
+<span class="token comment">// 重复声明</span>
+<span class="token keyword">var</span> name<span class="token punctuation">;</span> 
+<span class="token keyword">var</span> name<span class="token punctuation">;</span> 
+
+<span class="token keyword">let</span> age<span class="token punctuation">;</span> 
+<span class="token keyword">let</span> age<span class="token punctuation">;</span> <span class="token comment">// SyntaxError；标识符 age 已经声明过了</span>
+</code></pre></div><p>JavaScript 引擎会记录用于变量声明的标识符及其所在的块作用域，因此嵌套使用相同的标
+识符不会报错，而这是因为同一个块中没有重复声明：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Nicholas'</span><span class="token punctuation">;</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'Nicholas' </span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Matt'</span><span class="token punctuation">;</span> 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'Matt' </span>
+<span class="token punctuation">}</span> 
+<span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 30 </span>
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span> 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 26 </span>
+<span class="token punctuation">}</span> 
+</code></pre></div><p>对声明冗余报错不会因混用 let 和 var 而受影响。这两个关键字声明的并不是不同类型的变量，
+它们只是指出变量在相关作用域如何存在。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> name<span class="token punctuation">;</span> 
+<span class="token keyword">let</span> name<span class="token punctuation">;</span> <span class="token comment">// SyntaxError </span>
+<span class="token keyword">let</span> age<span class="token punctuation">;</span> 
+<span class="token keyword">var</span> age<span class="token punctuation">;</span> <span class="token comment">// SyntaxError</span>
+</code></pre></div><p>暂时性死区
+<code>let 与 var 的另一个重要的区别，就是 let 声明的变量不会在作用域中被提升。</code></p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// name 会被提升</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined </span>
+<span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Matt'</span><span class="token punctuation">;</span> 
+<span class="token comment">// age 不会被提升</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ReferenceError：age 没有定义</span>
+<span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span> 
+</code></pre></div><p><code>在解析代码时，JavaScript 引擎也会注意出现在块后面的 let 声明，只不过在此之前不能以任何方 式来引用未声明的变量。在 let 声明之前的执行瞬间被称为“暂时性死区”（temporal dead zone），在此 阶段引用任何后面才声明的变量都会抛出 ReferenceError。</code></p> <p>全局声明
+<code>与 var 关键字不同，使用 let 在全局作用域中声明的变量不会成为 window 对象的属性（var 声 明的变量则会）。</code></p> <p>条件声明
+在使用 var 声明变量时，由于声明会被提升，JavaScript 引擎会自动将多余的声明在作用域顶部合
+并为一个声明。因为 let 的作用域是块，所以不可能检查前面是否已经使用 let 声明过同名变量，同
+时也就不可能在没有声明的情况下声明它。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span> 
+ <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Nicholas'</span><span class="token punctuation">;</span> 
+ <span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span> 
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span> 
+ <span class="token comment">// 假设脚本不确定页面中是否已经声明了同名变量</span>
+ <span class="token comment">// 那它可以假设还没有声明过</span>
+ <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Matt'</span><span class="token punctuation">;</span> 
+ <span class="token comment">// 这里没问题，因为可以被作为一个提升声明来处理</span>
+ <span class="token comment">// 不需要检查之前是否声明过同名变量</span>
+ <span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">36</span><span class="token punctuation">;</span> 
+ <span class="token comment">// 如果 age 之前声明过，这里会报错</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> 
+<span class="token comment">// 使用 try/catch 语句或 typeof 操作符也不能解决，因为条件块中 let 声明的作用域仅限于该块。</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span> 
+ <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Nicholas'</span><span class="token punctuation">;</span> 
+ <span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">36</span><span class="token punctuation">;</span> 
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> 
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span> 
+ <span class="token comment">// 假设脚本不确定页面中是否已经声明了同名变量</span>
+ <span class="token comment">// 那它可以假设还没有声明过</span>
+ <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> name <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token keyword">let</span> name<span class="token punctuation">;</span> 
+ <span class="token punctuation">}</span> 
+ <span class="token comment">// name 被限制在 if {} 块的作用域内</span>
+ <span class="token comment">// 因此这个赋值形同全局赋值</span>
+ name <span class="token operator">=</span> <span class="token string">'Matt'</span><span class="token punctuation">;</span> 
+ <span class="token keyword">try</span> <span class="token punctuation">{</span> 
+ console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 如果 age 没有声明过，则会报错</span>
+ <span class="token punctuation">}</span> 
+ <span class="token keyword">catch</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token keyword">let</span> age<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> 
+ <span class="token comment">// age 被限制在 catch {}块的作用域内</span>
+ <span class="token comment">// 因此这个赋值形同全局赋值</span>
+ age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span> 
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Matt'</span><span class="token punctuation">;</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 'Matt' </span>
+<span class="token keyword">let</span> age <span class="token operator">=</span> <span class="token number">26</span><span class="token punctuation">;</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>window<span class="token punctuation">.</span>age<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined</span>
+</code></pre></div><p><code>const</code></p> <p>const实际上保证的，并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。对于简单类型的数据（数值、字符串、布尔值），值就保存在变量指向的那个内存地址，因此等同于常量。但对于复合类型的数据（主要是对象和数组），变量指向的内存地址，保存的只是一个指向实际数据的指针，const只能保证这个指针是固定的（即总是指向另一个固定的地址），至于它指向的数据结构是不是可变的，就完全不能控制了。因此，将一个对象声明为常量必须非常小心。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> foo <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 为 foo 添加一个属性，可以成功</span>
+foo<span class="token punctuation">.</span>prop <span class="token operator">=</span> <span class="token number">123</span><span class="token punctuation">;</span>
+foo<span class="token punctuation">.</span>prop <span class="token comment">// 123</span>
+
+<span class="token comment">// 将 foo 指向另一个对象，就会报错</span>
+foo <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// TypeError: &quot;foo&quot; is read-only</span>
+
+</code></pre></div><p><code>ES6 声明变量的六种方法</code></p> <p>ES5 只有两种声明变量的方法：var命令和function命令。ES6 除了添加let和const命令，后面章节还会提到，另外两种声明变量的方法：import命令和class命令。所以，ES6 一共有 6 种声明变量的方法</p> <h2 id="数据类型"><a href="#数据类型" class="header-anchor">#</a> 数据类型</h2> <p>计算机顾名思义就是可以做数学计算的机器，因此，计算机程序理所当然地可以处理各种数值。但是，计算机能处理的远不止数值，还可以处理文本、图形、音频、视频、网页等各种各样的数据，不同的数据，需要定义不同的数据类型。</p> <p>在 JavaScript 中定义了以下几种数据类型：</p> <ul><li>ECMAScript 有 6 种初始类型（primitive type），即 <code>Undefined</code>、<code>Null</code>、<code>Boolean</code>、<code>Number</code>、<code>String</code>和 ES6 新增的<code>Symbol</code> 以及 ES2020新增的<code>数据类型</code>。</li> <li>ECMAScript 有 1 种引用类型，即<code>Object</code></li></ul> <table><tr><th>分类</th> <th>类型</th> <th>值</th></tr> <tr><td rowspan="7">初始类型</td> <td>undefined</td> <td>undefined</td></tr> <tr><td>null</td> <td>一个表明 null 值的特殊关键字。 JavaScript 是大小写敏感的，因此 null 与 Null、NULL或其他变量完全不同。</td></tr> <tr><td>string</td> <td>单双引号引起来的数据</td></tr> <tr><td>number</td> <td>包括整型和浮点型。科学计数法。支持二进制、八进制、十进制、十六进制。</td></tr> <tr><td>BigInt（大整数）</td> <td>ES2020 引入了一种新的数据类型 BigInt（大整数），这是 ECMAScript 的第八种数据类型。BigInt 只用来表示整数，没有位数的限制，任何位数的整数都可以精确表示。</td></tr> <tr><td>boolean</td> <td>true false</td></tr> <tr><td>Symbol</td> <td>表示独一个一无二的值。(ES6新增)</td></tr> <tr><td>引用类型</td> <td>Object</td> <td>包含相关属性和方法的一个集合。包含Function、Array、Object</td></tr></table> <h3 id="undefined"><a href="#undefined" class="header-anchor">#</a> undefined</h3> <p>undefined 未定义，指的就是变量创建后但是没有赋值，而变量的默认值就是<code>undefined</code>.</p> <p>如：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">var</span> a<span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined</span>
+</code></pre></div><h3 id="null"><a href="#null" class="header-anchor">#</a> null</h3> <p>null 一个表明 null 值的特殊关键字，相当于一个占位符。JavaScript 是大小写敏感的，因此 null 与 Null、NULL 或其他变量完全不同。</p> <p>Null 类型同样只有一个值，即特殊值 null。逻辑上讲，null 值表示一个空对象指针，这也是给
+typeof 传一个 null 会返回&quot;object&quot;的原因：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> car <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> car<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// &quot;object&quot;</span>
+</code></pre></div><p>在定义将来要保存对象值的变量时，建议使用 null 来初始化，不要使用其他值。这样，只要检查
+这个变量的值是不是 null 就可以知道这个变量是否在后来被重新赋予了一个对象的引用，比如：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">if</span> <span class="token punctuation">(</span>car <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token comment">// car 是一个对象的引用</span>
+<span class="token punctuation">}</span> 
+</code></pre></div><p>undefined 值是由 null 值派生而来的，因此 ECMA-262 将它们定义为表面上相等，如下面的例
+子所示：</p> <div class="language-js extra-class"><pre class="language-js"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">null</span> <span class="token operator">==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// true </span>
+</code></pre></div><p>用等于操作符（==）比较 null 和 undefined 始终返回 true。但要注意，这个操作符会为了比较
+而转换它的操作数
+即使 null 和 undefined 有关系，它们的用途也是完全不一样的。如前所述，永远不必显式地将
+变量值设置为 undefined。但 null 不是这样的。任何时候，只要变量要保存对象，而当时又没有那个
+对象可保存，就要用 null 来填充该变量。这样就可以保持 null 是空对象指针的语义，并进一步将其
+与 undefined 区分开来。
+null 是一个假值。因此，如果需要，可以用更简洁的方式检测它。不过要记住，也有很多其他可
+能的值同样是假值。所以一定要明确自己想检测的就是 null 这个字面值，而不仅仅是假值。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">let</span> message <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span> 
+<span class="token keyword">let</span> age<span class="token punctuation">;</span> 
+<span class="token keyword">if</span> <span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token comment">// 这个块不会执行</span>
+<span class="token punctuation">}</span> 
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token comment">// 这个块会执行</span>
+<span class="token punctuation">}</span> 
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span>age<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token comment">// 这个块不会执行</span>
+<span class="token punctuation">}</span> 
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>age<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+ <span class="token comment">// 这个块会执行</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="string-类型"><a href="#string-类型" class="header-anchor">#</a> string 类型</h3> <p>用单双引号来说明，他所包围的值都可以是字符串。</p> <blockquote><p>引号包裹的字符串中间不允许换行</p></blockquote> <p>单双引号的用法：</p> <ul><li>效率是一样的</li> <li>只能成对出现，不能相互交叉使用</li> <li>可以相互嵌套。</li></ul> <p>还包括一些特殊的字符:</p> <table><thead><tr><th style="text-align:left;">字符</th> <th style="text-align:left;">描述</th></tr></thead> <tbody><tr><td style="text-align:left;">\0</td> <td style="text-align:left;">Null 字节</td></tr> <tr><td style="text-align:left;">\b</td> <td style="text-align:left;">退格符</td></tr> <tr><td style="text-align:left;">\f</td> <td style="text-align:left;">换页符</td></tr> <tr><td style="text-align:left;">\n</td> <td style="text-align:left;">换行符</td></tr> <tr><td style="text-align:left;">\r</td> <td style="text-align:left;">回车符</td></tr> <tr><td style="text-align:left;">\t</td> <td style="text-align:left;">Tab (制表符)</td></tr> <tr><td style="text-align:left;">\v</td> <td style="text-align:left;">垂直制表符</td></tr> <tr><td style="text-align:left;">'</td> <td style="text-align:left;">单引号</td></tr> <tr><td style="text-align:left;">&quot;</td> <td style="text-align:left;">双引号</td></tr> <tr><td style="text-align:left;">\</td> <td style="text-align:left;">反斜杠字符（\）</td></tr> <tr><td style="text-align:left;">\XXX</td> <td style="text-align:left;">由从 0 到 377 最多三位八进制数 XXX 表示的 Latin-1 字符。例如，\251 是版权符号的八进制序列。</td></tr> <tr><td style="text-align:left;">\xXX</td> <td style="text-align:left;">由从 00 和 FF 的两位十六进制数字 XX 表示的 Latin-1 字符。例如，\ xA9 是版权符号的十六进制序列。</td></tr> <tr><td style="text-align:left;">\uXXXX</td> <td style="text-align:left;">由四位十六进制数字 XXXX 表示的 Unicode 字符。例如，\ u00A9 是版权符号的 Unicode 序列。见 Unicode escape sequences (Unicode 转义字符).</td></tr> <tr><td style="text-align:left;">\u{XXXXX}</td> <td style="text-align:left;">Unicode 代码点 (code point) 转义字符。例如，\u{2F804} 相当于 Unicode 转义字符 \uD87E\uDC04 的简写。</td></tr></tbody></table> <h3 id="number-类型"><a href="#number-类型" class="header-anchor">#</a> number 类型</h3> <p>number 类型包括整型和浮点型。支持十进制（基数为 10）、十六进制（基数为 16）、八进制（基数为 8）以及二进制（基数为 2）表示。</p> <table><thead><tr><th style="text-align:left;">进制</th> <th style="text-align:left;">表示</th></tr></thead> <tbody><tr><td style="text-align:left;">十进制</td> <td style="text-align:left;">十进制整数字面量由一串数字序列组成，且没有前缀 0。</td></tr> <tr><td style="text-align:left;">八进制</td> <td style="text-align:left;">八进制的整数以 0（或 0O、0o）开头，只能包括数字 0-7。</td></tr> <tr><td style="text-align:left;">十六进制</td> <td style="text-align:left;">十六进制整数以 0x（或 0X）开头，可以包含数字（0-9）和字母 a~f 或 A~F。</td></tr> <tr><td style="text-align:left;">二进制</td> <td style="text-align:left;">二进制整数以 0b（或 0B）开头，只能包含数字 0 和 1。</td></tr></tbody></table> <div class="language- extra-class"><pre class="language-text"><code>var n1 = 100; //十进制
+
+var n2 = 071;  //八进制
+var n3 = 0o71; //八进制 ES6规定 0o开头
+
+var n4 = 0xa9; //十六进制
+
+var n5 = 0b11; //二进制
+</code></pre></div><blockquote><p>严格模式下，八进制整数字面量必须以 0o 或 0O 开头，而不能以 0 开头。</p></blockquote> <p>对于非常大或非常小的数，可以用科学计数法表示，可以把一个数表示为数字（包括十进制数字）加 e（或 E），后面加乘以 10 的倍数。例如：</p> <div class="language- extra-class"><pre class="language-text"><code># 用科学计数法来表示，还包括一些特殊的值：
+# 最大值
+Number.MAX_VALUE    //1.7976931348623157e+308
+
+# 最小值
+Number.MIN_VALUE    //5e-324
+
+var n1 = 3e2; //3*100 = 300
+var n2 = 5e3; //5*1000 = 5000
+var n3 = 5.3e3; //5.3*1000 = 5300
+
+# 无穷大
+Infinity    // 1/0 = Infinity
+</code></pre></div><h3 id="bigint-类型"><a href="#bigint-类型" class="header-anchor">#</a> BigInt 类型 <span class="badge warning" style="vertical-align:top;" data-v-15b7b770>ES2020</span></h3> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>JavaScript 所有数字都保存成 64 位浮点数，这给数值的表示带来了两大限制。一是数值的精度只能到 53 个二进制位（相当于 16 个十进制位），大于这个范围的整数，JavaScript 是无法精确表示的，这使得 JavaScript 不适合进行科学和金融方面的精确计算。二是大于或等于2的1024次方的数值，JavaScript 无法表示，会返回Infinity。</p></div> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// 超过 53 个二进制位的数值，无法保持精度</span>
+Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">53</span><span class="token punctuation">)</span> <span class="token operator">===</span> Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">53</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token comment">// true</span>
+
+<span class="token comment">// 超过 2 的 1024 次方的数值，无法表示</span>
+Math<span class="token punctuation">.</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1024</span><span class="token punctuation">)</span> <span class="token comment">// Infinity</span>
+</code></pre></div><blockquote><p>ES2020 引入了一种新的数据类型 BigInt（大整数），来解决这个问题，这是 ECMAScript 的第八种数据类型。BigInt 只用来表示整数，没有位数的限制，任何位数的整数都可以精确表示。</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> a <span class="token operator">=</span> <span class="token number">2172141653n</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> b <span class="token operator">=</span> <span class="token number">15346349309n</span><span class="token punctuation">;</span>
+
+<span class="token comment">// BigInt 可以保持精度</span>
+a <span class="token operator">*</span> b <span class="token comment">// 33334444555566667777n</span>
+
+<span class="token comment">// 普通整数无法保持精度</span>
+<span class="token function">Number</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">Number</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment">// 33334444555566670000</span>
+</code></pre></div><div class="custom-block tip"><p class="custom-block-title">TIP</p> <p>为了与 Number 类型区别，BigInt 类型的数据必须添加后缀n。</p></div> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token number">1234</span> <span class="token comment">// 普通整数</span>
+<span class="token number">1234n</span> <span class="token comment">// BigInt</span>
+
+<span class="token comment">// BigInt 的运算</span>
+<span class="token number">1n</span> <span class="token operator">+</span> <span class="token number">2n</span> <span class="token comment">// 3n</span>
+</code></pre></div><p>BigInt 同样可以使用各种进制表示，都要加上后缀<code>n</code>。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token number">0b1101n</span> <span class="token comment">// 二进制</span>
+<span class="token number">0o777n</span> <span class="token comment">// 八进制</span>
+<span class="token number">0xFFn</span> <span class="token comment">// 十六进制</span>
+</code></pre></div><p>BigInt 与普通整数是两种值，它们之间并不相等。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token number">42n</span> <span class="token operator">===</span> <span class="token number">42</span> <span class="token comment">// false</span>
+</code></pre></div><p><code>typeof</code>运算符对于 BigInt 类型的数据返回<code>bigint</code>。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">typeof</span> <span class="token number">123n</span> <span class="token comment">// 'bigint'</span>
+</code></pre></div><p>BigInt 可以使用负号（<code>-</code>），但是不能使用正号（<code>+</code>），因为会与 asm.js 冲突。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">-</span><span class="token number">42n</span> <span class="token comment">// 正确</span>
+<span class="token operator">+</span><span class="token number">42n</span> <span class="token comment">// 报错</span>
+</code></pre></div><p>JavaScript 以前不能计算70的阶乘（即<code>70!</code>），因为超出了可以表示的精度。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">70</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  p <span class="token operator">*=</span> i<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 1.197857166996989e+100</span>
+</code></pre></div><p>现在支持大整数了，就可以算了，浏览器的开发者工具运行下面代码，就OK。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">let</span> p <span class="token operator">=</span> <span class="token number">1n</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">1n</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">70n</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  p <span class="token operator">*=</span> i<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 11978571...00000000n</span>
+</code></pre></div><h3 id="boolean-类型"><a href="#boolean-类型" class="header-anchor">#</a> boolean 类型</h3> <p>Boolean. 布尔值，true 和 false. 表示&quot;真&quot;和&quot;假&quot;</p> <h3 id="symbol"><a href="#symbol" class="header-anchor">#</a> Symbol  <span class="badge warning" style="vertical-align:top;" data-v-15b7b770>es6</span></h3> <p>Symbol ( 在 ECMAScript 6 中新添加的类型).。一种数据类型，它的实例是唯一且不可改变的。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。</p> <h3 id="object"><a href="#object" class="header-anchor">#</a> Object</h3> <p>引用类型: 引用类型是一种数据结构，用于将数据和功能组织在一起，存储大量的数据</p> <blockquote><p>三大引用类型: Object 、Array 、Function</p></blockquote> <h2 id="判断数据类型"><a href="#判断数据类型" class="header-anchor">#</a> 判断数据类型</h2> <p>当我们想知道一个变量中存储的数据类型是什么，我们可以通过 typeof 运算符。</p> <h3 id="语法"><a href="#语法" class="header-anchor">#</a> 语法</h3> <p><code>typeof</code>运算符后跟操作数：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">typeof</span> operand<span class="token punctuation">;</span>
+<span class="token comment">// or</span>
+<span class="token keyword">typeof</span> operand<span class="token punctuation">;</span>
+</code></pre></div><h3 id="返回值"><a href="#返回值" class="header-anchor">#</a> 返回值</h3> <p>下表总结了<code>typeof</code>可能的返回值</p> <table><thead><tr><th>类型</th> <th>结果</th></tr></thead> <tbody><tr><td>Undefined</td> <td>&quot;undefined&quot;</td></tr> <tr><td>Null</td> <td>&quot;object&quot;</td></tr> <tr><td>Boolean</td> <td>&quot;boolean&quot;</td></tr> <tr><td>Number</td> <td>&quot;number&quot;</td></tr> <tr><td>String</td> <td>&quot;string&quot;</td></tr> <tr><td>Symbol</td> <td>&quot;symbol&quot;</td></tr> <tr><td>BigInt</td> <td>&quot;bigint&quot;</td></tr> <tr><td>函数对象</td> <td>&quot;function&quot;</td></tr> <tr><td>任何其他对象</td> <td>&quot;object&quot;</td></tr></tbody></table> <div class="custom-block warning"><p class="custom-block-title">WARNING</p> <p>注意 严格来讲，函数在 ECMAScript 中被认为是对象，并不代表一种数据类型。可是，
+函数也有自己特殊的属性。为此，就有必要通过 typeof 操作符来区分函数和其他对象。</p></div> <h3 id="示例"><a href="#示例" class="header-anchor">#</a> 示例</h3> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">// typeof总是返回一个字符串</span>
+<span class="token keyword">typeof</span> <span class="token keyword">typeof</span> <span class="token number">1</span> <span class="token operator">===</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Number</span>
+<span class="token keyword">typeof</span> <span class="token number">37</span> <span class="token operator">===</span> <span class="token string">&quot;number&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token number">NaN</span> <span class="token operator">===</span> <span class="token string">&quot;number&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">===</span> <span class="token string">&quot;number&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// String</span>
+<span class="token keyword">typeof</span> <span class="token string">&quot;&quot;</span> <span class="token operator">===</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token string">&quot;bla&quot;</span> <span class="token operator">===</span> <span class="token string">&quot;string&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Object</span>
+<span class="token keyword">typeof</span> <span class="token punctuation">{</span> a<span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token operator">===</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">;</span>
+<span class="token keyword">typeof</span> <span class="token keyword">null</span> <span class="token operator">===</span> <span class="token string">&quot;object&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><h2 id="变量在内存划分"><a href="#变量在内存划分" class="header-anchor">#</a> 变量在内存划分</h2> <blockquote><p>变量类型分两种是由于其在内存中存储方式不同：基本类型的数据是存放在<code>栈</code>内存中的，而引用类型的数据是存放在<code>堆</code>内存中的</p></blockquote> <p><img src="/img/javascript/02-1542881380000.png" alt="基本类型与引用类型的存储方式"></p> <h3 id="堆栈的概念"><a href="#堆栈的概念" class="header-anchor">#</a> 堆栈的概念</h3> <p>两者都是存放临时数据的地方。</p> <h4 id="栈"><a href="#栈" class="header-anchor">#</a> 栈</h4> <p>栈（数据结构）：一种先进后出的数据结构。</p> <p>栈区（stack） 由编译器自动分配释放 ，存放函数的参数值，局部变量的值等。</p> <p><img src="/img/javascript/stack.png" alt="栈"></p> <p>这种乒乓球的存放方式与栈中存取数据的方式如出一辙。处于盒子中最顶层的乒乓球 5，它一定是最后被放进去，但可以最先被使用。而我们想要使用底层的乒乓球 1，就必须将上面的 4 个乒乓球取出来，让乒乓球 1 处于盒子顶层。这就是栈空间先进后出，后进先出的特点。图中已经详细的表明了栈空间的存储原理。</p> <h4 id="堆"><a href="#堆" class="header-anchor">#</a> 堆</h4> <p>堆（数据结构）：堆可以被看成是一棵树，如：堆排序；</p> <p>堆区（heap） 一般由程序员分配释放，若程序员不释放，程序结束时可能由 OS 回收。</p> <p>堆数据结构是一种树状结构。它的存取数据的方式，则与书架与书非常相似。</p> <p>书虽然也整齐的存放在书架上，但是我们只要知道书的名字，我们就可以很方便的取出我们想要的书，而不用像从乒乓球盒子里取乒乓一样，非得将上面的所有乒乓球拿出来才能取到中间的某一个乒乓球。好比在 JSON 格式的数据中，我们存储的 key-value 是可以无序的，因为顺序的不同并不影响我们的使用，我们只需要关心书的名字</p> <p>堆是在程序运行时，而不是在程序编译时，申请某个大小的内存空间。即动态分配内存，对其访问和对一般内存的访问没有区别。对于堆，我们可以随心所欲的进行增加变量和删除变量，不用遵循次序。</p> <h3 id="两种数据类型的存放"><a href="#两种数据类型的存放" class="header-anchor">#</a> 两种数据类型的存放</h3> <h4 id="栈区存储"><a href="#栈区存储" class="header-anchor">#</a> 栈区存储</h4> <p>JavaScript 的基础数据类型往往都会保存在变量对象中,即保存在栈内存中，因为这些类型在内存中分别占有固定大小的空间，通过按值来访问。
+基本类型由于数据简单，会存放到内存栈区，栈区包括了 变量的标识符和变量的值：<br> <img src="/img/javascript/02-1542881486000.png" alt="栈区示意图"></p> <blockquote><p>栈区： 长度固定，读取速度快</p></blockquote> <h4 id="堆区存储"><a href="#堆区存储" class="header-anchor">#</a> 堆区存储</h4> <p>JS 的引用数据类型，比如数组 Array，Object,它们值的大小是不固定的。引用数据类型的值是保存在堆内存中的对象。JavaScript 不允许直接访问堆内存中的位置，因此我们不能直接操作对象的堆内存空间。在操作对象时，实际上是在操作对象的引用而不是实际的对象。因此，引用类型的值都是按引用访问的。这里的引用，我们可以理解为保存在变量对象中的一个地址，该地址与堆内存的实际值相关联。</p> <p>我们可以结合以下例子与图解进行理解:</p> <p><img src="/img/javascript/20181226000949936071.png" alt="堆区示意图"></p> <p><img src="/img/javascript/02-1542881596000.png" alt="堆区示意图"></p> <blockquote><p>堆区： 长度不固定，读取速度慢</p></blockquote> <h3 id="变量复制"><a href="#变量复制" class="header-anchor">#</a> 变量复制</h3> <h4 id="基本数据类型"><a href="#基本数据类型" class="header-anchor">#</a> 基本数据类型</h4> <p>基本数据类型：基本数据类型值指保存在栈内存中的简单数据段。访问方式是按值访问。</p> <div class="language- extra-class"><pre class="language-text"><code>var a = 1;
+</code></pre></div><p><img src="/img/javascript/stack1.png" alt="栈区示意图1"></p> <p>操作的是变量实际保存的值。</p> <div class="language- extra-class"><pre class="language-text"><code>a = 2;
+</code></pre></div><p><img src="/img/javascript/stack2.png" alt="栈区示意图2"></p> <p>基本类型变量的复制：从一个变量向一个变量复制时，会在栈中创建一个新值，然后把值复制到为新变量分配的位置上。</p> <div class="language- extra-class"><pre class="language-text"><code>var b = a;
+</code></pre></div><p><img src="/img/javascript/stack3.png" alt="栈区示意图3"></p> <div class="language- extra-class"><pre class="language-text"><code>b = 2;
+</code></pre></div><p><img src="/img/javascript/stack4.png" alt="栈区示意图4"></p> <h4 id="引用数据类型"><a href="#引用数据类型" class="header-anchor">#</a> 引用数据类型</h4> <p>引用数据类型：引用数据类型值指保存在堆内存中的对象。也就是，变量中保存的实际上的只是一个指针，这个指针指向内存中的另一个位置，该位置保存着对象。访问方式是按引用访问。</p> <div class="language- extra-class"><pre class="language-text"><code>var a = new Object();
+</code></pre></div><p><img src="/img/javascript/dui1.png" alt="堆区示意图1"></p> <p>当操作时，需要先从栈中读取内存地址，然后再延指针找到保存在堆内存中的值再操作。</p> <div class="language- extra-class"><pre class="language-text"><code>a.name = 'xz';
+</code></pre></div><p><img src="/img/javascript/dui2.png" alt="堆区示意图2"></p> <p>引用类型变量的复制：复制的是存储在栈中的指针，将指针复制到栈中未新变量分配的空间中，而这个指针副本和原指针指向存储在堆中的同一个对象；复制操作结束后，两个变量实际上将引用同一个对象。因此，在使用时，改变其中的一个变量的值，将影响另一个变量。</p> <div class="language- extra-class"><pre class="language-text"><code>var b = a;
+</code></pre></div><p><img src="/img/javascript/dui3.png" alt="堆区示意图3"></p> <div class="language- extra-class"><pre class="language-text"><code>b.sex = 'boy';
+</code></pre></div><p><img src="/img/javascript/dui4.png" alt="堆区示意图3"></p> <div class="language- extra-class"><pre class="language-text"><code>console.log(a.sex) //boy
+console.log(b.sex) //boy
+</code></pre></div><ul><li><a target="_blank" rel="noopener noreferrer" href=" https://segmentfault.com/a/1190000005863067">参考 1</a></li> <li><a target="_blank" rel="noopener noreferrer" href="  https://www.oschina.net/translate/how-does-javascript-actually-work-part-1">参考 2</a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/Javascript/Javascript基础语法/01-ECMAScript介绍.html" class="prev">
+        ECMAScript介绍
+      </a></span> <span class="next"><a href="/Javascript/Javascript基础语法/03-运算符.html">
+        运算符
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.02f4702a.js" defer></script><script src="/assets/js/2.c24528b1.js" defer></script><script src="/assets/js/24.b5a12bf8.js" defer></script><script src="/assets/js/4.68802046.js" defer></script>
+  </body>
+</html>
