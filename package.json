@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "vuepress dev docs --temp .temp",
+    "docs:dev": "vuepress dev docs --temp .temp",
+    "docs:build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-active-header-links": "^1.9.7",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
+    "@vuepress/plugin-medium-zoom": "^1.8.0",
+    "vuepress": "^1.8.0",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-fulltext-search": "^2.2.1",
+    "vuepress-plugin-medium-zoom": "^1.1.8",
+    "vuepress-plugin-zooming": "^1.1.7"
+  }
+}
