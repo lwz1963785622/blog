@@ -7,7 +7,6 @@ tagline: 学习时的总结,便于查阅
 # actionLink: /web/
 features:
 -  title: 平时使用的学习文档
-
 - title: 努力学习
 #   details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
 - title: 早日买房
